@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const terminalViews = {
         models: `
             <div class="panel-block-layout">
-                <h3>BANKBUGS FX LIQUIDITY MODELS</h3>
+                <h3>BANKBUGS|FX LIQUIDITY MODELS</h3>
                 <p>Track wholesale asset manipulation cycles natively. These 5 core proprietary algorithmic models map high-timeframe pool sweeps and internal liquidity distribution ranges before you execute on MT5.</p>
                 
                 <!-- 5 Models Premium Grid Matrix -->
