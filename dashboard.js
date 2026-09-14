@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="video-index">L01</span>
                             <span class="video-duration">10:00</span>
                         </div>
-                        <h4>1. Algorithmic Price Delivery Intro</h4>
+                        <h4>1. BANKBUGS|FX Liquidity Model - Intro </h4>
                         <div class="video-frame-view">
                             <!-- ⚡ REPLACE 'YOUR_VIDEO_ID_HERE' WITH YOUR ACTUAL YOUTUBE VIDEO ID -->
                             <iframe 
