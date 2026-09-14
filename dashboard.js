@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `,
-        mentorship: `
+               mentorship: `
             <div class="panel-block-layout">
                 <h3>PREMIUM MENTORSHIP LIBRARY</h3>
                 <p>High-end institutional educational modules. Master algorithmic order flow delivery windows, session time constraints, and premium vs discount equilibrium matrices.</p>
@@ -88,27 +88,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 <!-- 10-Lesson High-Density Video Grid -->
                 <div class="mentorship-video-grid">
                     
-                    <!-- Video 1 -->
+                    <!-- Video 1: Active Live Streaming Embed -->
                     <div class="video-matrix-card">
                         <div class="video-meta-top">
                             <span class="video-index">L01</span>
-                            <span class="video-duration">12:45</span>
+                            <span class="video-duration">10:00</span>
                         </div>
                         <h4>1. Algorithmic Price Delivery Intro</h4>
-                        <div class="premium-mockup-frame video-frame-view">
-                            <!-- VIDEO INTEGRATION SLOT: Replace src or keep thumbnail placeholder -->
-                            <div class="video-thumbnail-overlay">
-                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                            </div>
-                            <span class="frame-meta-status">// SECURE_STREAM_01</span>
+                        <div class="video-frame-view">
+                            <!-- ⚡ REPLACE 'YOUR_VIDEO_ID_HERE' WITH YOUR ACTUAL YOUTUBE VIDEO ID -->
+                            <iframe 
+                                src="https://youtu.be/MaC4a4rzS_U" 
+                                title="BANKBUGS|FX Liquidity Model Lesson 1" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen 
+                                style="width:100%; height:100%; border:none; border-radius:6px; position:absolute; top:0; left:0;">
+                            </iframe>
                         </div>
                     </div>
 
-                    <!-- Video 2 -->
+                    <!-- Video 2: Keep current preview states for remaining clips until uploaded -->
                     <div class="video-matrix-card">
                         <div class="video-meta-top">
                             <span class="video-index">L02</span>
-                            <span class="video-duration">18:20</span>
+                            <span class="video-duration">10:00</span>
                         </div>
                         <h4>2. HTF Liquidity Pool Identification</h4>
                         <div class="premium-mockup-frame video-frame-view">
@@ -242,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `,
+
         setups: `
             <div class="panel-block-layout">
                 <h3>WEEKLY MATRIX FORECASTS & RECAPS</h3>
