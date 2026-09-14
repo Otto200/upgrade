@@ -2,240 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>BANKBUGS|FX Mobile App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Mobile Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="app-container">
+        <!-- Profile Header -->
+        <header class="profile-header">
+            <div class="avatar">🚀</div>
+            <h1>Alex Developer</h1>
+            <p>Building things with HTML, CSS, & JS</p>
+        </header>
 
-    <!-- FIXED TOP HEADER NAVIGATION -->
-    <header class="app-top-nav">
-        <button class="menu-trigger-btn" onclick="toggleSidebar(true)">☰</button>
-        <div class="app-brand-hub">
-            <span class="brand-main">BANKBUGS|FX</span>
-            <span class="brand-sub">Ecosystem</span>
-        </div>
-        <div class="user-status-dot pending" onclick="triggerGate('Account Profile Center')"></div>
-    </header>
-
-    <!-- SLIDE-OUT DRAWER SIDEBAR MENU -->
-    <div id="sidebar-overlay" class="drawer-overlay" onclick="toggleSidebar(false)"></div>
-    <aside id="app-drawer" class="sidebar-drawer">
-        <div class="drawer-header">
-            <h3>Navigation Hub</h3>
-            <button class="close-drawer-btn" onclick="toggleSidebar(false)">✕</button>
-        </div>
-        <ul class="drawer-nav-list">
-            <li class="drawer-item active" onclick="handleMenuClick(event, 'toolkit', 'Operational Toolkit')">🧰 Free Trading Tools</li>
-            <li class="drawer-item" onclick="handleMenuClick(event, 'analytics', 'Liquidity Matrix')">📊 Market Matrix</li>
-            <li class="drawer-item lock-item" onclick="handlePremiumClick('Strategy Playbook Framework')">
-                <span>📖 Strategy Playbook</span>
-                <span class="lock-badge">Locked</span>
-            </li>
-            <li class="drawer-item lock-item" onclick="handlePremiumClick('Mentorship Video Vault')">
-                <span>🎬 Video Mentorship</span>
-                <span class="lock-badge">Locked</span>
-            </li>
-        </ul>
-        <div class="drawer-footer-status">
-            Status: <span style="color: var(--accent-gold);">Pending Verification</span>
-        </div>
-    </aside>
-
-    <!-- CORE SCROLLABLE WORKSPACE WRAPPER -->
-    <div id="blur-container" class="scroll-container">
-        <main class="app-content-view">
+        <!-- Dynamic Content Card -->
+        <main class="content-card">
+            <div class="status-badge">
+                <!-- SVG Vector Icon: Shield/Check -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>Status: Available for hire</span>
+            </div>
             
-            <div class="view-intro-title">
-                <h2 id="current-view-title">Operational Toolkit</h2>
-                <span class="live-pulse-tag">● Live API Connected</span>
-            </div>
-
-            <!-- TAB 1: OPERATIONAL TOOLKIT FRAMEWORK -->
-            <div id="tab-toolkit" class="tab-panel active">
-                <div class="app-card">
-                    <div class="card-head">⚡ Risk Management Terminal</div>
-                    <div class="mobile-terminal">
-                        [SYSTEM RUNNING...]<br>
-                        > Ready for local PNG calculations.<br>
-                        > Cap setting: Max 1.5% risk rule active.
-                    </div>
-                    <div class="tools-grid-layout">
-                        <div class="action-tool-tile">
-                            <div class="tile-icon">📊</div>
-                            <strong>Lot Calc</strong>
-                        </div>
-                        <div class="action-tool-tile">
-                            <div class="tile-icon">⏱️</div>
-                            <strong>Volatility</strong>
-                        </div>
-                        <div class="action-tool-tile">
-                            <div class="tile-icon">📝</div>
-                            <strong>Journal</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="app-card">
-                    <div class="card-head">🛠️ Integrations Ecosystem</div>
-                    <p class="card-paragraph">Everything below remains completely open and operational for your daily workflow routines.</p>
-                    <div class="tools-grid-layout">
-                        <div class="action-tool-tile platform"><strong>MT5</strong></div>
-                        <div class="action-tool-tile platform"><strong>TV</strong></div>
-                        <div class="action-tool-tile platform"><strong>MFX</strong></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 2: ANALYTICS MATRIX FRAMEWORK -->
-            <div id="tab-analytics" class="tab-panel">
-                <div class="app-card">
-                    <div class="card-head">📈 Realtime Liquidity Feed</div>
-                    <div class="matrix-list-row">
-                        <div class="matrix-info">
-                            <strong>XAUUSD (Gold)</strong>
-                            <span>Liquidity Sweep Mapped</span>
-                        </div>
-                        <span class="matrix-badge success">Ready</span>
-                    </div>
-                    <div class="matrix-list-row">
-                        <div class="matrix-info">
-                            <strong>EURUSD</strong>
-                            <span>Premium Equilibrium Phase</span>
-                        </div>
-                        <span class="matrix-badge waiting">Waiting</span>
-                    </div>
-                </div>
-            </div>
-
+            <p class="description">Tap below to toggle a quick interactive greeting message.</p>
+            <button id="actionBtn" class="primary-btn">Say Hello</button>
+            <div id="messageBox" class="hidden"></div>
         </main>
+
+        <!-- Navigation Links -->
+        <footer class="icon-nav">
+            <a href="https://github.com" class="nav-item" target="_blank" rel="noopener">
+                <!-- SVG Vector Icon: GitHub -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>GitHub</span>
+            </a>
+            <a href="https://vercel.com" class="nav-item" target="_blank" rel="noopener">
+                <!-- SVG Vector Icon: Triangle (Vercel Style) -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 22 22 2 22"></polygon>
+                </svg>
+                <span>Vercel</span>
+            </a>
+        </footer>
     </div>
 
-    <!-- FIXED BOTTOM STICKY NAVIGATION BAR -->
-    <nav class="app-bottom-bar">
-        <button class="bottom-nav-btn active" onclick="handleBottomTabSwitch(this, 'toolkit', 'Operational Toolkit')">
-            <span class="nav-btn-icon">🧰</span>
-            <span class="nav-btn-text">Tools</span>
-        </button>
-        <button class="bottom-nav-btn" onclick="handleBottomTabSwitch(this, 'analytics', 'Liquidity Matrix')">
-            <span class="nav-btn-icon">📊</span>
-            <span class="nav-btn-text">Matrix</span>
-        </button>
-        <button class="bottom-nav-btn premium-btn" onclick="handlePremiumClick('Strategy Playbook Framework')">
-            <span class="nav-btn-icon">📖</span>
-            <span class="nav-btn-text">Playbook</span>
-        </button>
-        <button class="bottom-nav-btn premium-btn" onclick="handlePremiumClick('Mentorship Video Vault')">
-            <span class="nav-btn-icon">🎬</span>
-            <span class="nav-btn-text">Academy</span>
-        </button>
-    </nav>
-
-    <!-- ON-CLICK CONVERSION CONTEXTUAL MODAL OVERLAY -->
-    <div id="gatekeeper-modal" class="modal-view-overlay">
-        <div class="mobile-gatekeeper-sheet">
-            <div class="sheet-drag-handle"></div>
-            <button class="sheet-close-x" onclick="closeGate()">✕</button>
-            
-            <div class="sheet-body-layout">
-                <span class="sheet-lock-graphic">🔒</span>
-                <h3>Premium Expansion Required</h3>
-                <p>Unlock access to the <strong id="target-module-name" style="color: var(--accent-green);"></strong> by choosing your access track below:</p>
-                
-                <div class="mobile-option-card broker-track">
-                    <div class="track-badge green">Option A — 100% Free Access Pass</div>
-                    <h4>IC Markets Account Track</h4>
-                    <p>Open and fund an official live account under our IB network link. Minimum operational capital deployment required: $5.</p>
-                    <a href="https://icmarkets.com" target="_blank" class="sheet-action-btn solid-green">Link Account & Unlock</a>
-                </div>
-
-                <div class="mobile-option-card cash-track">
-                    <div class="track-badge gold">Option B — Direct Cash Access Pass</div>
-                    <h4>Direct Premium Subscription</h4>
-                    <p>Already trading with a mature live setup account framework? Bypass track linkages immediately.</p>
-                    <a href="#" class="sheet-action-btn clear-gold">Unlock License ($30/mo)</a>
-                </div>
-
-                <div class="sheet-footer-verification">
-                    Already processed inside our network? <br>
-                    <a href="#" class="verification-direct-anchor">Verify Broker Account ID ➡️</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- NATIVE SYSTEM JS INTERACTION LOGIC -->
-    <script>
-        function toggleSidebar(shouldOpen) {
-            const drawer = document.getElementById('app-drawer');
-            const overlay = document.getElementById('sidebar-overlay');
-            if (shouldOpen) {
-                drawer.classList.add('open');
-                overlay.classList.add('visible');
-            } else {
-                drawer.classList.remove('open');
-                overlay.classList.remove('visible');
-            }
-        }
-
-        function handleMenuClick(event, tabId, viewTitle) {
-            // Update selected class arrays across items
-            const items = document.querySelectorAll('.drawer-item');
-            items.forEach(el => el.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-
-            // Align bottom bars to mirror selection changes dynamically
-            const bottomButtons = document.querySelectorAll('.bottom-nav-btn');
-            bottomButtons.forEach(btn => btn.classList.remove('active'));
-            
-            if (tabId === 'toolkit') bottomButtons[0].classList.add('active');
-            if (tabId === 'analytics') bottomButtons[1].classList.add('active');
-
-            // Render matching display panels 
-            switchViewData(tabId, viewTitle);
-
-            // Auto-close side drawer instantly upon clicking option targets
-            toggleSidebar(false);
-        }
-
-        function handleBottomTabSwitch(buttonElement, tabId, viewTitle) {
-            const bottomButtons = document.querySelectorAll('.bottom-nav-btn');
-            bottomButtons.forEach(btn => btn.classList.remove('active'));
-            buttonElement.classList.add('active');
-
-                     // Align sidebar indicators
-            const sideItems = document.querySelectorAll('.drawer-item');
-            sideItems.forEach(el => el.classList.remove('active'));
-            if (tabId === 'toolkit') sideItems[0].classList.add('active');
-            if (tabId === 'analytics') sideItems[1].classList.add('active');
-
-            switchViewData(tabId, viewTitle);
-        }
-
-        function switchViewData(tabId, viewTitle) {
-            const panels = document.querySelectorAll('.tab-panel');
-            panels.forEach(p => p.classList.remove('active'));
-            
-            document.getElementById(`tab-${tabId}`).classList.add('active');
-            document.getElementById('current-view-title').innerText = viewTitle;
-        }
-
-        function handlePremiumClick(moduleName) {
-            // Force dynamic drawer layout to safe shutdown close points first
-            toggleSidebar(false);
-            triggerGate(moduleName);
-        }
-
-        function triggerGate(moduleName) {
-            document.getElementById('blur-container').classList.add('sheet-blur-active');
-            document.getElementById('target-module-name').innerText = moduleName;
-            document.getElementById('gatekeeper-modal').style.display = 'flex';
-        }
-
-        function closeGate() {
-            document.getElementById('blur-container').classList.remove('sheet-blur-active');
-            document.getElementById('gatekeeper-modal').style.display = 'none';
-        }
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
