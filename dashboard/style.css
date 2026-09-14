@@ -264,3 +264,84 @@ html, body {
     .models-fintech-grid, .mentorship-video-grid { grid-template-columns: 1fr; }
     .main-workspace { padding: 116px 12px 104px 12px; }
 }
+
+
+
+
+/* ────────── BRAND LOGO & TEXT EXTENSIONS ────────── */
+.brand-vector-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-brand h2 span {
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin-left: 5px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* ────────── LIQUIDITY DRIVEN INFINITE FOMO TICKER ────────── */
+.fomo-ticker-banner {
+    width: 100%;
+    background-color: #030508;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    overflow: hidden;
+    padding: 6px 0;
+    display: flex;
+    white-space: nowrap;
+}
+
+.ticker-text-track {
+    display: inline-flex;
+    animation: continuousScroll 32s linear infinite; /* Loops text seamlessly across mobile viewports */
+}
+
+.ticker-text-track span {
+    font-family: monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding-right: 50px; /* Space buffer to tie the running strings together */
+    letter-spacing: 0.2px;
+}
+
+@keyframes continuousScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ────────── HIGH-CONVERSION GATED GOLD BUTTON ────────── */
+.pro-unlock-btn.gold-edition {
+    background: linear-gradient(135deg, #ffe066 0%, #ffd700 50%, #cca100 100%);
+    color: #030508;
+    border: 1px solid #ffe680;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.15);
+}
+
+.pro-unlock-btn.gold-edition:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, #fff3b3 0%, #ffd700 50%, #e6b800 100%);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 
+                inset 0 0 8px rgba(255, 255, 255, 0.6); /* Premium inside glowing border shield */
+}
+
+.pro-unlock-btn.gold-edition:active {
+    transform: translateY(0);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+/* ────────── ADJUST TOP SCROLL PAD BUFFER ────────── */
+.main-workspace {
+    /* Shifts layout area further down to balance the new mid-tier ticker space */
+    padding: 136px 20px 96px 20px !important; 
+}
+
