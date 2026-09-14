@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <!-- Fixed to pure 16:9 Aspect Ratio Container -->
                         <div class="video-frame-view" style="position: relative; width: 100%; aspect-ratio: 16 / 9;">
                             <iframe 
-                                src="https://youtube.com" 
+                                src="https://youtube.com/embed/MaC4a4rzS_U" 
                                 title="BANKBUGS | FX Masterclass Lesson 1" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
