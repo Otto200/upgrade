@@ -276,3 +276,64 @@ body {
     width: 12px;
     height: 12px;
 }
+
+
+
+
+...login style....
+
+/* Back Button link layout */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    align-self: flex-start;
+}
+.back-link:hover, .back-link:active {
+    color: var(--glow-green);
+}
+.back-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Form Structural Alignment */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+.input-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.input-group input {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    color: var(--text-main);
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+.input-group input:focus {
+    outline: none;
+    border-color: var(--glow-green);
+}
+
+
