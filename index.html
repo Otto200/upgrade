@@ -3,49 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Mobile Dashboard</title>
+    <title>BANKBUGS|FX - Strategy Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app-container">
-        <!-- Profile Header -->
-        <header class="profile-header">
-            <div class="avatar">🚀</div>
-            <h1>Alex Developer</h1>
-            <p>Building things with HTML, CSS, & JS</p>
+        <!-- Hero Branding Header -->
+        <header class="trader-profile">
+            <div class="glow-avatar">
+                <!-- SVG Icon: Terminal Style Bug/Chart Matrix -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="4"></rect>
+                    <path d="M6 16l4-4 4 4 4-8"></path>
+                </svg>
+            </div>
+            <h1>BANKBUGS | FX</h1>
+            <p class="tagline">Founded by Otto Eric • Since 2021</p>
+            <div class="timeline-badge">Official TikTok Strategy App</div>
         </header>
 
-        <!-- Dynamic Content Card -->
-        <main class="content-card">
-            <div class="status-badge">
-                <!-- SVG Vector Icon: Shield/Check -->
+        <!-- Dynamic Strategy App Selector -->
+        <main class="strategy-card">
+            <h2>📈 The Blueprint Matrix</h2>
+            <p class="subtitle">Tap below to switch parameters between our Prop Firm Passing model and Live Broker execution algorithms.</p>
+            
+            <div class="tab-system">
+                <button class="tab-btn active" data-strategy="prop">Prop Firm Passing</button>
+                <button class="tab-btn" data-strategy="live">Live Execution</button>
+            </div>
+
+            <!-- Dynamic Display Box -->
+            <div id="strategyDisplay" class="display-box">
+                <!-- Content injected via JS -->
+            </div>
+
+            <!-- TikTok Directed Action Button -->
+            <a href="https://tiktok.com" target="_blank" class="cta-btn">
+                <span>Follow on TikTok</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                </svg>
+            </a>
+        </main>
+
+        <!-- Regional Trust Indicators -->
+        <footer class="proof-footer">
+            <div class="proof-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 </svg>
-                <span>Status: Available for hire</span>
+                <span>PNG Trusted</span>
             </div>
-            
-            <p class="description">Tap below to toggle a quick interactive greeting message.</p>
-            <button id="actionBtn" class="primary-btn">Say Hello</button>
-            <div id="messageBox" class="hidden"></div>
-        </main>
-
-        <!-- Navigation Links -->
-        <footer class="icon-nav">
-            <a href="https://github.com" class="nav-item" target="_blank" rel="noopener">
-                <!-- SVG Vector Icon: GitHub -->
+            <div class="proof-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 14 14"></polyline>
                 </svg>
-                <span>GitHub</span>
-            </a>
-            <a href="https://vercel.com" class="nav-item" target="_blank" rel="noopener">
-                <!-- SVG Vector Icon: Triangle (Vercel Style) -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polygon points="12 2 22 22 2 22"></polygon>
-                </svg>
-                <span>Vercel</span>
-            </a>
+                <span>5-Year Track</span>
+            </div>
         </footer>
     </div>
 
