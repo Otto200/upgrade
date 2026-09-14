@@ -9,48 +9,75 @@
 <body class="fintech-dashboard">
     <div class="dashboard-wrapper">
         
-        <!-- Premium Sidebar Component -->
-        <aside class="side-navigation">
-            <div class="sidebar-brand">
-                <div class="logo-mark">𝝮</div>
-                <h2>BANKBUGS<span>FX</span></h2>
+        <!-- ==========================================
+             STICKY DUAL-TIER TOP NAVIGATION SYSTEM
+             ========================================== -->
+        <div class="top-nav-container">
+            
+            <!-- TIER ONE: Brand & Gated Conversion -->
+            <div class="tier-one">
+                <div class="sidebar-brand">
+                    <div class="logo-mark">𝝮</div>
+                    <h2>BANKBUGS<span>FX</span></h2>
+                </div>
+                <button class="pro-unlock-btn" onclick="window.open('https://your-payment-link.com', '_blank')">
+                    Go Pro
+                </button>
             </div>
-            
-            <nav class="nav-links-stack">
-               
-                <button class="menu-tab-btn" data-view="strategy">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                    <span>LIQUIDITY Model</span>
-                </button>
-                 <button class="menu-tab-btn active" data-view="models">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM21 9H3M21 15H3M12 3v18"/></svg>
-                    <span>Core Concepts</span>
-                </button>
-                <button class="menu-tab-btn" data-view="mentorship">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7zM1 5h14v14H1V5z"/></svg>
-                    <span>Mentorship Library</span>
-                </button>
-                <button class="menu-tab-btn" data-view="setups">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-                    <span>Market Profile</span>
-                </button>
-                <button class="menu-tab-btn" data-view="executions">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    <span>Live Signals</span>
-                </button>
+
+            <!-- TIER TWO: Core Tab Mechanics -->
+            <nav class="tier-two-nav" aria-label="Terminal sections">
+                <button class="menu-tab-btn active" data-view="models">Trading Models</button>
+                <button class="menu-tab-btn" data-view="strategy">Core Strategy</button>
+                <button class="menu-tab-btn" data-view="mentorship">Mentorship Library</button>
+                <button class="menu-tab-btn" data-view="setups">Weekly Matrix</button>
+                <button class="menu-tab-btn" data-view="executions">Live Executions</button>
             </nav>
-            
-            
-        </aside>
 
-        <!-- Main Workspace Area -->
+        </div>
+
+        <!-- ==========================================
+             MAIN CONTENT WORKSPACE CANVAS
+             ========================================== -->
         <main class="main-workspace">
-
-            <!-- Dynamic Interactive Analytics Panel -->
             <section id="dynamicViewport" class="content-viewport-panel">
-                <!-- Content will swap instantly via JavaScript -->
+                <!-- Swapped instantly via JavaScript -->
             </section>
         </main>
+
+        <!-- ==========================================
+             LOCKED DUAL-TIER BOTTOM NAVIGATION BAR
+             ========================================== -->
+        <footer class="bottom-nav-lock">
+            <!-- BOTTOM TIER ONE: Section Title -->
+            <div class="bottom-tier-one">
+                <span>CFD Platforms</span>
+            </div>
+            
+            <!-- BOTTOM TIER TWO: Active Interactive Core Controls -->
+            <nav class="bottom-tier-two" aria-label="Utility sections">
+                <button class="bottom-nav-item menu-tab-btn" data-view="broker">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>Broker</span>
+                </button>
+                <button class="bottom-nav-item menu-tab-btn" data-view="trade">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+                    <span>Trade</span>
+                </button>
+                <button class="bottom-nav-item menu-tab-btn" data-view="analysis">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                    <span>Analysis</span>
+                </button>
+                <button class="bottom-nav-item menu-tab-btn" data-view="indicators">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <span>Indicators/EA</span>
+                </button>
+                <button class="bottom-nav-item menu-tab-btn" data-view="more">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                    <span>More</span>
+                </button>
+            </nav>
+        </footer>
         
     </div>
     <script src="dashboard.js"></script>
