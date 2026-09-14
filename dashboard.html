@@ -3,78 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BANKBUGS|FX - Trader Workspace</title>
+    <title>BANKBUGS | FX Terminal</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="app-container dashboard-layout">
-        <!-- Dashboard Navigation Header -->
-        <header class="dash-header">
-            <div class="user-greeting">
-                <span class="welcome-text">Welcome Back, Trader</span>
-                <h1 class="brand-title">BANKBUGS Matrix Workspace</h1>
+<body class="terminal-body">
+    <div class="terminal-container">
+        
+        <!-- Premium Terminal Header -->
+        <header class="term-header">
+            <div class="term-brand">
+                <span class="system-status-dot"></span>
+                <h1>BANKBUGS / MATRIX WORKSPACE</h1>
             </div>
-            <a href="index.html" class="logout-btn">
+            <a href="login.html" class="term-logout" title="Exit Terminal">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
                 </svg>
             </a>
         </header>
 
-        <!-- Master Matrix Target Progress Metrics -->
-        <section class="metrics-grid">
-            <div class="metric-card">
-                <span class="m-label">Prop Target</span>
-                <span class="m-val green">+8.0%</span>
-            </div>
-            <div class="metric-card">
-                <span class="m-label">Max Daily Risk</span>
-                <span class="m-val red">1.5%</span>
-            </div>
-            <div class="metric-card">
-                <span class="m-label">Model State</span>
-                <span class="m-val blue">Active</span>
-            </div>
+        <!-- Institutional Data Tape Metrics -->
+        <section class="ticker-tape">
+            <div class="tape-item"><span class="t-lbl">PROP OBJECTIVE</span><span class="t-val green">+8.00%</span></div>
+            <div class="tape-item"><span class="t-lbl">MAX DAILY RISK</span><span class="t-val red">1.50%</span></div>
+            <div class="tape-item"><span class="t-lbl">LIQUIDITY MODEL</span><span class="t-val status">STABLE</span></div>
         </section>
 
-        <!-- Interactive Core Syllabus Directory -->
-        <main class="strategy-card">
-            <h2>⚡ Ultimate Liquidity Model Playbook</h2>
-            <p class="subtitle">Select an executive portal section below to deploy setup files, rules, and chart mockups.</p>
+        <!-- Premium Workspace Stack Layout -->
+        <main class="workspace-wrapper">
+            
+            <!-- Sleek Horizontal Navigation Tab List -->
+            <nav class="workspace-nav" aria-label="Terminal sections">
+                <button class="nav-tab active" data-content="models">TRADING MODELS</button>
+                <button class="nav-tab" data-content="strategy">CONCEPTS</button>
+                <button class="nav-tab" data-content="mentorship">VIDEOS</button>
+                <button class="nav-tab" data-content="setups">WEEKLY SETUPS</button>
+                <button class="nav-tab" data-content="executions">LIVE DATA LOG</button>
+            </nav>
 
-            <!-- Categorized Navigation Matrix -->
-            <div class="dash-menu-grid">
-                <button class="menu-item active" data-content="models">
-                    <span>📐 Trading Models</span>
-                </button>
-                <button class="menu-item" data-content="strategy">
-                    <span>🎯 Full Strategy & Concepts</span>
-                </button>
-                <button class="menu-item" data-content="mentorship">
-                    <span>📺 Mentorship Videos</span>
-                </button>
-                <button class="menu-item" data-content="setups">
-                    <span>🔮 Weekly Setups & Recaps</span>
-                </button>
-                <button class="menu-item" data-content="executions">
-                    <span>🔥 Live Executions</span>
-                </button>
-            </div>
-
-            <!-- Dynamic Interactive Workspace Window -->
-            <div id="workspaceContent" class="workspace-viewport">
-                <!-- Content dynamically handled via JS -->
+            <!-- Dynamic Viewport Area -->
+            <div id="workspaceContent" class="terminal-viewport">
+                <!-- Content handled via dynamic JavaScript engine -->
             </div>
         </main>
 
-        <!-- External App Integration Sticky Dock -->
-        <footer class="dock-footer">
-            <span class="dock-title">Deploy Strategy Live on Platforms:</span>
-            <div class="dock-links">
-                <a href="https://tradingview.com" target="_blank" class="dock-btn tv">TradingView</a>
-                <a href="https://metatrader5.com" target="_blank" class="dock-btn mt5">MetaTrader 5</a>
+        <!-- Minimal Platform Routing Links -->
+        <footer class="terminal-footer">
+            <span class="footer-title">CROSS-PLATFORM DEPLOYMENT:</span>
+            <div class="footer-links">
+                <a href="https://tradingview.com" target="_blank" class="f-link">TRADINGVIEW</a>
+                <a href="https://metatrader5.com" target="_blank" class="f-link">METATRADER 5</a>
             </div>
         </footer>
+        
     </div>
 
     <script src="dashboard.js"></script>
