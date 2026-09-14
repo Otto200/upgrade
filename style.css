@@ -251,3 +251,28 @@ body {
     height: 18px;
     color: var(--glow-green);
 }
+
+
+/* Web Portal Entry Styling */
+.web-portal-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    margin-top: 14px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.web-portal-link:active, .web-portal-link:hover {
+    color: var(--glow-green);
+}
+
+.web-portal-link svg {
+    width: 12px;
+    height: 12px;
+}
