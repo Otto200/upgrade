@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <!-- 10-Lesson High-Density Video Grid -->
                 <div class="mentorship-video-grid">
                     
-                                        <!-- Video 1: Active Live Streaming Embed -->
+                    <!-- Video 1: Active Live Streaming Embed -->
                     <div class="video-matrix-card">
                         <div class="video-meta-top">
                             <span class="video-index">L01</span>
@@ -96,15 +96,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <h4>1. BANKBUGS|FX Liquidity Model - Intro </h4>
                         
-                        <!-- Fixed to pure 16:9 Aspect Ratio Container -->
-                        <div class="video-frame-view" style="position: relative; width: 100%; aspect-ratio: 32 / 18;">
+                        <!-- Outer Frame forced to rigid 16:9 widescreen parameters -->
+                        <div class="video-frame-view" style="width: 100%; height: auto; aspect-ratio: 16 / 9; overflow: hidden; background: #000; position: relative;">
                             <iframe 
                                 src="https://youtube.com/embed/MaC4a4rzS_U" 
                                 title="BANKBUGS | FX Masterclass Lesson 1" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 allowfullscreen 
-                                style="width:100%; height:100%; border:none; border-radius:6px; position:absolute; top:0; left:0;">
+                                style="width: 100%; height: 100%; aspect-ratio: 16 / 9; border: none; border-radius: 6px; display: block; position: absolute; top: 0; left: 0;">
                             </iframe>
                         </div>
                     </div>
