@@ -1,569 +1,266 @@
-/* Premium Fintech SaaS Architecture Theme */
+/* ==========================================================================
+   BANKBUGS | FX PREMIUM FINTECH SAAS TERMINAL LAYOUT
+   ========================================================================== */
 :root {
-    --app-bg: #0b0f17;
-    --sidebar-bg: #06090f;
-    --surface-glass: rgba(18, 24, 38, 0.4);
-    --border-subtle: rgba(255, 255, 255, 0.05);
-    --border-focus: rgba(255, 255, 255, 0.15);
+    --bg-main: #06090e;
+    --bg-nav: #0b0f17;
+    --surface-glass: rgba(18, 24, 38, 0.35);
+    --border-subtle: rgba(255, 255, 255, 0.04);
     
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-dark-muted: #475569;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --text-muted-dark: #484f58;
     
-    --fintech-emerald: #10b981;
-    --fintech-crimson: #ef4444;
-    --fintech-electric: #3b82f6;
+    --primary-neon: #00ff00;
+    --accent-blue: #58a6ff;
+    --premium-gold: #ffd700;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
-body.fintech-dashboard {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: var(--app-bg);
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-main);
     color: var(--text-primary);
-    min-height: 100vh;
-    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     overflow: hidden;
 }
 
 .dashboard-wrapper {
     display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
-/* Sidebar Styling Framework */
-.side-navigation {
-    width: 260px;
-    background-color: var(--sidebar-bg);
-    border-right: 1px solid var(--border-subtle);
+/* ────────── DUAL TIER STICKY TOP NAVIGATION ────────── */
+.top-nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-nav);
+    border-bottom: 1px solid var(--border-subtle);
     display: flex;
     flex-direction: column;
-    padding: 24px 16px;
+    z-index: 1000;
+}
+
+.tier-one {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 .sidebar-brand {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding-left: 8px;
-    margin-bottom: 32px;
+    gap: 10px;
 }
 
 .logo-mark {
-    background: linear-gradient(135deg, var(--fintech-electric), #8b5cf6);
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #161b22, #06090e);
+    border: 1px solid var(--border-subtle);
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 16px;
-    color: #fff;
+    font-size: 14px;
+    color: var(--primary-neon);
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
 }
 
 .sidebar-brand h2 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
 
 .sidebar-brand h2 span {
-    color: var(--fintech-electric);
+    color: var(--primary-neon);
     font-weight: 400;
-    margin-left: 2px;
 }
 
-.nav-links-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    flex-grow: 1;
+.pro-unlock-btn {
+    background: linear-gradient(135deg, #ffffff, #e2e8f0);
+    color: #06090e;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+    transition: all 0.2s ease;
 }
+
+.pro-unlock-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+.tier-two-nav {
+    display: flex;
+    padding: 0 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+.tier-two-nav::-webkit-scrollbar { display: none; }
 
 .menu-tab-btn {
-    display: flex;
-    align-items: center;
-    gap: 12px;
     background: transparent;
     border: none;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 14px 16px;
     color: var(--text-secondary);
-    font-size: 13px;
-    font-weight: 500;
-    text-align: left;
+    font-size: 12.5px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-.menu-tab-btn svg {
-    width: 16px;
-    height: 16px;
-    color: var(--text-dark-muted);
-    transition: color 0.2s;
+.tier-two-nav .menu-tab-btn {
+    border-bottom: 2px solid transparent;
+}
+.tier-two-nav .menu-tab-btn.active {
+    color: var(--primary-neon);
+    border-bottom-color: var(--primary-neon);
 }
 
-.menu-tab-btn:hover, .menu-tab-btn.active {
-    background-color: var(--surface-glass);
-    color: var(--text-primary);
-}
-
-.menu-tab-btn.active svg {
-    color: var(--fintech-electric);
-}
-
-.sidebar-footer {
-    border-top: 1px solid var(--border-subtle);
-    padding-top: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.user-pill {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.user-avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #1e293b;
-    border: 1px solid var(--border-focus);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    font-weight: 700;
-}
-
-.user-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.user-name { font-size: 13px; font-weight: 600; }
-.user-role { font-size: 11px; color: var(--text-dark-muted); }
-
-.logout-icon-btn { color: var(--text-dark-muted); }
-.logout-icon-btn:hover { color: var(--fintech-crimson); }
-.logout-icon-btn svg { width: 16px; height: 16px; }
-
-/* Main Content Structural Canvas */
+/* ────────── MAIN CONTENT WORKSPACE CANVAS ────────── */
 .main-workspace {
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 32px;
-    gap: 24px;
+    width: 100%;
+    /* Strict structural padding limits top and bottom views */
+    padding: 110px 20px 96px 20px;
     overflow-y: auto;
+    background-color: var(--bg-main);
 }
 
-.workspace-topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border-subtle);
-    padding-bottom: 24px;
-}
-
-.topbar-welcome span {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--text-dark-muted);
-    letter-spacing: 1px;
-}
-
-.topbar-welcome h2 {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-.live-ticker-cards {
-    display: flex;
-    gap: 12px;
-}
-
-.ticker-card {
-    background-color: var(--surface-glass);
-    border: 1px solid var(--border-subtle);
-    padding: 10px 16px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    min-width: 120px;
-}
-
-.card-lbl {
-    font-size: 9px;
-    font-weight: 700;
-    color: var(--text-secondary);
-    letter-spacing: 0.5px;
-    margin-bottom: 2px;
-}
-
-.card-val {
-    font-size: 13px;
-    font-weight: 700;
-    font-family: monospace;
-}
-.card-val.green { color: var(--fintech-emerald); }
-.card-val.pulsing {
-    color: var(--fintech-electric);
-    animation: flashGlow 2s infinite alternate;
-}
-
-/* Central Dynamic Presentation Window */
 .content-viewport-panel {
-    background: linear-gradient(180deg, var(--surface-glass), transparent);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, var(--surface-glass) 0%, transparent 100%);
     border: 1px solid var(--border-subtle);
     border-radius: 12px;
     padding: 24px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    min-height: calc(100vh - 230px);
 }
 
-.panel-block-layout h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 8px;
+/* Models Grid Layer */
+.models-fintech-grid, .mentorship-video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
 }
 
-.panel-block-layout p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    max-width: 600px;
-    margin-bottom: 24px;
+.model-visual-card, .video-matrix-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px;
 }
 
-/* Modern Visual Data Frame Box */
 .premium-mockup-frame {
     width: 100%;
-    flex-grow: 1;
-    min-height: 300px;
-    background-color: rgba(6, 9, 15, 0.6);
-    border: 1px solid var(--border-subtle);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    color: var(--text-dark-muted);
-    font-family: monospace;
-    font-size: 12px;
-    position: relative;
-    overflow: hidden;
-}
-
-.premium-mockup-frame::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(90deg, transparent 49%, rgba(255,255,255,0.01) 50%, transparent 51%),
-                linear-gradient(0deg, transparent 49%, rgba(255,255,255,0.01) 50%, transparent 51%);
-    background-size: 20px 20px;
-}
-
-.frame-action-btn {
-    background-color: var(--text-primary);
-    color: var(--sidebar-bg);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-family: sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    z-index: 1;
-}
-
-@keyframes flashGlow {
-    0% { opacity: 0.6; }
-    100% { opacity: 1; }
-}
-
-/* Responsive Adaptive State */
-@media (max-width: 768px) {
-    body.fintech-dashboard { flex-direction: column; overflow-y: auto; }
-    .dashboard-wrapper { flex-direction: column; height: auto; width: 100%; }
-    .side-navigation { width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border-subtle); }
-    .nav-links-stack { flex-direction: row; overflow-x: auto; padding-bottom: 8px; }
-    .main-workspace { padding: 16px; }
-    .workspace-topbar { flex-direction: column; align-items: flex-start; gap: 16px; }
-}
-
-
-
-
-
-/* ────────── MODEL CARDS MATRIX DISPLAY ENGINE ────────── */
-.models-fintech-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 Columns on PC/Tablets */
-    gap: 20px;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.model-visual-card {
-    background: rgba(255, 255, 255, 0.01);
-    border: 1px solid var(--border-subtle);
-    border-radius: 8px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.model-card-meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.model-id-tag {
-    font-family: monospace;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--primary-neon);
-    background: rgba(0, 255, 0, 0.05);
-    border: 1px solid rgba(0, 255, 0, 0.15);
-    padding: 2px 6px;
-    border-radius: 4px;
-}
-
-.model-visual-card h4 {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-/* Force the mockup window to preserve sizing ratios */
-.model-frame-view {
-    min-height: 220px !important;
-    height: 220px;
-    padding: 0 !important;
+    min-height: 220px;
     background-color: #030508;
-}
-
-/* Clean, crisp layout scaling for your charts */
-.workspace-pure-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Clips perfectly to card boundaries with zero distortion */
-    border-radius: 6px;
-    opacity: 0.95;
-    transition: opacity 0.2s ease;
-}
-
-.model-visual-card:hover .workspace-pure-img {
-    opacity: 1;
-}
-
-/* Mobile Screen Tuning: Collapse to single rows to prevent horizontal squishing */
-@media (max-width: 768px) {
-    .models-fintech-grid {
-        grid-template-columns: 1fr !important; /* Stack cleanly into 1 dense column on phone viewports */
-        gap: 16px;
-    }
-    .model-frame-view {
-        height: 180px;
-        min-height: 180px !important;
-    }
-}
-
-
-
-/* ────────── MENTORSHIP VIDEO DISPLAY SUBSYSTEM ────────── */
-.mentorship-video-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 Clean columns on desktop and tablets */
-    gap: 20px;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.video-matrix-card {
-    background: rgba(255, 255, 255, 0.01);
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
-    padding: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ────────── DUAL-TIER LOCKED BOTTOM NAVIGATION ────────── */
+.bottom-nav-lock {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-nav);
+    border-top: 1px solid var(--border-subtle);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    z-index: 1000;
 }
 
-.video-meta-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.video-index {
-    font-family: monospace;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--primary-neon);
-    background: rgba(0, 255, 0, 0.04);
-    border: 1px solid rgba(0, 255, 0, 0.12);
-    padding: 2px 6px;
-    border-radius: 4px;
-}
-
-.video-duration {
-    font-family: monospace;
-    font-size: 11px;
-    color: var(--text-secondary);
-}
-
-.video-matrix-card h4 {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--text-primary);
-    line-height: 1.3;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; /* Keeps long lesson strings compressed professionally */
-}
-
-/* Force media layers to maintain a high-end aspect ratio box */
-.video-frame-view {
-    min-height: 160px !important;
-    height: 160px;
-    background-color: #030507;
-    position: relative;
-    padding: 0 !important;
-}
-
-/* Glass UI Center Play Trigger Ring */
-.video-thumbnail-overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(180deg, transparent 40%, #030507 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.play-vector-icon {
-    width: 36px;
-    height: 36px;
-    color: var(--text-primary);
-    background: rgba(11, 15, 23, 0.7);
-    border: 1px solid var(--border-subtle);
-    border-radius: 50%;
-    padding: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-/* Interactive Hover State: Ignite the signature BANKBUGS green glow */
-.video-matrix-card:hover .play-vector-icon {
-    color: #000000;
-    background-color: var(--primary-neon);
-    border-color: var(--primary-neon);
-    box-shadow: 0 0 15px var(--primary-neon);
-    transform: scale(1.08);
-}
-
-.video-matrix-card:hover .video-thumbnail-overlay {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* Mobile Screen Tuning: Force columns down cleanly to maximize screen focus */
-@media (max-width: 768px) {
-    .mentorship-video-grid {
-        grid-template-columns: 1fr !important; /* Locks rows to 1 dense column stack on smartphones */
-        gap: 16px;
-    }
-    .video-frame-view {
-        height: 150px;
-        min-height: 150px !important;
-    }
-}
-
-
-
-
-/* ────────── FINTECH APPARATUS GATE PAYWALL ────────── */
-.gate-paywall-overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(6, 9, 15, 0.75) 0%, rgba(11, 15, 23, 0.9) 100%);
-    backdrop-filter: blur(4px); /* Creates the premium blurry frosted-glass effect over your video chart thumbnail */
-    -webkit-backdrop-filter: blur(4px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    z-index: 50;
-    padding: 16px;
+/* Bottom Tier One Header Label */
+.bottom-tier-one {
     text-align: center;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.lock-shield-badge {
-    background: rgba(255, 215, 0, 0.1);
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
+.bottom-tier-one span {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Bottom Tier Two Grid Layout */
+.bottom-tier-two {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+    padding: 6px 10px;
+    width: 100%;
 }
 
-.lock-shield-badge svg {
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    padding: 6px 0;
+    border-radius: 6px;
+}
+
+.bottom-nav-item svg {
     width: 18px;
     height: 18px;
-    color: var(--premium-gold); /* Shines corporate validation gold at the center of the video matrix */
+    color: var(--text-dark-muted);
+    transition: all 0.2s ease;
 }
 
-.lock-tier-text {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.bottom-nav-item span {
+    font-size: 10px;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-/* Solid high-conversion payment action route trigger button */
-.paywall-unlock-btn {
-    background: linear-gradient(135deg, #ffffff, #e2e8f0);
-    color: #06090e;
-    border: none;
-    padding: 8px 18px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-    transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+/* Global Navigation Toggle State Handling */
+.menu-tab-btn.active {
+    color: var(--primary-neon) !important;
+}
+.menu-tab-btn.active svg {
+    color: var(--primary-neon) !important;
+    filter: drop-shadow(0 0 4px rgba(0,255,0,0.3));
 }
 
-.paywall-unlock-btn:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
-    background: #ffffff;
-}
-
-.paywall-unlock-btn:active {
-    transform: scale(0.98);
+/* ────────── RESPONSIVE MOBILE ADJUSTMENTS ────────── */
+@media (max-width: 768px) {
+    .models-fintech-grid, .mentorship-video-grid { grid-template-columns: 1fr; }
+    .main-workspace { padding: 116px 12px 104px 12px; }
 }
