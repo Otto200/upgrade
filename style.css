@@ -337,3 +337,167 @@ body {
 }
 
 
+
+
+......dashboard workspace......
+
+/* Dashboard Workspace Architecture Extensions */
+.dashboard-layout {
+    max-width: 440px;
+    gap: 16px;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.welcome-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.brand-title {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.logout-btn {
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.logout-btn:hover { color: #ff4444; }
+.logout-btn svg { width: 20px; height: 20px; }
+
+/* Metrics Panels */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 11fr);
+    gap: 10px;
+}
+
+.metric-card {
+    background: var(--card-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px 8px;
+    text-align: center;
+}
+
+.m-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.m-val { font-weight: 700; font-size: 14px; }
+.m-val.green { color: var(--glow-green); }
+.m-val.red { color: #ff4444; }
+.m-val.blue { color: var(--accent-blue); }
+
+/* Grid Navigation Controls */
+.dash-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 11fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.menu-item {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.menu-item.active {
+    background: rgba(0, 230, 118, 0.08);
+    border-color: var(--glow-green);
+    color: var(--text-main);
+}
+
+/* Dynamic Content Display Field */
+.workspace-viewport {
+    background: rgba(9, 13, 22, 0.8);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 16px;
+    text-align: left;
+    min-height: 220px;
+}
+
+.content-block h3 {
+    font-size: 15px;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.content-block p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 130px;
+    background: #1e293b;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+/* Execution Sticky Platform Bar */
+.dock-footer {
+    background: var(--card-dark);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.dock-title {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.dock-links { display: flex; gap: 8px; }
+.dock-btn {
+    flex: 1;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+}
+.dock-btn.tv { background: #2962ff; }
+.dock-btn.mt5 { background: #007cff; }
+
+
