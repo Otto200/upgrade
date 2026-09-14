@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANKBUGS|FX - Web Portal Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Back Navigation to main page -->
+        <a href="index.html" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Back to Steps</span>
+        </a>
+
+        
+        <header class="trader-profile">
+            <div class="glow-avatar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="4"></rect>
+                    <path d="M6 16l4-4 4 4 4-8"></path>
+                </svg>
+            </div>
+            <h1>BANKBUGS | FX</h1>
+            <p class="tagline">Strategy Web Portal Access</p>
+        </header>
+
+        <!-- Login Form Module -->
+        <main class="strategy-card">
+            <h2>🔐 Authorized Member Sign-In</h2>
+            <p class="subtitle">Enter your strategy credentials to unlock setup feeds, live execution checklists, and matrix algorithms.</p>
+            
+            <form id="loginForm" class="login-form">
+                <div class="input-group">
+                    <label for="username">Student ID / Email</label>
+                    <input type="text" id="username" placeholder="e.g., eric@bankbugsfx.com" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="step-cta-btn master-btn">
+                    <span>Unlock Matrix access</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </button>
+            </form>
+        </main>
+
+        <!-- Interactive Portal Alert Node -->
+        <div id="loginFeedback" class="hidden-panel"></div>
+
+        <!-- Regional Trust Indicators -->
+        <footer class="proof-footer">
+            <div class="proof-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>SSL Secured</span>
+            </div>
+            <div class="proof-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>PNG Verified</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Inline JavaScript for quick local client handling
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const feedback = document.getElementById('loginFeedback');
+            
+            feedback.className = "visible-panel";
+            feedback.style.borderColor = "#ff4444";
+            feedback.style.background = "rgba(255, 68, 68, 0.1)";
+            feedback.innerHTML = `
+                <strong>⚠️ Authentication System Error:</strong><br>
+                Database connection refused. Ensure your account verification via Otto Eric on TikTok is complete before using the web app portal.
+            `;
+            feedback.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
