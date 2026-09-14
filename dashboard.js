@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         strategy: `
             <div class="panel-block-layout">
                 <h3>PRIME Model</h3>
-                <p>The 5 Trading models that I Share are derived from Our PRIME model here. We have one Main Liquidity Model but the way it appears in Live markets are observed in 5 derived models of the Prime Model. Spotting them in live market isthe skill that will set you for the rest of your life.</p>
+                <p>The 5 Trading models that I Share are derived from Our PRIME model here. We have one Main Liquidity Model but the way it appears in Live markets are observed in 5 derived models of the Prime Model. Spotting them in live market is the SKILL that will set you for the rest of your life.</p>
                 <div class="premium-mockup-frame">
                     <span class="frame-meta-status">// SYSTEM_CHECKLIST_DATA_LOG</span>
                     <button class="frame-action-btn" onclick="alert('Pre-Trade checklist array loaded.')">Open Strategy Checklist</button>
