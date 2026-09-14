@@ -88,26 +88,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 <!-- 10-Lesson High-Density Video Grid -->
                 <div class="mentorship-video-grid">
                     
-                    <!-- Video 1: Active Live Streaming Embed -->
-                    <div class="video-matrix-card">
+                                       <!-- Video 1: Gated Premium Lock Frame -->
+                    <div class="video-matrix-card premium-locked-state">
                         <div class="video-meta-top">
                             <span class="video-index">L01</span>
                             <span class="video-duration">10:00</span>
                         </div>
                         <h4>1. BANKBUGS|FX Liquidity Model - Intro </h4>
                         
-                        <!-- Outer Frame forced to rigid 16:9 widescreen parameters -->
+                        <!-- Widescreen Frame with Integrated Payment Paywall Wrapper -->
                         <div class="video-frame-view" style="width: 100%; height: auto; aspect-ratio: 16 / 9; overflow: hidden; background: #000; position: relative;">
+                            
+                            <!-- 1. The Real Live Video Player Layer (Visible behind the glass screen) -->
                             <iframe 
                                 src="https://youtube.com/embed/MaC4a4rzS_U" 
                                 title="BANKBUGS | FX Masterclass Lesson 1" 
                                 frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen 
-                                style="width: 100%; height: 100%; aspect-ratio: 16 / 9; border: none; border-radius: 6px; display: block; position: absolute; top: 0; left: 0;">
+                                style="width: 100%; height: 100%; aspect-ratio: 16 / 9; border: none; border-radius: 6px; display: block; position: absolute; top: 0; left: 0; pointer-events: none;">
                             </iframe>
+
+                            <!-- 2. Premium Fintech Paywall Shield Overlay -->
+                            <div class="gate-paywall-overlay">
+                                <div class="lock-shield-badge">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                </div>
+                                <span class="lock-tier-text">Premium Strategy Masterclass</span>
+                                <button class="paywall-unlock-btn" onclick="window.open('https://your-payment-link.com', '_blank')">
+                                    Unlock Course Access
+                                </button>
+                            </div>
+
                         </div>
                     </div>
+
 
 
                     <!-- Video 2: Keep current preview states for remaining clips until uploaded -->
