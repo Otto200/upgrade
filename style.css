@@ -86,7 +86,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Strategy Container Card */
+/* Roadmap Container Card */
 .strategy-card {
     background: var(--card-dark);
     border: 1px solid var(--border-color);
@@ -104,90 +104,126 @@ body {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.4;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
-/* Interactive Tabs */
-.tab-system {
+/* Sequential Step Nodes */
+.steps-container {
     display: flex;
-    background: #090d16;
-    padding: 4px;
-    border-radius: 10px;
-    gap: 4px;
-    margin-bottom: 16px;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.tab-btn {
-    flex: 1;
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
+.step-node {
+    border-left: 2px solid var(--border-color);
+    padding-left: 16px;
+    position: relative;
 }
 
-.tab-btn.active {
-    background: var(--card-dark);
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.step-number {
+    position: absolute;
+    left: -13px;
+    top: -2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--bg-dark);
+    border: 2px solid var(--accent-blue);
     color: var(--text-main);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    border: 1px solid var(--border-color);
-}
-
-/* Content display panel */
-.display-box {
-    background: rgba(9, 13, 22, 0.6);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 20px;
-    min-height: 140px;
-}
-
-.data-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.03);
-    font-size: 13px;
-}
-
-.data-row:last-child {
-    border-bottom: none;
-}
-
-.label { color: var(--text-muted); }
-.val { font-weight: 600; color: var(--text-main); }
-.val.green { color: var(--glow-green); }
-
-/* Main CTA Button */
-.cta-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.step-node h3 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.step-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+/* Clean Step Action Buttons */
+.step-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     width: 100%;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.partner-btn {
+    background: rgba(37, 99, 235, 0.1);
+    color: #60a5fa;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.partner-btn:active { background: rgba(37, 99, 235, 0.2); }
+
+.dual-btn-row {
+    display: flex;
+    gap: 8px;
+}
+
+.step-cta-btn.secondary {
+    background: #1e293b;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.step-cta-btn.secondary:active { background: #334155; }
+
+.master-btn {
     background: linear-gradient(135deg, #00e676, #00b0ff);
     color: #000;
-    text-decoration: none;
-    padding: 14px;
+    box-shadow: 0 4px 12px rgba(0, 230, 118, 0.2);
+}
+
+.master-btn:active { opacity: 0.9; }
+
+.step-cta-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Success panel popup container */
+.hidden-panel { display: none; }
+.visible-panel {
+    background: rgba(0, 230, 118, 0.1);
+    border: 1px solid var(--glow-green);
+    color: var(--text-main);
     border-radius: 12px;
-    font-weight: 700;
-    font-size: 15px;
-    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.25);
-    transition: transform 0.1s ease;
+    padding: 14px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.4;
+    animation: slideUp 0.3s ease;
 }
 
-.cta-btn:active {
-    transform: scale(0.98);
-}
-
-.cta-btn svg {
-    width: 18px;
-    height: 18px;
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Proof indicators footer */
