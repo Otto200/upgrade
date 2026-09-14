@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <!-- Update the Lesson 1 Video Frame inside dashboard.js to look like this -->
 <div class="video-frame-view" style="position: relative; width: 100%; height: 160px;">
     <iframe 
-        src="https://youtube.com" 
+        src="https://youtube.com/embed/MaC4a4rzS_U" 
         title="BANKBUGS | FX Masterclass Lesson 1" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
