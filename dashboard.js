@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h4>1. BANKBUGS|FX Liquidity Model - Intro </h4>
                         
                         <!-- Fixed to pure 16:9 Aspect Ratio Container -->
-                        <div class="video-frame-view" style="position: relative; width: 100%; aspect-ratio: 16 / 9;">
+                        <div class="video-frame-view" style="position: relative; width: 100%; aspect-ratio: 32 / 18;">
                             <iframe 
                                 src="https://youtube.com/embed/MaC4a4rzS_U" 
                                 title="BANKBUGS | FX Masterclass Lesson 1" 
