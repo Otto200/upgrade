@@ -84,9 +84,161 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="panel-block-layout">
                 <h3>PREMIUM MENTORSHIP LIBRARY</h3>
                 <p>High-end institutional educational modules. Master algorithmic order flow delivery windows, session time constraints, and premium vs discount equilibrium matrices.</p>
-                <div class="premium-mockup-frame">
-                    <span class="frame-meta-status">// SECURE_STREAM_INTERFACE_CONNECTED</span>
-                    <button class="frame-action-btn" onclick="alert('Media stream starting...')">Launch Video Portal</button>
+                
+                <!-- 10-Lesson High-Density Video Grid -->
+                <div class="mentorship-video-grid">
+                    
+                    <!-- Video 1 -->
+                    <div class="video-matrix-card">
+                        <div class="video-meta-top">
+                            <span class="video-index">L01</span>
+                            <span class="video-duration">12:45</span>
+                        </div>
+                        <h4>1. Algorithmic Price Delivery Intro</h4>
+                        <div class="premium-mockup-frame video-frame-view">
+                            <!-- VIDEO INTEGRATION SLOT: Replace src or keep thumbnail placeholder -->
+                            <div class="video-thumbnail-overlay">
+                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <span class="frame-meta-status">// SECURE_STREAM_01</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="video-matrix-card">
+                        <div class="video-meta-top">
+                            <span class="video-index">L02</span>
+                            <span class="video-duration">18:20</span>
+                        </div>
+                        <h4>2. HTF Liquidity Pool Identification</h4>
+                        <div class="premium-mockup-frame video-frame-view">
+                            <div class="video-thumbnail-overlay">
+                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <span class="frame-meta-status">// SECURE_STREAM_02</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="video-matrix-card">
+                        <div class="video-meta-top">
+                            <span class="video-index">L03</span>
+                            <span class="video-duration">14:15</span>
+                        </div>
+                        <h4>3. Macro vs Micro Time Windows</h4>
+                        <div class="premium-mockup-frame video-frame-view">
+                            <div class="video-thumbnail-overlay">
+                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <span class="frame-meta-status">// SECURE_STREAM_03</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div class="video-matrix-card">
+                        <div class="video-meta-top">
+                            <span class="video-index">L04</span>
+                            <span class="video-duration">22:05</span>
+                        </div>
+                        <h4>4. The Core Liquidity Purge Setup</h4>
+                        <div class="premium-mockup-frame video-frame-view">
+                            <div class="video-thumbnail-overlay">
+                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <span class="frame-meta-status">// SECURE_STREAM_04</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 5 -->
+                    <div class="video-matrix-card">
+                        <div class="video-meta-top">
+                            <span class="video-index">L05</span>
+                            <span class="video-duration">16:40</span>
+                        </div>
+                        <h4>5. Tracking the Internal M5 MSS</h4>
+                        <div class="premium-mockup-frame video-frame-view">
+                            <div class="video-thumbnail-overlay">
+                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <span class="frame-meta-status">// SECURE_STREAM_05</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 6 -->
+                    <div class="video-matrix-card">
+                        <div class="video-meta-top">
+                            <span class="video-index">L06</span>
+                            <span class="video-duration">19:10</span>
+                        </div>
+                        <h4>6. Execution Above the CHoCH High</h4>
+                        <div class="premium-mockup-frame video-frame-view">
+                            <div class="video-thumbnail-overlay">
+                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <span class="frame-meta-status">// SECURE_STREAM_06</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 7 -->
+                    <div class="video-matrix-card">
+                        <div class="video-meta-top">
+                            <span class="video-index">L07</span>
+                            <span class="video-duration">15:55</span>
+                        </div>
+                        <h4>7. Turtle Soup Entry Safeguards</h4>
+                        <div class="premium-mockup-frame video-frame-view">
+                            <div class="video-thumbnail-overlay">
+                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <span class="frame-meta-status">// SECURE_STREAM_07</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 8 -->
+                    <div class="video-matrix-card">
+                        <div class="video-meta-top">
+                            <span class="video-index">L08</span>
+                            <span class="video-duration">25:30</span>
+                        </div>
+                        <h4>8. Premium & Discount Mathematics</h4>
+                        <div class="premium-mockup-frame video-frame-view">
+                            <div class="video-thumbnail-overlay">
+                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <span class="frame-meta-status">// SECURE_STREAM_08</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 9 -->
+                    <div class="video-matrix-card">
+                        <div class="video-meta-top">
+                            <span class="video-index">L09</span>
+                            <span class="video-duration">13:20</span>
+                        </div>
+                        <h4>9. Algorithmic Position Sizing</h4>
+                        <div class="premium-mockup-frame video-frame-view">
+                            <div class="video-thumbnail-overlay">
+                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <span class="frame-meta-status">// SECURE_STREAM_09</span>
+                        </div>
+                    </div>
+
+                    <!-- Video 10 -->
+                    <div class="video-matrix-card">
+                        <div class="video-meta-top">
+                            <span class="video-index">L10</span>
+                            <span class="video-duration">31:12</span>
+                        </div>
+                        <h4>10. Complete Prop Evaluation Flow</h4>
+                        <div class="premium-mockup-frame video-frame-view">
+                            <div class="video-thumbnail-overlay">
+                                <svg class="play-vector-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <span class="frame-meta-status">// SECURE_STREAM_10</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         `,
