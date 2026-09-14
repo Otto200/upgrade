@@ -7,10 +7,66 @@ document.addEventListener('DOMContentLoaded', () => {
         models: `
             <div class="panel-block-layout">
                 <h3>BANKBUGS FX LIQUIDITY MODELS</h3>
-                <p>Track algorithmic bank manipulation matrices. Monitor higher timeframe pools, expansion impulses, and internal liquidity distribution ranges safely before deploying trade execution capital.</p>
-                <div class="premium-mockup-frame">
-                    <span class="frame-meta-status">// METRIC_ASSET_GRID_PENDING_LOAD</span>
-                    <button class="frame-action-btn" onclick="alert('Ecosystem chart template initialized.')">Load Liquidity Matrix Map</button>
+                <p>Track wholesale asset manipulation cycles natively. These 5 core proprietary algorithmic models map high-timeframe pool sweeps and internal liquidity distribution ranges before you execute on MT5.</p>
+                
+                <!-- 5 Models Premium Grid Matrix -->
+                <div class="models-fintech-grid">
+                    
+                    <!-- Model 1 -->
+                    <div class="model-visual-card">
+                        <div class="model-card-meta">
+                            <span class="model-id-tag">M1</span>
+                            <h4>Liquidity Purge Model</h4>
+                        </div>
+                        <div class="premium-mockup-frame model-frame-view">
+                            <img src="img/model1.webp" alt="BANKBUGS Model 1" class="workspace-pure-img" onerror="this.parentElement.innerHTML='<span class=\\'frame-meta-status\\'>// MODEL_1_MISSING_IN_REPO</span>'">
+                        </div>
+                    </div>
+
+                    <!-- Model 2 -->
+                    <div class="model-visual-card">
+                        <div class="model-card-meta">
+                            <span class="model-id-tag">M2</span>
+                            <h4>Internal MSS Shift</h4>
+                        </div>
+                        <div class="premium-mockup-frame model-frame-view">
+                            <img src="img/model2.webp" alt="BANKBUGS Model 2" class="workspace-pure-img" onerror="this.parentElement.innerHTML='<span class=\\'frame-meta-status\\'>// MODEL_2_MISSING_IN_REPO</span>'">
+                        </div>
+                    </div>
+
+                    <!-- Model 3 -->
+                    <div class="model-visual-card">
+                        <div class="model-card-meta">
+                            <span class="model-id-tag">M3</span>
+                            <h4>Premium / Discount Matrix</h4>
+                        </div>
+                        <div class="premium-mockup-frame model-frame-view">
+                            <img src="img/model3.webp" alt="BANKBUGS Model 3" class="workspace-pure-img" onerror="this.parentElement.innerHTML='<span class=\\'frame-meta-status\\'>// MODEL_3_MISSING_IN_REPO</span>'">
+                        </div>
+                    </div>
+
+                    <!-- Model 4 -->
+                    <div class="model-visual-card">
+                        <div class="model-card-meta">
+                            <span class="model-id-tag">M4</span>
+                            <h4>HTF Pool Sweeps</h4>
+                        </div>
+                        <div class="premium-mockup-frame model-frame-view">
+                            <img src="img/model4.webp" alt="BANKBUGS Model 4" class="workspace-pure-img" onerror="this.parentElement.innerHTML='<span class=\\'frame-meta-status\\'>// MODEL_4_MISSING_IN_REPO</span>'">
+                        </div>
+                    </div>
+
+                    <!-- Model 5 -->
+                    <div class="model-visual-card">
+                        <div class="model-card-meta">
+                            <span class="model-id-tag">M5</span>
+                            <h4>Turtle Soup Blueprint</h4>
+                        </div>
+                        <div class="premium-mockup-frame model-frame-view">
+                            <img src="img/model5.webp" alt="BANKBUGS Model 5" class="workspace-pure-img" onerror="this.parentElement.innerHTML='<span class=\\'frame-meta-status\\'>// MODEL_5_MISSING_IN_REPO</span>'">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         `,
@@ -62,16 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Direct interface navigation event cycle loop
     menuTabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            // Demolish past active styles from the layout buttons list
             menuTabs.forEach(btn => btn.classList.remove('active'));
-            
-            // Apply signature active layout styles to the selected button
             tab.classList.add('active');
-
-            // Extraction router match
             const viewKey = tab.getAttribute('data-view');
-            
-            // Swap display content with a micro-fade entrance cycle refresh
             dynamicViewport.innerHTML = terminalViews[viewKey];
         });
     });
