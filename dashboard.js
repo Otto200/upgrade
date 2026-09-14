@@ -95,17 +95,18 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="video-duration">10:00</span>
                         </div>
                         <h4>1. BANKBUGS|FX Liquidity Model - Intro </h4>
-                        <div class="video-frame-view">
-                            <!-- ⚡ REPLACE 'YOUR_VIDEO_ID_HERE' WITH YOUR ACTUAL YOUTUBE VIDEO ID -->
-                            <iframe 
-                                src="https://youtu.be/MaC4a4rzS_U" 
-                                title="BANKBUGS|FX Liquidity Model Lesson 1" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen 
-                                style="width:100%; height:100%; border:none; border-radius:6px; position:absolute; top:0; left:0;">
-                            </iframe>
-                        </div>
+                        <!-- Update the Lesson 1 Video Frame inside dashboard.js to look like this -->
+<div class="video-frame-view" style="position: relative; width: 100%; height: 160px;">
+    <iframe 
+        src="https://youtube.com" 
+        title="BANKBUGS | FX Masterclass Lesson 1" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen 
+        style="width:100%; height:100%; border:none; border-radius:6px; position:absolute; top:0; left:0;">
+    </iframe>
+</div>
+
                     </div>
 
                     <!-- Video 2: Keep current preview states for remaining clips until uploaded -->
