@@ -254,8 +254,8 @@ document.addEventListener('DOMContentLoaded', () => {
         `,
         executions: `
             <div class="panel-block-layout">
-                <h3>LIVE TRANSACTION EXECUTION DATA</h3>
-                <p>Review absolute verified real histories. Study execution prints, lot-allocation tracking variables, and historical withdrawal statements achieved natively from right here in PNG.</p>
+                <h3>LIVE EXECUTABLE ALERTS HERE</h3>
+                <p>Here you get live Signals Everyday on pairs we are Watching. You can Trade with our signals using our prime Strategy on Demo until you are confident enough to execute it on live.</p>
                 <div class="premium-mockup-frame">
                     <span class="frame-meta-status">// TRANSACTION_HISTORY_LEDGER_VERIFIED</span>
                     <button class="frame-action-btn" onclick="alert('Downloading transaction record statement.')">Download Verified Ledger (PDF)</button>
