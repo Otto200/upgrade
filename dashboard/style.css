@@ -304,3 +304,83 @@ body.fintech-dashboard {
     .main-workspace { padding: 16px; }
     .workspace-topbar { flex-direction: column; align-items: flex-start; gap: 16px; }
 }
+
+
+
+
+
+/* ────────── MODEL CARDS MATRIX DISPLAY ENGINE ────────── */
+.models-fintech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns on PC/Tablets */
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.model-visual-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.model-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.model-id-tag {
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary-neon);
+    background: rgba(0, 255, 0, 0.05);
+    border: 1px solid rgba(0, 255, 0, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.model-visual-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Force the mockup window to preserve sizing ratios */
+.model-frame-view {
+    min-height: 220px !important;
+    height: 220px;
+    padding: 0 !important;
+    background-color: #030508;
+}
+
+/* Clean, crisp layout scaling for your charts */
+.workspace-pure-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Clips perfectly to card boundaries with zero distortion */
+    border-radius: 6px;
+    opacity: 0.95;
+    transition: opacity 0.2s ease;
+}
+
+.model-visual-card:hover .workspace-pure-img {
+    opacity: 1;
+}
+
+/* Mobile Screen Tuning: Collapse to single rows to prevent horizontal squishing */
+@media (max-width: 768px) {
+    .models-fintech-grid {
+        grid-template-columns: 1fr !important; /* Stack cleanly into 1 dense column on phone viewports */
+        gap: 16px;
+    }
+    .model-frame-view {
+        height: 180px;
+        min-height: 180px !important;
+    }
+}
