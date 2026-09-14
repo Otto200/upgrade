@@ -1,56 +1,71 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('.nav-tab');
-    const displayWindow = document.getElementById('workspaceContent');
+    const menuTabs = document.querySelectorAll('.menu-tab-btn');
+    const dynamicViewport = document.getElementById('dynamicViewport');
 
-    const libraryData = {
+    const appViews = {
         models: `
-            <div class="pane-block">
-                <h3>BANKBUGS LIQUIDITY MODELS</h3>
-                <p>Advanced tracking frameworks mapping high-timeframe pool sweeps. Designed strictly to execute precision trade entries on structural expansion phases.</p>
-                <div class="image-canvas">[ SYSTEM CHART CANVAS ]</div>
+            <div class="panel-block-layout">
+                <h3>Bankbugs FX Liquidity Models</h3>
+                <p>Track wholesale asset manipulation cycles natively. Identify high-timeframe order block structural mitigation windows before execution.</p>
+                <div class="premium-mockup-frame">
+                    <span>// GRAPHIC_METRIC_ASSET_LOAD_PENDING</span>
+                    <button class="frame-action-btn">Expand Full Chart Model</button>
+                </div>
             </div>
         `,
         strategy: `
-            <div class="pane-block">
-                <h3>FULL STRATEGY & CONCEPTUAL RULES</h3>
-                <p>Proprietary institutional risk frameworks tailored directly for structural prop evaluations and raw ECN execution parameters.</p>
-                <div class="image-canvas">[ CHECKLIST MATRIX MAP ]</div>
+            <div class="panel-block-layout">
+                <h3>Ultimate Prop Firm Strategy Matrix</h3>
+                <p>The operational checklist verified to pass prop risk structures without breaching maximum trailing drawdown boundaries.</p>
+                <div class="premium-mockup-frame">
+                    <span>// STRATEGY_CONCEPTS_CHECKLIST_RULES</span>
+                    <button class="frame-action-btn">View Setup Parameters</button>
+                </div>
             </div>
         `,
         mentorship: `
-            <div class="pane-block">
-                <h3>MENTORSHIP COMPENDIUM</h3>
-                <p>Algorithmic system documentation modules covering core narrative mechanics and order flow delivery models.</p>
-                <div class="image-canvas">[ MEDIA COMPONENT INTERFACE ]</div>
+            <div class="panel-block-layout">
+                <h3>Structured Mentorship Video Feed</h3>
+                <p>High-definition continuous educational streaming detailing institutional liquidity tracking rules.</p>
+                <div class="premium-mockup-frame">
+                    <span>// STREAM_VIDEO_PLAYER_INTERFACE</span>
+                    <button class="frame-action-btn">Launch Video Library</button>
+                </div>
             </div>
         `,
         setups: `
-            <div class="pane-block">
-                <h3>WEEKLY ANALYSIS ARCHIVE</h3>
-                <p>Current weekly directional forecast vectors, premium range definitions, and complete algorithmic trade recaps.</p>
-                <div class="image-canvas">[ TECHNICAL FORWARD MARKUP ]</div>
+            <div class="panel-block-layout">
+                <h3>Weekly Forecast & Setup Vectors</h3>
+                <p>Live technical trend projections across major pairs mapped out before Monday market openings.</p>
+                <div class="premium-mockup-frame">
+                    <span>// WEEKLY_MARKUP_DATA_FEED</span>
+                    <button class="frame-action-btn">Open TradingView Chart Layout</button>
+                </div>
             </div>
         `,
         executions: `
-            <div class="pane-block">
-                <h3>LIVE DATA EXECUTION LOG</h3>
-                <p>Verified account trade processing parameters, entry execution screenshots, and real-time ledger accounting details.</p>
-                <div class="image-canvas">[ HIGH RESOLUTION TRANSACTION LEDGER ]</div>
+            <div class="panel-block-layout">
+                <h3>Live Transaction Ledger & Recaps</h3>
+                <p>A historical ledger showcasing execution entries matched directly with broker withdrawal histories.</p>
+                <div class="premium-mockup-frame">
+                    <span>// TRANSACTION_HISTORY_LOG_VERIFIED</span>
+                    <button class="frame-action-btn">Download PDF Ledger</button>
+                </div>
             </div>
         `
     };
 
-    // Render baseline profile
-    displayWindow.innerHTML = libraryData.models;
+    // Set initial frame viewport
+    dynamicViewport.innerHTML = appViews.models;
 
     // Direct interface navigation event cycle
-    tabs.forEach(tab => {
+    menuTabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
+            menuTabs.forEach(btn => btn.classList.remove('active'));
             tab.classList.add('active');
 
-            const indexKey = tab.getAttribute('data-content');
-            displayWindow.innerHTML = libraryData[indexKey];
+            const viewKey = tab.getAttribute('data-view');
+            dynamicViewport.innerHTML = appViews[viewKey];
         });
     });
 });
