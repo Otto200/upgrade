@@ -3,61 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BANKBUGS | FX Terminal</title>
-    <link rel="stylesheet" href="dashboard/style.css">
+    <title>BANKBUGS | Premium FX Workspace</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="terminal-body">
-    <div class="terminal-container">
+<body class="fintech-dashboard">
+    <div class="dashboard-wrapper">
         
-        <!-- Premium Terminal Header -->
-        <header class="term-header">
-            <div class="term-brand">
-                <span class="system-status-dot"></span>
-                <h1>BANKBUGS / MATRIX WORKSPACE</h1>
+        <!-- Premium Sidebar Component -->
+        <aside class="side-navigation">
+            <div class="sidebar-brand">
+                <div class="logo-mark">𝝮</div>
+                <h2>BANKBUGS<span>FX</span></h2>
             </div>
-            <a href="login.html" class="term-logout" title="Exit Terminal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
-                </svg>
-            </a>
-        </header>
-
-        <!-- Institutional Data Tape Metrics -->
-        <section class="ticker-tape">
-            <div class="tape-item"><span class="t-lbl">PROP OBJECTIVE</span><span class="t-val green">+8.00%</span></div>
-            <div class="tape-item"><span class="t-lbl">MAX DAILY RISK</span><span class="t-val red">1.50%</span></div>
-            <div class="tape-item"><span class="t-lbl">LIQUIDITY MODEL</span><span class="t-val status">STABLE</span></div>
-        </section>
-
-        <!-- Premium Workspace Stack Layout -->
-        <main class="workspace-wrapper">
             
-            <!-- Sleek Horizontal Navigation Tab List -->
-            <nav class="workspace-nav" aria-label="Terminal sections">
-                <button class="nav-tab active" data-content="models">TRADING MODELS</button>
-                <button class="nav-tab" data-content="strategy">CONCEPTS</button>
-                <button class="nav-tab" data-content="mentorship">VIDEOS</button>
-                <button class="nav-tab" data-content="setups">WEEKLY SETUPS</button>
-                <button class="nav-tab" data-content="executions">LIVE DATA LOG</button>
+            <nav class="nav-links-stack">
+                <button class="menu-tab-btn active" data-view="models">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM21 9H3M21 15H3M12 3v18"/></svg>
+                    <span>Trading Models</span>
+                </button>
+                <button class="menu-tab-btn" data-view="strategy">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    <span>Core Strategy</span>
+                </button>
+                <button class="menu-tab-btn" data-view="mentorship">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7zM1 5h14v14H1V5z"/></svg>
+                    <span>Mentorship Library</span>
+                </button>
+                <button class="menu-tab-btn" data-view="setups">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                    <span>Weekly Matrix</span>
+                </button>
+                <button class="menu-tab-btn" data-view="executions">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span>Live Executions</span>
+                </button>
             </nav>
-
-            <!-- Dynamic Viewport Area -->
-            <div id="workspaceContent" class="terminal-viewport">
-                <!-- Content handled via dynamic JavaScript engine -->
+            
+            <div class="sidebar-footer">
+                <div class="user-pill">
+                    <div class="user-avatar">OE</div>
+                    <div class="user-info">
+                        <span class="user-name">Otto Eric</span>
+                        <span class="user-role">Founder</span>
+                    </div>
+                </div>
+                <a href="login.html" class="logout-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+                </a>
             </div>
+        </aside>
+
+        <!-- Main Workspace Area -->
+        <main class="main-workspace">
+            
+            <!-- Global Analytics Topbar -->
+            <header class="workspace-topbar">
+                <div class="topbar-welcome">
+                    <span>OVERVIEW</span>
+                    <h2>Liquidity Delivery Network</h2>
+                </div>
+                
+                <div class="live-ticker-cards">
+                    <div class="ticker-card">
+                        <span class="card-lbl">PROP PHASES</span>
+                        <span class="card-val green">COMPLIANT</span>
+                    </div>
+                    <div class="ticker-card">
+                        <span class="card-lbl">MAX RISK CAP</span>
+                        <span class="card-val">1.50%</span>
+                    </div>
+                    <div class="ticker-card">
+                        <span class="card-lbl">LIVE ALGO STATE</span>
+                        <span class="card-val pulsing">ONLINE</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dynamic Interactive Analytics Panel -->
+            <section id="dynamicViewport" class="content-viewport-panel">
+                <!-- Content will swap instantly via JavaScript -->
+            </section>
         </main>
-
-        <!-- Minimal Platform Routing Links -->
-        <footer class="terminal-footer">
-            <span class="footer-title">CROSS-PLATFORM DEPLOYMENT:</span>
-            <div class="footer-links">
-                <a href="https://tradingview.com" target="_blank" class="f-link">TRADINGVIEW</a>
-                <a href="https://metatrader5.com" target="_blank" class="f-link">METATRADER 5</a>
-            </div>
-        </footer>
         
     </div>
-
     <script src="dashboard.js"></script>
 </body>
 </html>
