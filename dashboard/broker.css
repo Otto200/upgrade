@@ -128,31 +128,54 @@
     font-weight: 700;
 }
 
-/* Fixes the button container element width constraints */
-.broker-ib-cta-group {
-    display: flex;
-    justify-content: flex-start; /* Keeps the button cleanly justified to the left */
+/* ────────── CENTERED GREEN FINTECH CTA ENGINE ────────── */
+.broker-centered-cta-container {
     width: 100%;
-    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
 }
 
-/* Constrains the actual action button anchor tag element */
-.broker-action-anchor.primary {
-    display: inline-flex;
+.broker-action-anchor.green-filled-master {
+    background: #00e676 !important; /* Solid high-visibility green fill */
+    color: #030508 !important;       /* Deep dark text layout */
+    font-weight: 800 !important;
+    font-size: 13.5px !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 32px !important;  /* Wider horizontal sizing padding */
+    border-radius: 8px !important;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;                  /* Prevents the button block from going full width */
-    min-width: 200px;             /* Enforces a firm baseline touch-target geometry */
-    max-width: 280px;             /* Keeps the element compact across large display windows */
-    padding: 12px 24px;
-    border-radius: 8px;           /* Gives your primary actions a polished dashboard radius */
-    white-space: nowrap;          /* Forces the link phrase onto one strict horizontal line */
+    gap: 8px;
+    width: auto !important;         /* Shrinks width so button stays tightly grouped and centered */
+    min-width: 240px;
+    box-shadow: 0 4px 20px rgba(0, 230, 118, 0.3) !important;
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
 
-/* Adjusts the directional SVG icon spacing inside the primary anchor layout block */
-.broker-action-anchor.primary svg {
-    width: 18px;
-    height: 18px;
-    margin-left: 8px;             /* Separates your typography string clean away from the arrow asset */
-    flex-shrink: 0;               /* Ensures structural compression never deforms the directional layout icon */
+/* Highly Interactive Hover/Active Translation Physics */
+.broker-action-anchor.green-filled-master:hover {
+    transform: translateY(-2px) scale(1.03) !important; /* Gentle pop out scaling transition */
+    box-shadow: 0 8px 25px rgba(0, 230, 118, 0.5) !important; /* Intense neon ignition glow */
+    background: #00ff88 !important; /* Slight spectrum color shift on hover focus */
+}
+
+.broker-action-anchor.green-filled-master:active {
+    transform: translateY(0) scale(0.98) !important;   /* Compression feel when clicked */
+    box-shadow: 0 4px 12px rgba(0, 230, 118, 0.2) !important;
+}
+
+.broker-action-anchor.green-filled-master svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 3px !important; /* Thicker vector icon styling for crisp visual weight */
+    transition: transform 0.2s ease;
+}
+
+.broker-action-anchor.green-filled-master:hover svg {
+    transform: translateX(3px); /* Interactive nudge arrow indicator movement */
 }
