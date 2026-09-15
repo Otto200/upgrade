@@ -1,0 +1,82 @@
+/* ==========================================================================
+   BANKBUGS | FX ECOSYSTEM LANDING PAGE THEME OVERRIDE FOR DASHBOARD
+   ========================================================================== */
+
+/* 1. Sync Core Theme Typography & Colors from index.html */
+:root {
+    /* Base Color Tokens matching landing page standard */
+    --bg-dark: #090d16;             /* Deep rich dark blue-slate core background */
+    --card-dark: #121824;           /* Solid card surface layer */
+    --border-color: #1f293d;        /* Precision layout boundary line */
+    --text-main: #f8fafc;           /* Crisp primary font reading color */
+    --text-muted: #94a3b8;          /* Low-priority secondary typography line */
+    
+    /* Branding Accent Highlights */
+    --glow-green: #00e676;          /* High-voltage green identity signature tint */
+    --accent-blue: #2563eb;         /* Institutional blue badge identifier */
+    --btn-gradient-start: #00e676;
+    --btn-gradient-end: #00b0ff;
+}
+
+/* 2. Enforce Master Font Consistency across Entire Terminal Viewport */
+body.fintech-dashboard, 
+body.fintech-dashboard *,
+.menu-tab-btn, 
+.panel-block-layout h3,
+.pro-unlock-btn {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Roboto, "Segoe UI", sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 3. Apply the Signature Landing Page Glow Avatar Style */
+.top-nav-container .logo-mark {
+    background: linear-gradient(135deg, #1e293b, #0f172a) !important;
+    border: 2px solid var(--glow-green) !important;
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.25) !important;
+    color: var(--glow-green) !important;
+    transition: all 0.3s ease;
+}
+
+/* 4. Overwrite Active Top & Bottom Button Lighting States */
+.menu-tab-btn.active {
+    color: var(--glow-green) !important;
+}
+
+.tier-two-nav .menu-tab-btn.active {
+    border-bottom-color: var(--glow-green) !important;
+}
+
+.menu-tab-btn.active svg,
+.bottom-nav-item.menu-tab-btn.active svg {
+    color: var(--glow-green) !important;
+    filter: drop-shadow(0 0 6px rgba(0, 230, 118, 0.4)) !important;
+}
+
+/* 5. Upgrade Gated Action Buttons to Match Landing Page Master Button Style */
+.frame-action-btn,
+.paywall-unlock-btn {
+    background: linear-gradient(135deg, var(--btn-gradient-start), var(--btn-gradient-end)) !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.25) !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.frame-action-btn:hover,
+.paywall-unlock-btn:hover {
+    transform: translateY(-1px) scale(1.02) !important;
+    box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4) !important;
+    opacity: 0.95;
+}
+
+/* 6. Standardize Dynamic Content Workspace Panels */
+.content-viewport-panel {
+    background: linear-gradient(180deg, rgba(18, 24, 38, 0.6) 0%, transparent 100%) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.premium-mockup-frame {
+    background-color: var(--bg-dark) !important;
+    border: 1px solid var(--border-color) !important;
+}
