@@ -1,0 +1,178 @@
+/* ==========================================================================
+   BANKBUGS | FX ECOSYSTEM - ISOLATED BROKER COUPLING INTERFACE
+   ========================================================================== */
+
+.broker-viewport {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Premium Card Module */
+.broker-hero-banner {
+    background: linear-gradient(135deg, rgba(18, 24, 38, 0.8) 0%, rgba(6, 9, 15, 0.9) 100%);
+    border: 1px solid var(--border-color, #1f293d);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.broker-hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(0, 230, 118, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.broker-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.broker-badge {
+    background: rgba(0, 230, 118, 0.08);
+    border: 1px solid rgba(0, 230, 118, 0.2);
+    color: var(--glow-green, #00e676);
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* Institutional Performance Tape */
+.broker-stat-tape {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding-top: 16px;
+}
+
+.broker-stat-card {
+    text-align: center;
+}
+
+.broker-stat-lbl {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted, #94a3b8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.broker-stat-val {
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-main, #f8fafc);
+}
+
+.broker-stat-val.highlight {
+    color: var(--glow-green, #00e676);
+}
+
+/* PNG Localized Requirements Block */
+.png-integration-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.png-requirement-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-color, #1f293d);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.png-requirement-card h4 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-main, #f8fafc);
+    border-left: 2px solid var(--glow-green, #00e676);
+    padding-left: 8px;
+}
+
+.png-requirement-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.png-requirement-card li {
+    font-size: 12.5px;
+    color: var(--text-muted, #94a3b8);
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.png-requirement-card li::before {
+    content: '•';
+    color: var(--glow-green, #00e676);
+    font-weight: 700;
+}
+
+/* Big Interactive CTA */
+.broker-master-cta {
+    width: 100%;
+    background: linear-gradient(135deg, #00e676, #00b0ff);
+    color: #030508;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.2);
+    transition: all 0.2s ease;
+}
+
+.broker-master-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 230, 118, 0.35);
+}
+
+.broker-master-cta svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Adaptive Media Adjustments */
+@media (max-width: 768px) {
+    .png-integration-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .broker-stat-tape {
+        gap: 6px;
+    }
+    .broker-stat-val {
+        font-size: 11px;
+    }
+}
