@@ -168,25 +168,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-    // Add this helper style router within your existing tabs listener processing cycle loop:
-    allMenuTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            allMenuTabs.forEach(btn => btn.classList.remove('active'));
-            tab.classList.add('active');
-
-            const viewKey = tab.getAttribute('data-view');
-            
-            // ⚡ DYNAMIC BROKER CSS ENGINE TRIGGER GUARD
-            if (viewKey === 'broker') {
-                if (!document.getElementById('broker-stylesheet-guard')) {
-                    const cssLink = document.createElement('link');
-                    cssLink.id = 'broker-stylesheet-guard';
-                    cssLink.rel = 'stylesheet';
-                    cssLink.href = 'dashboard/broker.css';
-                    document.head.appendChild(cssLink);
-                }
-            }
-            
-            dynamicViewport.innerHTML = terminalViews[viewKey];
-        });
-    });
+    
