@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // NEW UTILITY BOTTOM NAVBAR ITEMS
                // UPDATED ACTIVE BROKER PORTAL INTERFACE VIEW
-               // ADVANCED FINTECH INVESTMENT BANKING (IB) BROKER VIEW LAYOUT
+                       // UPDATED FINTECH IB BROKER WORKSPACE (REVISED REQUIREMENT MATRIX)
         broker: `
             <div class="broker-viewport">
                 <div class="broker-premium-container">
@@ -66,42 +66,52 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
 
-                    <!-- Fintech Illustration Specs Grid Matrix -->
+                    <!-- Clean Premium Content Grid Matrix -->
                     <div class="broker-specs-matrix">
                         
-                        <!-- Funding Channel -->
+                        <!-- Section 1: Broker Requirements -->
                         <div class="matrix-illustration-card">
                             <div class="matrix-vector-aside">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                             </div>
                             <div class="matrix-info-content">
-                                <h4>PNG Card Processing Rails</h4>
-                                <p>Optimized directly to accept personal credit or debit cards from BSP and Kina Bank. Settlement channels register wallet allocations instantly on checkout verification.</p>
+                                <h4>Broker Requirements</h4>
+                                <ul style="list-style: none; margin-top: 6px; padding: 0; display: flex; flex-direction: column; gap: 4px;">
+                                    <li style="font-size: 12.5px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
+                                        <span style="color: var(--glow-green);">✓</span> Valid ID (NID, Passport, Drivers License)
+                                    </li>
+                                    <li style="font-size: 12.5px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
+                                        <span style="color: var(--glow-green);">✓</span> Bank Visa Card
+                                    </li>
+                                    <li style="font-size: 12.5px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
+                                        <span style="color: var(--glow-green);">✓</span> Email
+                                    </li>
+                                    <li style="font-size: 12.5px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
+                                        <span style="color: var(--glow-green);">✓</span> Phone Number
+                                    </li>
+                                </ul>
                             </div>
                         </div>
 
-                        <!-- KYC Verification -->
+                        <!-- Section 2: Withdrawal and Deposit -->
                         <div class="matrix-illustration-card">
                             <div class="matrix-vector-aside">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
                             </div>
                             <div class="matrix-info-content">
-                                <h4>Institutional KYC Audit</h4>
-                                <p>Upload standard PNG government identity documents (NID card, passport, or driver's license). Compliance verification loops securely clear profiles within 24 hours.</p>
+                                <h4>Withdrawal and Deposit</h4>
+                                <p style="margin-top: 6px;">
+                                    All transactions are processed directly via Visa Card.
+                                </p>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- Gated Conversion Claim Banner -->
-                    <div class="ecosystem-claim-banner">
-                        <p>💡 <span>Ecosystem Promo Activated:</span> Register a live trading account using the verified access link below to automatically secure free access tokens to the locked BANKBUGS premium playback dashboard matrix.</p>
-                    </div>
-
-                    <!-- Master Deployment Action Button Links -->
+                    <!-- Master Deployment Action Button Link -->
                     <div class="broker-ib-cta-group">
-                        <a href="https://ic.com" target="_blank" class="broker-action-anchor primary">
-                            <span>Open IC Account</span>
+                        <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="broker-action-anchor primary">
+                            <span>SIGN UP WITH IC NOW</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
                     </div>
@@ -109,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `,
+
 
         trade: `
             <div class="panel-block-layout">
