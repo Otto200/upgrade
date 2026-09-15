@@ -1,178 +1,169 @@
 /* ==========================================================================
-   BANKBUGS | FX ECOSYSTEM - ISOLATED BROKER COUPLING INTERFACE
+   BANKBUGS | FX ECOSYSTEM - PREMIUM FINTECH IB BROKER WORKSPACE
    ========================================================================== */
-
 .broker-viewport {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
     width: 100%;
 }
 
-/* Premium Card Module */
-.broker-hero-banner {
-    background: linear-gradient(135deg, rgba(18, 24, 38, 0.8) 0%, rgba(6, 9, 15, 0.9) 100%);
+/* Master Single-Card Layout Wrapper */
+.broker-premium-container {
+    background: rgba(18, 24, 38, 0.25);
     border: 1px solid var(--border-color, #1f293d);
     border-radius: 12px;
     padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
     position: relative;
+}
+
+/* ────────── HORIZONTAL SLIDING BANNER CAROUSEL ────────── */
+.broker-carousel-viewport {
+    width: 100%;
+    aspect-ratio: 970 / 250; /* Preserves professional 970x250 image dimensions */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
     overflow: hidden;
+    position: relative;
+    background: #020508;
 }
 
-.broker-hero-banner::before {
-    content: '';
-    position: absolute;
-    top: -50%; left: -50%; width: 200%; height: 200%;
-    background: radial-gradient(circle, rgba(0, 230, 118, 0.03) 0%, transparent 70%);
-    pointer-events: none;
-}
-
-.broker-title-row {
+.broker-carousel-track {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
+    width: 300%; /* Spans 3 banners horizontally */
+    height: 100%;
+    animation: brokerAutoSlide 18s cubic-bezier(0.85, 0, 0.15, 1) infinite;
 }
 
-.broker-badge {
-    background: rgba(0, 230, 118, 0.08);
-    border: 1px solid rgba(0, 230, 118, 0.2);
-    color: var(--glow-green, #00e676);
-    font-family: monospace;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 4px;
-    letter-spacing: 0.5px;
+.broker-banner-slide {
+    width: 100.333%;
+    height: 100%;
+    position: relative;
 }
 
-/* Institutional Performance Tape */
-.broker-stat-tape {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    padding-top: 16px;
+.broker-banner-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.broker-stat-card {
-    text-align: center;
+/* Seamless Stepped Transform Interpolator */
+@keyframes brokerAutoSlide {
+    0%, 28%   { transform: translateX(0); }
+    33%, 61%  { transform: translateX(-33.333%); }
+    66%, 94%  { transform: translateX(-66.666%); }
+    100%      { transform: translateX(0); }
 }
 
-.broker-stat-lbl {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--text-muted, #94a3b8);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: block;
-    margin-bottom: 2px;
-}
-
-.broker-stat-val {
-    font-family: monospace;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text-main, #f8fafc);
-}
-
-.broker-stat-val.highlight {
-    color: var(--glow-green, #00e676);
-}
-
-/* PNG Localized Requirements Block */
-.png-integration-grid {
+/* ────────── FINTECH GRID ILLUSTRATION CARDS ────────── */
+.broker-specs-matrix {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 }
 
-.png-requirement-card {
-    background: rgba(255, 255, 255, 0.01);
-    border: 1px solid var(--border-color, #1f293d);
+.matrix-illustration-card {
+    background: rgba(6, 9, 15, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.02);
     border-radius: 8px;
-    padding: 16px;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    gap: 16px;
+    align-items: flex-start;
 }
 
-.png-requirement-card h4 {
-    font-size: 13.5px;
+.matrix-vector-aside {
+    background: rgba(0, 230, 118, 0.03);
+    border: 1px solid rgba(0, 230, 118, 0.1);
+    border-radius: 8px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.matrix-vector-aside svg {
+    width: 20px;
+    height: 20px;
+    color: var(--glow-green, #00e676);
+}
+
+.matrix-info-content h4 {
+    font-size: 14px;
     font-weight: 700;
     color: var(--text-main, #f8fafc);
-    border-left: 2px solid var(--glow-green, #00e676);
-    padding-left: 8px;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
 }
 
-.png-requirement-card ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.png-requirement-card li {
+.matrix-info-content p {
     font-size: 12.5px;
-    color: var(--text-muted, #94a3b8);
-    line-height: 1.4;
-    display: flex;
-    align-items: flex-start;
-    gap: 6px;
+    color: var(--text-secondary, #8b949e);
+    line-height: 1.5;
+    margin: 0;
 }
 
-.png-requirement-card li::before {
-    content: '•';
+/* Gated Ecosystem Callout Banner */
+.ecosystem-claim-banner {
+    background: linear-gradient(90deg, rgba(0, 230, 118, 0.04) 0%, transparent 100%);
+    border-left: 3px solid var(--glow-green, #00e676);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+}
+
+.ecosystem-claim-banner p {
+    font-size: 12.5px;
+    color: var(--text-main, #f8fafc);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.ecosystem-claim-banner span {
     color: var(--glow-green, #00e676);
     font-weight: 700;
 }
 
-/* Big Interactive CTA */
-.broker-master-cta {
-    width: 100%;
-    background: linear-gradient(135deg, #00e676, #00b0ff);
-    color: #030508;
-    border: none;
-    border-radius: 8px;
-    padding: 14px;
-    font-size: 14px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    cursor: pointer;
+/* Master Action Button Links */
+.broker-ib-cta-group {
+    display: flex;
+    gap: 12px;
+}
+
+.broker-action-anchor {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.2);
+    letter-spacing: 0.5px;
     transition: all 0.2s ease;
 }
 
-.broker-master-cta:hover {
+.broker-action-anchor.primary {
+    background: linear-gradient(135deg, #00e676, #00b0ff);
+    color: #030508;
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.2);
+}
+
+.broker-action-anchor.primary:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 20px rgba(0, 230, 118, 0.35);
 }
 
-.broker-master-cta svg {
-    width: 16px;
-    height: 16px;
-}
-
-/* Adaptive Media Adjustments */
+/* Mobile Responsiveness Adaptive Adjustments */
 @media (max-width: 768px) {
-    .png-integration-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    .broker-stat-tape {
-        gap: 6px;
-    }
-    .broker-stat-val {
-        font-size: 11px;
-    }
+    .broker-specs-matrix { grid-template-columns: 1fr; gap: 12px; }
+    .matrix-illustration-card { padding: 16px; }
+    .broker-ib-cta-group { flex-direction: column; gap: 10px; }
 }
