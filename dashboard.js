@@ -149,24 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render default startup dashboard layout view
     dynamicViewport.innerHTML = terminalViews.models;
 
-    // Cross-Tab routing cycle hook
-    allMenuTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Clear active lighting tokens from ALL buttons across top and bottom layers
-            allMenuTabs.forEach(btn => btn.classList.remove('active'));
-            
-            // Set active focus on the target click path element
-            tab.classList.add('active');
-
-            // Pull view identification parameter value string
-            const TargetKey = tab.getAttribute('data-view');
-            
-            // Swap core center viewport matrix data panels instantly
-            dynamicViewport.innerHTML = terminalViews[TargetKey];
-        });
-    });
-});
-
 
     // Add this helper style router within your existing tabs listener processing cycle loop:
     allMenuTabs.forEach(tab => {
