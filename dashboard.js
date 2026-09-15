@@ -45,15 +45,69 @@ document.addEventListener('DOMContentLoaded', () => {
         `,
 
         // NEW UTILITY BOTTOM NAVBAR ITEMS
+               // UPDATED ACTIVE BROKER PORTAL INTERFACE VIEW
         broker: `
-            <div class="panel-block-layout">
-                <h3>IC MARKETS BROKER ENVIRONMENT</h3>
-                <p>Connect your active terminal layout to your raw spread ECN liquidity account parameters. Ensure your execution feeds reflect optimized institution pricing tiers.</p>
-                <div class="premium-mockup-frame">
-                    <button class="frame-action-btn" onclick="window.open('https://icmarkets.com', '_blank')">Launch IC Markets Client Desk</button>
+            <div class="broker-viewport">
+                <!-- Hero Broker Info Layout -->
+                <div class="broker-hero-banner">
+                    <div class="broker-title-row">
+                        <h3>IC Markets Global Architecture</h3>
+                        <span class="broker-badge">RAW SPREAD ECN</span>
+                    </div>
+                    <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5; margin: 0;">
+                        The foundational liquidity infrastructure selected to handle execution loops within the BANKBUGS Ecosystem. Raw ECN connections feed true interbank spreads directly into your trading desks.
+                    </p>
+                    
+                    <!-- Performance Tapes -->
+                    <div class="broker-stat-tape">
+                        <div class="broker-stat-card">
+                            <span class="broker-stat-lbl">Base Spread</span>
+                            <span class="broker-stat-val highlight">0.0 Pips</span>
+                        </div>
+                        <div class="broker-stat-card">
+                            <span class="broker-stat-lbl">Latency Speed</span>
+                            <span class="broker-stat-val">&lt; 1.0ms</span>
+                        </div>
+                        <div class="broker-stat-card">
+                            <span class="broker-stat-lbl">Regulation</span>
+                            <span class="broker-stat-val">ASIC / FSA</span>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- PNG Grid Layout Framework -->
+                <div class="png-integration-grid">
+                    <!-- Local Bank Handling Card -->
+                    <div class="png-requirement-card">
+                        <h4>🇵🇬 PNG Bank Funding</h4>
+                        <ul>
+                            <li>Supports BSP & Kina Bank Visa Cards for secure online card deposits.</li>
+                            <li>Instant deposit processing straight into your live wallet layer.</li>
+                            <li>Suggested baseline capital start: $100 USD to defend drawdowns.</li>
+                        </ul>
+                    </div>
+
+                    <!-- KYC Check Verification Card -->
+                    <div class="png-requirement-card">
+                        <h4>🛡️ KYC Onboarding Proofs</h4>
+                        <ul>
+                            <li>Primary Identity: Clear photo of NID Card, Passport, or Driver's License.</li>
+                            <li>Address Validation: Bank statement summary showing your matched full name.</li>
+                            <li>Fast Track: Approvals route completely within 24-hours for verification.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Strategic Conversion Action Anchor Link -->
+                <a href="https://ic.com" target="_blank" class="broker-master-cta">
+                    <span>Open Verified Trading Account</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
             </div>
         `,
+
         trade: `
             <div class="panel-block-layout">
                 <h3>METATRADER 5 GATEWAY INTERFACE</h3>
@@ -112,3 +166,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+    // Add this helper style router within your existing tabs listener processing cycle loop:
+    allMenuTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            allMenuTabs.forEach(btn => btn.classList.remove('active'));
+            tab.classList.add('active');
+
+            const viewKey = tab.getAttribute('data-view');
+            
+            // ⚡ DYNAMIC BROKER CSS ENGINE TRIGGER GUARD
+            if (viewKey === 'broker') {
+                if (!document.getElementById('broker-stylesheet-guard')) {
+                    const cssLink = document.createElement('link');
+                    cssLink.id = 'broker-stylesheet-guard';
+                    cssLink.rel = 'stylesheet';
+                    cssLink.href = 'dashboard/broker.css';
+                    document.head.appendChild(cssLink);
+                }
+            }
+            
+            dynamicViewport.innerHTML = terminalViews[viewKey];
+        });
+    });
