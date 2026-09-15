@@ -46,65 +46,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // NEW UTILITY BOTTOM NAVBAR ITEMS
                // UPDATED ACTIVE BROKER PORTAL INTERFACE VIEW
+               // ADVANCED FINTECH INVESTMENT BANKING (IB) BROKER VIEW LAYOUT
         broker: `
             <div class="broker-viewport">
-                <!-- Hero Broker Info Layout -->
-                <div class="broker-hero-banner">
-                    <div class="broker-title-row">
-                        <h3>IC Markets Global Architecture</h3>
-                        <span class="broker-badge">RAW SPREAD ECN</span>
-                    </div>
-                    <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5; margin: 0;">
-                        The foundational liquidity infrastructure selected to handle execution loops within the BANKBUGS Ecosystem. Raw ECN connections feed true interbank spreads directly into your trading desks.
-                    </p>
+                <div class="broker-premium-container">
                     
-                    <!-- Performance Tapes -->
-                    <div class="broker-stat-tape">
-                        <div class="broker-stat-card">
-                            <span class="broker-stat-lbl">Base Spread</span>
-                            <span class="broker-stat-val highlight">0.0 Pips</span>
-                        </div>
-                        <div class="broker-stat-card">
-                            <span class="broker-stat-lbl">Latency Speed</span>
-                            <span class="broker-stat-val">&lt; 1.0ms</span>
-                        </div>
-                        <div class="broker-stat-card">
-                            <span class="broker-stat-lbl">Regulation</span>
-                            <span class="broker-stat-val">ASIC / FSA</span>
+                    <!-- 970x250 Automated Slider Carousel Viewport -->
+                    <div class="broker-carousel-viewport">
+                        <div class="broker-carousel-track">
+                            <div class="broker-banner-slide">
+                                <img src="img/banner1.webp" alt="IC Markets Infrastructure" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://w3.org\\' width=\\'970\\' height=\\'250\\' style=\\'background:%23050811;\\'><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23484f58\\' font-family=\\'sans-serif\\' font-size=\\'14\\' text-anchor=\\'middle\\'>// BANNER_1_LOAD_PENDING</text></svg>';">
+                            </div>
+                            <div class="broker-banner-slide">
+                                <img src="img/banner2.webp" alt="Raw ECN Liquidity Metrics" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://w3.org\\' width=\\'970\\' height=\\'250\\' style=\\'background:%23050811;\\'><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23484f58\\' font-family=\\'sans-serif\\' font-size=\\'14\\' text-anchor=\\'middle\\'>// BANNER_2_LOAD_PENDING</text></svg>';">
+                            </div>
+                            <div class="broker-banner-slide">
+                                <img src="img/banner3.webp" alt="Algorithmic Order Processing" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://w3.org\\' width=\\'970\\' height=\\'250\\' style=\\'background:%23050811;\\'><text x=\\'50%\\' y=\\'50%\\' fill=\\'%23484f58\\' font-family=\\'sans-serif\\' font-size=\\'14\\' text-anchor=\\'middle\\'>// BANNER_3_LOAD_PENDING</text></svg>';">
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Fintech Illustration Specs Grid Matrix -->
+                    <div class="broker-specs-matrix">
+                        
+                        <!-- Funding Channel -->
+                        <div class="matrix-illustration-card">
+                            <div class="matrix-vector-aside">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            </div>
+                            <div class="matrix-info-content">
+                                <h4>PNG Card Processing Rails</h4>
+                                <p>Optimized directly to accept personal credit or debit cards from BSP and Kina Bank. Settlement channels register wallet allocations instantly on checkout verification.</p>
+                            </div>
+                        </div>
+
+                        <!-- KYC Verification -->
+                        <div class="matrix-illustration-card">
+                            <div class="matrix-vector-aside">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            </div>
+                            <div class="matrix-info-content">
+                                <h4>Institutional KYC Audit</h4>
+                                <p>Upload standard PNG government identity documents (NID card, passport, or driver's license). Compliance verification loops securely clear profiles within 24 hours.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Gated Conversion Claim Banner -->
+                    <div class="ecosystem-claim-banner">
+                        <p>💡 <span>Ecosystem Promo Activated:</span> Register a live trading account using the verified access link below to automatically secure free access tokens to the locked BANKBUGS premium playback dashboard matrix.</p>
+                    </div>
+
+                    <!-- Master Deployment Action Button Links -->
+                    <div class="broker-ib-cta-group">
+                        <a href="https://ic.com" target="_blank" class="broker-action-anchor primary">
+                            <span>Open IC Account</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
                 </div>
-
-                <!-- PNG Grid Layout Framework -->
-                <div class="png-integration-grid">
-                    <!-- Local Bank Handling Card -->
-                    <div class="png-requirement-card">
-                        <h4>🇵🇬 PNG Bank Funding</h4>
-                        <ul>
-                            <li>Supports BSP & Kina Bank Visa Cards for secure online card deposits.</li>
-                            <li>Instant deposit processing straight into your live wallet layer.</li>
-                            <li>Suggested baseline capital start: $100 USD to defend drawdowns.</li>
-                        </ul>
-                    </div>
-
-                    <!-- KYC Check Verification Card -->
-                    <div class="png-requirement-card">
-                        <h4>🛡️ KYC Onboarding Proofs</h4>
-                        <ul>
-                            <li>Primary Identity: Clear photo of NID Card, Passport, or Driver's License.</li>
-                            <li>Address Validation: Bank statement summary showing your matched full name.</li>
-                            <li>Fast Track: Approvals route completely within 24-hours for verification.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Strategic Conversion Action Anchor Link -->
-                <a href="https://ic.com" target="_blank" class="broker-master-cta">
-                    <span>Open Verified Trading Account</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
             </div>
         `,
 
