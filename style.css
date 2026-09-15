@@ -337,4 +337,18 @@ body {
 }
 
 
+/* Custom image formatting rules inside the neon glow avatar container */
+.glow-avatar {
+    overflow: hidden; /* Clips the image edges perfectly to form a neat circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Forces the graphic asset to fill the space cleanly with zero squishing */
+    border-radius: 50%;
+}
 
