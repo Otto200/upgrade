@@ -44,9 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `,
 
-        // NEW UTILITY BOTTOM NAVBAR ITEMS
-               // UPDATED ACTIVE BROKER PORTAL INTERFACE VIEW
-                       // UPDATED FINTECH IB BROKER WORKSPACE (REVISED REQUIREMENT MATRIX)
+               // UPDATED FINTECH IB BROKER WORKSPACE (CENTERED PREMIUM GREEN CTA)
         broker: `
             <div class="broker-viewport">
                 <div class="broker-premium-container">
@@ -78,16 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <h4>Broker Requirements</h4>
                                 <ul style="list-style: none; margin-top: 6px; padding: 0; display: flex; flex-direction: column; gap: 4px;">
                                     <li style="font-size: 12.5px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
-                                        <span style="color: var(--glow-green);">✓</span> Valid ID (NID, Passport, Drivers License)
+                                        <span style="color: var(--glow-green, #00e676);">✓</span> Valid ID (NID, Passport, Drivers License)
                                     </li>
                                     <li style="font-size: 12.5px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
-                                        <span style="color: var(--glow-green);">✓</span> Bank Visa Card
+                                        <span style="color: var(--glow-green, #00e676);">✓</span> Bank Visa Card
                                     </li>
                                     <li style="font-size: 12.5px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
-                                        <span style="color: var(--glow-green);">✓</span> Email
+                                        <span style="color: var(--glow-green, #00e676);">✓</span> Email
                                     </li>
                                     <li style="font-size: 12.5px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
-                                        <span style="color: var(--glow-green);">✓</span> Phone Number
+                                        <span style="color: var(--glow-green, #00e676);">✓</span> Phone Number
                                     </li>
                                 </ul>
                             </div>
@@ -100,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <div class="matrix-info-content">
                                 <h4>Withdrawal and Deposit</h4>
-                                <p style="margin-top: 6px;">
+                                <p style="margin-top: 6px; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
                                     All transactions are processed directly via Visa Card.
                                 </p>
                             </div>
@@ -108,9 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     </div>
 
-                    <!-- Master Deployment Action Button Link -->
-                    <div class="broker-ib-cta-group">
-                        <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="broker-action-anchor primary">
+                    <!-- Master Centered Interactive Green CTA Button -->
+                    <div class="broker-centered-cta-container">
+                        <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="broker-action-anchor green-filled-master">
                             <span>SIGN UP WITH IC NOW</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
