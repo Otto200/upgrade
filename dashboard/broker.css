@@ -128,42 +128,31 @@
     font-weight: 700;
 }
 
-/* Master Action Button Links */
+/* Fixes the button container element width constraints */
 .broker-ib-cta-group {
     display: flex;
-    gap: 12px;
+    justify-content: flex-start; /* Keeps the button cleanly justified to the left */
+    width: 100%;
+    margin-top: 16px;
 }
 
-.broker-action-anchor {
-    flex: 1;
-    display: flex;
+/* Constrains the actual action button anchor tag element */
+.broker-action-anchor.primary {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 14px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    transition: all 0.2s ease;
+    width: auto;                  /* Prevents the button block from going full width */
+    min-width: 200px;             /* Enforces a firm baseline touch-target geometry */
+    max-width: 280px;             /* Keeps the element compact across large display windows */
+    padding: 12px 24px;
+    border-radius: 8px;           /* Gives your primary actions a polished dashboard radius */
+    white-space: nowrap;          /* Forces the link phrase onto one strict horizontal line */
 }
 
-.broker-action-anchor.primary {
-    background: linear-gradient(135deg, #00e676, #00b0ff);
-    color: #030508;
-    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.2);
-}
-
-.broker-action-anchor.primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(0, 230, 118, 0.35);
-}
-
-/* Mobile Responsiveness Adaptive Adjustments */
-@media (max-width: 768px) {
-    .broker-specs-matrix { grid-template-columns: 1fr; gap: 12px; }
-    .matrix-illustration-card { padding: 16px; }
-    .broker-ib-cta-group { flex-direction: column; gap: 10px; }
+/* Adjusts the directional SVG icon spacing inside the primary anchor layout block */
+.broker-action-anchor.primary svg {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;             /* Separates your typography string clean away from the arrow asset */
+    flex-shrink: 0;               /* Ensures structural compression never deforms the directional layout icon */
 }
