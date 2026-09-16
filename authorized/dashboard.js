@@ -1,4 +1,34 @@
 /* ==========================================================================
+   BANKBUGS|FX AUTHORIZED TERMINAL SECURITY ROUTE GUARD
+   ========================================================================== */
+(function() {
+    const sessionToken = sessionStorage.getItem('fx_auth_node');
+    
+    if (!sessionToken) {
+        // Halt client execution immediately if token signature is missing
+        window.location.replace('../index.html');
+        return;
+    }
+
+    try {
+        const payload = JSON.parse(atob(sessionToken));
+        // Enforce a strict 24-hour session expiration window (86400000 ms)
+        if (!payload.authenticated || (Date.now() - payload.timestamp > 86400000)) {
+            sessionStorage.removeItem('fx_auth_node');
+            window.location.replace('../index.html');
+        }
+    } catch (e) {
+        // Boot out user if storage parameter string is malformed or corrupted
+        sessionStorage.removeItem('fx_auth_node');
+        window.location.replace('../index.html');
+    }
+})();
+
+// ... Your original dashboard initialization scripts continue perfectly below here ...
+
+
+
+/* ==========================================================================
    BANKBUGS|FX UNIFIED WORKSPACE NAVIGATION CONTROLLER
    Target Location: visitor/dashboard.js
    ========================================================================== */
