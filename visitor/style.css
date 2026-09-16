@@ -372,3 +372,12 @@ body.fintech-dashboard {
     display: inline-flex !important;
     align-items: center !important;
 }
+
+
+.bottom-tier-two .bottom-nav-item.menu-tab-btn {
+    text-decoration: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
