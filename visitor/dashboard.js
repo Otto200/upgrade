@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`;
     };
 
-    // --- 3. Click Handler Event Router Assignment ---
+     // --- 3. Click Handler Event Router Assignment ---
     allNavLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const targetView = link.getAttribute('data-view');
@@ -120,6 +120,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initialize layout with the PRIME Model content view showing by default
+    // --- 4. ONBOARDING REQUIREMENT MODAL CLICK MECHANICS ---
+    const modalTrigger = document.getElementById('mentorshipModalTrigger');
+    const mentorshipModal = document.getElementById('mentorshipModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+    if (modalTrigger && mentorshipModal && modalCloseBtn) {
+        modalTrigger.addEventListener('click', (e) => {
+            e.preventDefault(); // Stop page jumps
+            mentorshipModal.classList.add('active'); // Injects our unlockmentorship.css active animation rules
+        });
+
+        modalCloseBtn.addEventListener('click', () => {
+            mentorshipModal.classList.remove('active');
+        });
+
+        // Close modal when user clicks outside on the darkened backdrop mask layer
+        mentorshipModal.addEventListener('click', (e) => {
+            if (e.target === mentorshipModal) {
+                mentorshipModal.classList.remove('active');
+            }
+        });
+    }
+
+    // Initialize layout with the PRIME Model content view showing by default on launch
     renderViewportSection('models');
 });
