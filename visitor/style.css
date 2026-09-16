@@ -365,3 +365,10 @@ body.fintech-dashboard {
 .bottom-nav-item.menu-tab-btn.active svg {
     stroke: var(--primary);
 }
+
+
+.tier-two-nav .menu-tab-btn {
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
