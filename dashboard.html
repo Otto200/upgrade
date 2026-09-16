@@ -111,35 +111,6 @@
         
     </div>
 
-<!-- Secret Admin Panel at the bottom of your dashboard -->
-<div id="admin-panel" style="margin-top: 50px; padding: 20px; border-top: 1px solid #222; text-align: center;">
-  <input type="text" id="alert-body" placeholder="Enter market setup details..." style="padding: 10px; width: 60%; background: #111; color: #fff; border: 1px solid #333;">
-  <button id="send-broadcast-btn" style="background: #ff3366; color: #fff; padding: 10px 20px; font-weight: bold; border: none; cursor: pointer; margin-left: 10px;">
-    🚨 Broadcast to All Traders
-  </button>
-</div>
-
-<script>
-  document.getElementById('send-broadcast-btn').addEventListener('click', async () => {
-    const alertText = document.getElementById('alert-body').value || "New liquidity purge setup posted!";
-    
-    // Call your Vercel API endpoint
-    const response = await fetch('/api/broadcast.js', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        title: 'BANKBUGS|FX Alert ⚡',
-        body: alertText
-      })
-    });
-    
-    const result = await response.json();
-    if(result.success) {
-      alert('Broadcast signal deployed successfully!');
-    }
-  });
-</script>
-
 
 
     
@@ -186,6 +157,57 @@
     <script src="dashboard.js"></script>
     <script src="usertoken.js"></script>
      <script src="api/broadcast.js"></script>
+
+    <!-- Paste this right above your closing </body> tag at the absolute bottom of dashboard.html -->
+<div style="position: relative; z-index: 999999; margin: 50px auto; padding: 30px; background: #111111; border: 3px dashed #ff3366; text-align: center; max-width: 500px; border-radius: 8px;">
+  <h3 style="color: #ff3366; margin-top: 0; font-family: sans-serif;">🚨 BANKBUGS|FX ADMIN BROADCAST</h3>
+  <input type="text" id="alert-body" placeholder="Enter market setup details..." style="padding: 12px; width: 80%; background: #222222; color: #ffffff; border: 1px solid #333333; margin-bottom: 15px; border-radius: 4px;">
+  <br>
+  <button id="send-broadcast-btn" style="background: #ff3366; color: #ffffff; padding: 12px 24px; font-weight: bold; border: none; cursor: pointer; border-radius: 4px; font-size: 16px; width: 84%;">
+    Broadcast Signal to All Traders
+  </button>
+</div>
+
+<script>
+  // Isolated block to prevent other dashboard errors from killing this script
+  (function() {
+    console.log("Admin broadcast UI script loaded successfully.");
+    
+    // We wait for the DOM to completely load before binding the click event
+    document.addEventListener('DOMContentLoaded', () => {
+      const broadcastBtn = document.getElementById('send-broadcast-btn');
+      if (!broadcastBtn) {
+        console.error("Could not find the send-broadcast-btn element in the DOM.");
+        return;
+      }
+      
+      broadcastBtn.addEventListener('click', async () => {
+        const alertText = document.getElementById('alert-body').value || "New liquidity purge setup posted!";
+        
+        try {
+          const response = await fetch('/api/broadcast', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              title: 'BANKBUGS|FX Alert ⚡',
+              body: alertText
+            })
+          });
+          
+          const result = await response.json();
+          if (result.success) {
+            alert('Broadcast signal deployed successfully!');
+          } else {
+            alert('Server error: ' + (result.error || 'Unknown error'));
+          }
+        } catch (err) {
+          console.error("Failed to fetch broadcast API:", err);
+          alert('Failed to connect to Vercel API. Check your console.');
+        }
+      });
+    });
+  })();
+</script>
 
     
 </body>
