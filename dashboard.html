@@ -158,31 +158,27 @@
     <script src="usertoken.js"></script>
      <script src="api/broadcast.js"></script>
 
-    <!-- Paste this right above your closing </body> tag at the absolute bottom of dashboard.html -->
-<div style="position: relative; z-index: 999999; margin: 50px auto; padding: 30px; background: #111111; border: 3px dashed #ff3366; text-align: center; max-width: 500px; border-radius: 8px;">
-  <h3 style="color: #ff3366; margin-top: 0; font-family: sans-serif;">🚨 BANKBUGS|FX ADMIN BROADCAST</h3>
-  <input type="text" id="alert-body" placeholder="Enter market setup details..." style="padding: 12px; width: 80%; background: #222222; color: #ffffff; border: 1px solid #333333; margin-bottom: 15px; border-radius: 4px;">
-  <br>
-  <button id="send-broadcast-btn" style="background: #ff3366; color: #ffffff; padding: 12px 24px; font-weight: bold; border: none; cursor: pointer; border-radius: 4px; font-size: 16px; width: 84%;">
-    Broadcast Signal to All Traders
+    <!-- ABSOLUTE FIXED OVERRIDE: Floats above your locked top/bottom bars -->
+<div id="bb-admin-override" style="position: fixed; top: 20%; right: 20px; z-index: 9999999 !important; width: 320px; padding: 20px; background: #0b0c10; border: 3px solid #ff3366; box-shadow: 0 0 20px rgba(255, 51, 102, 0.5); border-radius: 8px; font-family: sans-serif;">
+  <h4 style="color: #ff3366; margin: 0 0 10px 0; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">⚡ BANKBUGS Admin Broadcaster</h4>
+  <p style="color: #888; font-size: 11px; margin: 0 0 12px 0;">This panel overrides your dashboard panels to remain visible.</p>
+  <textarea id="alert-body" placeholder="Type market signal or update details..." style="width: 100%; height: 60px; background: #1f2833; color: #fff; border: 1px solid #45f3ff; padding: 8px; box-sizing: border-box; font-size: 12px; border-radius: 4px; resize: none; margin-bottom: 10px;"></textarea>
+  <button id="send-broadcast-btn" style="width: 100%; background: #ff3366; color: #fff; padding: 10px; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; text-transform: uppercase;">
+    Deploy Broadcast Alert
   </button>
 </div>
 
 <script>
-  // Isolated block to prevent other dashboard errors from killing this script
+  // Self-executing script isolation block
   (function() {
-    console.log("Admin broadcast UI script loaded successfully.");
-    
-    // We wait for the DOM to completely load before binding the click event
-    document.addEventListener('DOMContentLoaded', () => {
-      const broadcastBtn = document.getElementById('send-broadcast-btn');
-      if (!broadcastBtn) {
-        console.error("Could not find the send-broadcast-btn element in the DOM.");
-        return;
-      }
-      
-      broadcastBtn.addEventListener('click', async () => {
-        const alertText = document.getElementById('alert-body').value || "New liquidity purge setup posted!";
+    console.log("Admin floating layout injected into DOM.");
+
+    function bindBroadcastAction() {
+      const button = document.getElementById('send-broadcast-btn');
+      if (!button) return;
+
+      button.addEventListener('click', async () => {
+        const textValue = document.getElementById('alert-body').value || "New liquidity purge setup posted!";
         
         try {
           const response = await fetch('/api/broadcast', {
@@ -190,24 +186,32 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               title: 'BANKBUGS|FX Alert ⚡',
-              body: alertText
+              body: textValue
             })
           });
           
           const result = await response.json();
           if (result.success) {
-            alert('Broadcast signal deployed successfully!');
+            alert('Signal blasted out to all live user devices!');
           } else {
-            alert('Server error: ' + (result.error || 'Unknown error'));
+            alert('Broadcast Endpoint Error: ' + (result.error || 'Check server configuration logs.'));
           }
-        } catch (err) {
-          console.error("Failed to fetch broadcast API:", err);
-          alert('Failed to connect to Vercel API. Check your console.');
+        } catch(err) {
+          console.error("Endpoint execution failure:", err);
+          alert('Failed to connect to Vercel API function.');
         }
       });
-    });
+    }
+
+    // Force hook registration regardless of how content panels load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bindBroadcastAction);
+    } else {
+      bindBroadcastAction();
+    }
   })();
 </script>
+
 
     
 </body>
