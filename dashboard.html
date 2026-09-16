@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="dashboard/style.css">
      <link rel="stylesheet" href="dashboard/broker.css">
      <link rel="stylesheet" href="dashboard/dashboard-theme-overide.css">
+
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "7701dc44-7800-465d-bc09-9780161f4682",
+    });
+  });
+</script>
     
 </head>
 <body class="fintech-dashboard">
