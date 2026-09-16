@@ -1,74 +1,71 @@
 /* ==========================================================================
-   BANKBUGS|FX PREMIUM DASHBOARD CONTROLLER
-   Target File: visitor/dashboard.js
+   BANKBUGS|FX VISITOR ROUTING CONTROLLER
+   Target Location: visitor/dashboard.js
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const mobileToggle = document.getElementById('mobileToggle');
-    const sidebar = document.getElementById('sidebar');
-    const pairs = document.querySelectorAll('.pairs-selector .pair');
-    const unlockBtn = document.getElementById('unlockMentorshipBtn');
-    const premiumBtn = document.querySelector('.premium-action-btn');
-    const ctaUnlockBtn = document.getElementById('ctaUnlockBtn');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sideDashboard = document.getElementById('sideDashboard');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const tabButtons = document.querySelectorAll('.menu-tab-btn');
+    const dynamicViewport = document.getElementById('dynamicViewport');
 
-    // --- 1. Responsive Sidebar Offcanvas Navigation Toggle ---
-    if (mobileToggle && sidebar) {
-        mobileToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            sidebar.classList.toggle('open');
-        });
+    // --- 1. Off-Canvas Sidebar Dashboard Interactions ---
+    const toggleSidebar = () => {
+        sideDashboard.classList.toggle('open');
+        sidebarOverlay.classList.toggle('visible');
+    };
 
-        // Click outside the workspace sidebar context to dismiss the drawer smoothly
-        document.addEventListener('click', (e) => {
-            if (sidebar.classList.contains('open') && !sidebar.contains(e.target) && e.target !== mobileToggle) {
-                sidebar.classList.remove('open');
-            }
-        });
+    if (sidebarToggle && sideDashboard && sidebarOverlay) {
+        sidebarToggle.addEventListener('click', toggleSidebar);
+        sidebarOverlay.addEventListener('click', toggleSidebar);
     }
 
-    // --- 2. Interactive Asset Group Selection & Vector Updates ---
-    pairs.forEach(pair => {
-        pair.addEventListener('click', () => {
-            // Remove previous active state vectors
-            pairs.forEach(p => p.classList.remove('active'));
-            pair.classList.add('active');
+    // --- 2. Live Tab Routing Action Listeners ---
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetView = btn.getAttribute('data-view');
             
-            // Emulate interbank data premium update sequences
-            const wave = document.querySelector('.vector-wave path');
-            if (wave) {
-                // Dynamically modify vector paths to represent market liquidity shift signatures
-                const variantPaths = [
-                    "M0,150 Q75,40 150,110 T300,50 T450,160 T600,80",
-                    "M0,100 Q75,160 150,70 T300,140 T450,60 T600,120",
-                    "M0,60 Q75,30 150,140 T300,90 T450,110 T600,50"
-                ];
-                const selectedIndex = Math.floor(Math.random() * variantPaths.length);
-                wave.setAttribute('d', variantPaths[selectedIndex]);
-                
-                // Randomize positions of the swing point markers slightly to simulate a data update
-                const highMarker = document.querySelector('.swing-point-marker.high');
-                const lowMarker = document.querySelector('.swing-point-marker.low');
-                
-                if (highMarker) {
-                    highMarker.style.top = `${Math.floor(Math.random() * 25) + 15}%`;
-                    highMarker.style.left = `${Math.floor(Math.random() * 20) + 35}%`;
+            // Synchronize active states globally across top & bottom matrices
+            tabButtons.forEach(b => {
+                if (b.getAttribute('data-view') === targetView) {
+                    b.classList.add('active');
+                } else {
+                    b.classList.remove('active');
                 }
-                if (lowMarker) {
-                    lowMarker.style.top = `${Math.floor(Math.random() * 25) + 60}%`;
-                    lowMarker.style.left = `${Math.floor(Math.random() * 20) + 65}%`;
-                }
-            }
+            });
+
+            // Route new interface data to the clean non-overlapping viewport
+            renderViewportSection(targetView);
         });
     });
 
-    // --- 3. Premium Mentorship Verification Portal Actions ---
-    const triggerMentorshipPrompt = (e) => {
-        if (e) e.preventDefault();
-        alert("Initializing Secure Gateway Link...\nRedirecting you to the premium BANKBUGS|FX Institutional Mentorship portal.");
+    const renderViewportSection = (viewKey) => {
+        const structuralTemplates = {
+            models: `
+                <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
+                    <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">PRIME Model Interbank Matrix</h4>
+                    <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Streaming algorithmic liquid blocks, swing validation loops, and delivery signatures directly to your visitor profile node.</p>
+                </div>`,
+            strategy: `
+                <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
+                    <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Institutional Core Concepts</h4>
+                    <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Learn why retail support/resistance layers fail during interbank sweeps and liquidity runs before mitigations occur.</p>
+                </div>`,
+            broker: `
+                <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
+                    <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Broker Authentication Node</h4>
+                    <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Connect your institutional verification signatures safely to clear execution pathways inside your workspace.</p>
+                </div>`
+        };
+
+        dynamicViewport.innerHTML = structuralTemplates[viewKey] || `
+            <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
+                <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem; text-transform:capitalize;">${viewKey} Tracking View Active</h4>
+                <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Synchronizing real-time telemetry matrix profiles with live infrastructure nodes...</p>
+            </div>`;
     };
 
-    // Bind event hooks to user authentication access points safely
-    if (unlockBtn) unlockBtn.addEventListener('click', triggerMentorshipPrompt);
-    if (premiumBtn) premiumBtn.addEventListener('click', triggerMentorshipPrompt);
-    if (ctaUnlockBtn) ctaUnlockBtn.addEventListener('click', triggerMentorshipPrompt);
+    // Initialize with default PRIME Model content injection
+    renderViewportSection('models');
 });
