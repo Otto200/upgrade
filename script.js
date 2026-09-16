@@ -83,3 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1800);
     });
 });
+
+
+if (data.success && data.redirectUrl) {
+    // Lock the session verification token inside sessionStorage
+    sessionStorage.setItem('fx_auth_node', data.token);
+    
+    // Transfer traffic to the unlocked workspace ecosystem
+    window.location.href = data.redirectUrl;
+}
