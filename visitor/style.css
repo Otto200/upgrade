@@ -24,6 +24,7 @@ body.fintech-dashboard {
     margin: 0;
     padding: 0;
     height: 100vh;
+    height: 100dvh; /* ⚡ Dynamic viewport tracking stops bottom nav truncation on mobile */
     overflow: hidden; /* Blocks outer global workspace kinetic double scrolls */
 }
 
@@ -31,9 +32,11 @@ body.fintech-dashboard {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    height: 100dvh; /* ⚡ Snaps app layout exactly within the mobile viewport safe margins */
     width: 100vw;
     position: relative;
 }
+
 
 /* --- TOP LOCKED TWO-TIER NAVIGATION SYSTEM --- */
 .top-nav-container {
