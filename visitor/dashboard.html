@@ -2,165 +2,153 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BANKBUGS|FX - Institutional Ecosystem Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BANKBUGS|FX Visitor Terminal</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="/visitor/style.css">
-      <link rel="stylesheet" href="/visitor/overide.css">
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://onesignal.com" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "7701dc44-7800-465d-bc09-9780161f4682",
+        });
+      });
+    </script>
 </head>
-<body>
+<body class="fintech-dashboard">
     <div class="dashboard-wrapper">
-        <!-- Sidebar Navigation (Responsive Drawer) -->
-        <aside class="sidebar" id="sidebar">
+        
+        <!-- ==========================================
+             TOP LOCKED TWO-TIER NAVIGATION SYSTEM
+             ========================================== -->
+        <header class="top-nav-container">
+            <!-- TIER ONE: Hamburger Control, Conversion, & Profile -->
+            <div class="tier-one">
+                <button class="hamburger-menu-trigger" id="sidebarToggle" aria-label="Toggle Dashboard Menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    <span class="hamburger-label">Dashboard</span>
+                </button>
+                
+                <button class="pro-unlock-btn gold-edition" onclick="window.open('https://your-payment-link.com', '_blank')">
+                    UNLOCK Mentorship
+                </button>
+
+                <div class="user-profile-anchor">
+                    <svg viewBox="0 0 24 24" class="profile-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span class="profile-label">Visitor</span>
+                </div>
+            </div>
+
+            <!-- TIER TWO: Core Tab Mechanics -->
+            <nav class="tier-two-nav" aria-label="Terminal sections">
+                <button class="menu-tab-btn active" data-view="models">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM21 9H3M21 15H3M12 3v18"/></svg>
+                    <span>PRIME Model</span>
+                </button>
+                <button class="menu-tab-btn" data-view="strategy">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    <span>Concepts</span>
+                </button>
+                <button class="menu-tab-btn" data-view="mentorship">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7zM1 5h14v14H1V5z"/></svg>
+                    <span>Mentorship Library</span>
+                </button>
+                <button class="menu-tab-btn" data-view="setups">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                    <span>Weekly Setups</span>
+                </button>
+                <button class="menu-tab-btn" data-view="executions">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span>Live Signals</span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- ==========================================
+             SLIDING SIDE DASHBOARD MENU (5 ITEMS)
+             ========================================== -->
+        <aside class="side-dashboard-menu" id="sideDashboard">
             <div class="sidebar-header">
                 <div class="logo">
-                    <img src="img/logo.webp" alt="BANKBUGS|FX Logo" class="brand-image-logo">
-                    <span>BANKBUGS|FX</span>
+                    <img src="../img/logo.webp" alt="BANKBUGS Logo" class="brand-vector-logo" onerror="this.style.display='none';">
+                    <h3>BANKBUGS|FX</h3>
                 </div>
             </div>
-            
-            <nav class="sidebar-nav">
-                <div class="nav-section">MAIN CORE</div>
-                <a href="#" class="nav-item active">
-                    <svg viewBox="0 0 24 24" class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
-                    <span>Ecosystem Dashboard</span>
+            <nav class="sidebar-links">
+                <a href="#" class="sidebar-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                    <span>Ecosystem Hub</span>
                 </a>
-                <a href="#" class="nav-item">
-                    <svg viewBox="0 0 24 24" class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                    <span>Live Signals</span>
-                    <span class="badge pulse">LIVE</span>
+                <a href="#" class="sidebar-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <span>Broker Account Verification</span>
                 </a>
-                <a href="#" class="nav-item">
-                    <svg viewBox="0 0 24 24" class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                    <span>Weekly Setups</span>
+                <a href="#" class="sidebar-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <span>Interbank Liquidity Metrics</span>
                 </a>
-
-                <div class="nav-section">INTEL & TOOLS</div>
-                <a href="#" class="nav-item">
-                    <svg viewBox="0 0 24 24" class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h6a4 4 0 0 0-4 4v14a3 3 0 0 1-3-3H22z"></path></svg>
-                    <span>Mentorship Library</span>
+                <a href="#" class="sidebar-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span>Algorithmic Rule Book</span>
                 </a>
-                <a href="#" class="nav-item">
-                    <svg viewBox="0 0 24 24" class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                    <span>Analytical Indicators</span>
+                <a href="../index.html" class="sidebar-item logout">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Exit Workspace</span>
                 </a>
             </nav>
-
-            <div class="sidebar-footer">
-                <a href="index.html" class="logout-btn">
-                    <svg viewBox="0 0 24 24" class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-                    <span>Exit Portal</span>
-                </a>
-            </div>
         </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-        <!-- Main Dashboard Canvas Area -->
-        <main class="main-content">
-            <!-- Institutional Header Bar -->
-            <header class="dashboard-header">
-                <div class="header-left">
-                    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                    </button>
-                    <div class="market-status">
-                        <span class="status-indicator online"></span>
-                        <span class="status-text">INTERBANK NETWORK CONNECTED</span>
-                    </div>
+        <!-- ==========================================
+             MAIN CONTENT WORKSPACE CANVAS (NO OVERLAP)
+             ========================================== -->
+        <main class="main-workspace">
+            <section id="dynamicViewport" class="content-viewport-panel">
+                <!-- Swapped instantly via JavaScript -->
+                <div style="padding: 2.5rem 1.5rem; color: #8E9BAE; text-align: center; border: 1px dashed #253352; border-radius: 8px; background-color: #131A2C;">
+                    <h3 style="color: #C5A880; font-size: 1.2rem;">Visitor Terminal Workspace Active</h3>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Content area automatically sizes down and tracks inside view boundaries without layout vertical clip defects.</p>
                 </div>
-                
-                <div class="header-right">
-                    <button class="action-badge" id="unlockMentorshipBtn">
-                        <svg viewBox="0 0 24 24" class="badge-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                        <span>UNLOCK MENTORSHIP</span>
-                    </button>
-                    <div class="user-profile-anchor">
-                        <div class="profile-avatar">FX</div>
-                        <span class="profile-label">Visitor Node</span>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Main Content Container Grid -->
-            <div class="content-body">
-                <!-- Critical High Alert Banner Block -->
-                <div class="alert-banner">
-                    <div class="alert-icon">⚠️</div>
-                    <div class="alert-msg">
-                        <strong>INTERBANK SWING POINTS & LIQUIDITY PURGE IS KEY:</strong> Institutions leave swing points to return to them later. They cannot hide this volume signature. The capacity to intercept these sweeps is the definitive institutional trading skillset.
-                    </div>
-                </div>
-
-                <!-- Live Analytical Metric Blocks -->
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <div class="card-meta">LIQUIDITY RATIO</div>
-                        <div class="card-value">98.42% <span class="trend-up">▲ SECURE</span></div>
-                        <div class="card-footer-text">Institutional Liquidity Model Active</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="card-meta">SMART MONEY REVERSALS</div>
-                        <div class="card-value gold-text">14 Active</div>
-                        <div class="card-footer-text">Identified sweeps across majors</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="card-meta">FX EXECUTION DELAY</div>
-                        <div class="card-value">1.24 ms <span class="trend-optimal">OPTIMAL</span></div>
-                        <div class="card-footer-text">Direct Interbank Bridge latency</div>
-                    </div>
-                </div>
-
-                <!-- Primary Chart / Execution Split Grid -->
-                <div class="workspace-grid">
-                    <!-- Custom Chart Area -->
-                    <div class="panel-card chart-panel">
-                        <div class="panel-header">
-                            <h3>Liquidity Model Tracking Feed</h3>
-                            <div class="pairs-selector">
-                                <span class="pair active">EURUSD</span>
-                                <span class="pair">GBPUSD</span>
-                                <span class="pair">USDJPY</span>
-                            </div>
-                        </div>
-                        <div class="mock-chart-container">
-                            <div class="chart-y-axis">
-                                <span>1.0920</span><span>1.0880</span><span>1.0840</span><span>1.0800</span>
-                            </div>
-                            <div class="chart-canvas-area">
-                                <!-- Interbank Swing Markers -->
-                                <div class="swing-point-marker high" style="top: 20%; left: 45%;">
-                                    <span class="line-tag">INSTITUTIONAL LIQUIDITY PURGE HIGH</span>
-                                </div>
-                                <div class="swing-point-marker low" style="top: 75%; left: 75%;">
-                                    <span class="line-tag">SMART MONEY REVERSAL AREA</span>
-                                </div>
-                                <svg viewBox="0 0 600 200" class="vector-wave">
-                                    <path d="M0,150 Q75,40 150,110 T300,50 T450,160 T600,80" fill="none" stroke="#C5A880" stroke-width="2.5"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                                        <!-- Action Hub / Access Panel -->
-                    <div class="panel-card premium-cta-panel">
-                        <div class="cta-inner">
-                            <div class="gold-shield-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
-                            </div>
-                            <h2>Stop Trading Retail</h2>
-                            <p>Unlock the comprehensive algorithmic framework. Intercept institutional footprints before order block mitigation phases.</p>
-                            <button class="premium-action-btn" id="ctaUnlockBtn">ACCESS FULL PRIME MODEL</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
         </main>
-    </div>
 
+        <!-- ==========================================
+             LOCKED DUAL-TIER BOTTOM NAVIGATION BAR
+             ========================================== -->
+        <footer class="bottom-nav-lock">
+            <div class="bottom-tier-one">
+                <span>FX Trading Platforms</span>
+            </div>
+            <nav class="bottom-tier-two" aria-label="Utility sections">
+                <button class="bottom-nav-item menu-tab-btn" data-view="broker">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>Broker</span>
+                </button>
+                <button class="bottom-nav-item menu-tab-btn" data-view="trade">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+                    <span>Trading</span>
+                </button>
+                <button class="bottom-nav-item menu-tab-btn" data-view="analysis">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                    <span>Analytical</span>
+                </button>
+                <button class="bottom-nav-item menu-tab-btn" data-view="indicators">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <span>Indicators/EA</span>
+                </button>
+                <button class="bottom-nav-item menu-tab-btn" data-view="more">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                    <span>Explore More</span>
+                </button>
+            </nav>
+        </footer>
+        
+    </div>
     <script src="/visitor/dashboard.js"></script>
 </body>
 </html>
-
