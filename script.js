@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnText = submitBtn.querySelector('.btn-text');
     const spinner = submitBtn.querySelector('.spinner');
 
-    // Toggle Password Visibility Mechanics
+    // --- 1. Toggle Password Visibility Mechanics ---
     togglePasswordBtn.addEventListener('click', () => {
         const isPassword = passwordInput.getAttribute('type') === 'password';
         passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     });
 
-    // Client-side Interface Verification Regular Expressions
+    // --- 2. Client-side Interface Verification Tools ---
     const validateEmail = (email) => {
         const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return re.test(String(email).toLowerCase());
@@ -46,15 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form Submission Processing Interception
-    loginForm.addEventListener('submit', (e) => {
+    // --- 3. Form Submission Processing & Live API Routing ---
+    loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         let isValid = true;
         const emailValue = emailInput.value.trim();
         const passwordValue = passwordInput.value;
 
-        // Perform Interface Valdiation Rules
+        // Perform Interface Validation Rules
         if (!validateEmail(emailValue)) {
             emailGroup.classList.add('invalid');
             isValid = false;
@@ -67,28 +67,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!isValid) return;
 
-        // Visual Presentation state updates for network action emulation
+        // Visual Presentation state updates for network action tracking
         submitBtn.disabled = true;
         btnText.classList.add('hidden');
         spinner.classList.remove('hidden');
 
-        // Simulate secure enterprise latency processing cycle
-        setTimeout(() => {
-            alert('Authentication successful! Initializing digital core portal context...');
-            
-            // Revert state handling controls
-            submitBtn.disabled = false;
-            btnText.classList.remove('hidden');
-            spinner.classList.add('hidden');
-        }, 1800);
+        try {
+            // Post authentication credentials to your Vercel API endpoint route
+            const response = await fetch('/api/auth', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: emailValue, password: passwordValue })
+            });
+
+            const data = await response.json();
+
+            if (data.success && data.redirectUrl) {
+                // Lock the session verification token inside sessionStorage
+                sessionStorage.setItem('fx_auth_node', data.token);
+                
+                // Transfer traffic directly to the unlocked authorized workspace ecosystem
+                window.location.href = data.redirectUrl;
+            } else {
+                alert(data.message || 'Authentication failed. Access Denied.');
+                resetButtonState();
+            }
+
+        } catch (error) {
+            console.error('Network transport vector fault:', error);
+            alert('Communication failure. Verify API serverless configuration setup.');
+            resetButtonState();
+        }
     });
+
+    function resetButtonState() {
+        submitBtn.disabled = false;
+        btnText.classList.remove('hidden');
+        spinner.classList.add('hidden');
+    }
 });
-
-
-if (data.success && data.redirectUrl) {
-    // Lock the session verification token inside sessionStorage
-    sessionStorage.setItem('fx_auth_node', data.token);
-    
-    // Transfer traffic to the unlocked workspace ecosystem
-    window.location.href = data.redirectUrl;
-}
