@@ -1,14 +1,9 @@
 /* ==========================================================================
-   PREMIUM SIGNUP ONBOARDING MODAL STYLES
+   PREMIUM SIGNUP ONBOARDING MODAL COMPONENT STYLES
+   Target File: visitor/unlockmentorship.css
    ========================================================================== */
-a.pro-unlock-btn.gold-edition {
-    text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-}
 
+/* --- Modal Overlay Container Placement --- */
 .premium-modal-overlay {
     position: fixed !important;
     inset: 0 !important;
@@ -24,11 +19,13 @@ a.pro-unlock-btn.gold-edition {
     transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
+/* Visibility State Trigger via JS class hook */
 .premium-modal-overlay.active {
     opacity: 1 !important;
     pointer-events: auto !important;
 }
 
+/* --- Inner Core Typography Card Geometry --- */
 .premium-modal-card {
     background-color: #131A2C !important;
     border: 1px solid #253352 !important;
@@ -40,12 +37,14 @@ a.pro-unlock-btn.gold-edition {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
     transform: translateY(15px) !important;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-sizing: border-box !important;
 }
 
 .premium-modal-overlay.active .premium-modal-card {
     transform: translateY(0) !important;
 }
 
+/* --- Upper Component Header Matrix --- */
 .modal-close-trigger {
     position: absolute !important;
     top: 1rem !important;
@@ -73,7 +72,7 @@ a.pro-unlock-btn.gold-edition {
     height: 48px !important;
     background-color: rgba(197, 168, 128, 0.1) !important;
     color: #C5A880 !important;
-    border-radius: 50%;
+    border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -90,6 +89,7 @@ a.pro-unlock-btn.gold-edition {
     font-weight: 700 !important;
     color: #FFFFFF !important;
     margin: 0 0 0.5rem 0 !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
 
 .premium-badge-tag {
@@ -104,6 +104,7 @@ a.pro-unlock-btn.gold-edition {
     margin: 0 !important;
 }
 
+/* --- Content Requirements List Matrix --- */
 .req-intro-text {
     font-size: 0.85rem !important;
     color: #8E9BAE !important;
@@ -150,6 +151,7 @@ a.pro-unlock-btn.gold-edition {
     margin: 0 !important;
 }
 
+/* --- Footer Metadata Matrix --- */
 .modal-footer-action {
     margin-top: 1.75rem !important;
     padding-top: 1.25rem !important;
