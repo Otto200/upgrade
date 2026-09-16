@@ -1,18 +1,18 @@
-// sw.js - Background Core Thread for BANKBUGS|FX
+// sw.js - BANKBUGS|FX Background Process Thread
 
-// Force worker to activate instantly without a page reload
+// 1. Force the worker to activate instantly when a trader installs or refreshes
 self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(clients.claim());
-  console.log('BANKBUGS|FX Background Worker Active.');
+  console.log('BANKBUGS|FX Background Thread Hot.');
 });
 
-// Capture incoming free push streams
+// 2. Catch incoming broadcast updates from your Vercel cloud function
 self.addEventListener('push', (event) => {
-  let payload = { title: 'BANKBUGS|FX Update', body: 'New strategy or liquidity alert available.' };
+  let payload = { title: 'BANKBUGS|FX Alert ⚡', body: 'New market liquidity setup available.' };
 
   if (event.data) {
     try {
@@ -22,36 +22,31 @@ self.addEventListener('push', (event) => {
     }
   }
 
-  const notificationOptions = {
+  const options = {
     body: payload.body,
-    icon: '/icon-192x192.png',  // Uses your exact manifest asset
-    badge: '/icon-192x192.png', // Small icon for Android status bars
+    icon: '/icon-192x192.png',
+    badge: '/icon-192x192.png',
     vibrate:,
-    data: {
-      url: '/dashboard.html'
-    },
-    tag: 'bb-fx-alert',        // Stacks incoming updates to avoid layout spam
+    data: { url: '/dashboard.html' },
+    tag: 'bb-fx-broadcast', // Stacks messages to avoid alert clutter
     renotify: true
   };
 
   event.waitUntil(
-    self.registration.showNotification(payload.title, notificationOptions)
+    self.registration.showNotification(payload.title, options)
   );
 });
 
-// Click action - targets dashboard app interface directly
+// 3. Focus or launch the app when a trader taps the notification
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
-      // Focus if dashboard is already open
       for (let client of windowClients) {
         if (client.url.includes('/dashboard.html') && 'focus' in client) {
           return client.focus();
         }
       }
-      // Open fresh dashboard window if closed
       if (clients.openWindow) {
         return clients.openWindow('/dashboard.html');
       }
