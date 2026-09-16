@@ -47,86 +47,33 @@ body.fintech-dashboard {
     z-index: 90;
 }
 
-/* Tier One Header Component Group */
+/* Tier One Header Component Group (Optimized Layout Spacing) */
 .tier-one {
     background-color: var(--bg-surface);
     border-bottom: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 1.25rem;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.75rem 1.25rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
-/* Hamburger Trigger Structural Configuration */
-.hamburger-menu-trigger {
-    background: transparent;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    color: var(--text-primary);
-    padding: 0.5rem 0.85rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
+/* Ensure the layout wraps comfortably on compact mobile viewports */
+@media (max-width: 480px) {
+    .tier-one {
+        padding: 0.6rem 0.75rem !important;
+        gap: 0.25rem !important;
+    }
+    .hamburger-label {
+        display: none !important; /* Conceals label on tight viewports to protect space */
+    }
+    .pro-unlock-btn.gold-edition {
+        font-size: 0.75rem !important;
+        padding: 0.5rem 0.75rem !important;
+    }
 }
 
-.hamburger-menu-trigger:hover {
-    border-color: var(--primary);
-    background-color: rgba(197, 168, 128, 0.05);
-}
-
-.hamburger-menu-trigger svg {
-    width: 18px;
-    height: 18px;
-}
-
-.hamburger-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-}
-
-/* Conversion Trigger Button Rules */
-.pro-unlock-btn.gold-edition {
-    background: linear-gradient(135deg, var(--primary) 0%, #A98E65 100%);
-    color: var(--bg-main);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    padding: 0.55rem 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.2);
-    transition: all 0.2s ease-in-out;
-}
-
-.pro-unlock-btn.gold-edition:hover {
-    background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(197, 168, 128, 0.35);
-}
-
-/* Profile Badge Layout Anchors */
-.user-profile-anchor {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-secondary);
-}
-
-.profile-icon {
-    width: 18px;
-    height: 18px;
-    color: var(--primary);
-}
-
-.profile-label {
-    font-size: 0.85rem;
-    font-weight: 500;
-}
 
 /* Tier Two Nav Item Rules */
 .tier-two-nav {
