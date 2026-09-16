@@ -11,6 +11,18 @@
     <!-- ⚡ FORCE ROOT FAVICON DISPLAY -->
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "7701dc44-7800-465d-bc09-9780161f4682",
+    });
+  });
+</script>
+
+    
 </head>
 <body>
     <div class="app-container">
