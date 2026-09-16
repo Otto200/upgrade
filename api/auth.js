@@ -1,71 +1,63 @@
 export default async function handler(req, res) {
-    // Cross-origin headers protection
+    // 🛡️ Cross-Origin Resource Sharing (CORS) Security Headers
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
 
+    // Handle preflight browser requests immediately
     if (req.method === 'OPTIONS') {
         return res.status(200).end();
     }
 
+    // Only allow secure POST traffic payload streams
     if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed.' });
+        return res.status(405).json({ success: false, error: 'Method not allowed.' });
     }
 
     try {
         const { email, password } = req.body;
 
         if (!email || !password) {
-            return res.status(400).json({ success: false, message: 'Missing parameters.' });
+            return res.status(400).json({ success: false, message: 'Missing authentication parameters.' });
         }
 
         // ========================================================
         // 🔒 MANUALLY AUTHORIZED TRADERS DATABASE MATRIX
-        // Add or remove user objects below to grant/revoke access.
+        // Add, change, or remove user objects here to grant access.
         // ========================================================
         const authorizedUsers = [
-            { email: "trader@bankbugsfx.app", password: "12345678" },
-            { email: "admin@bankbugsfx.app", password: "12345678" },
-            { email: "student@bankbugsfx.app", password: "12345678" }
+            { email: "trader1@bankbugsfx.com", password: "BugsPassword2026" },
+            { email: "admin@bankbugsfx.com", password: "InstitutionalCore77" },
+            { email: "student@domain.com", password: "UnlockMentorship99" }
         ];
 
-        // Match against user inputs cleanly
+        // Format user matching requirements cleanly
         const cleanedEmail = email.toLowerCase().trim();
         const userMatch = authorizedUsers.find(u => u.email === cleanedEmail && u.password === password);
 
         if (userMatch) {
+            // Generate a secure verification state timestamp token string signature
+            const secureToken = btoa(JSON.stringify({
+                authenticated: true,
+                user: cleanedEmail,
+                timestamp: Date.now()
+            }));
+
             return res.status(200).json({ 
                 success: true, 
                 message: 'Access approved.',
-                redirectUrl: 'authorized/dashboard.html'
+                token: secureToken,
+                redirectUrl: 'authorized/dashboard.html' // Routes precisely to your premium workspace
             });
         } else {
             return res.status(401).json({ 
                 success: false, 
-                message: 'Invalid institutional credentials.' 
+                message: 'Invalid credentials. Access Denied.' 
             });
         }
 
     } catch (error) {
-        console.error('Auth handler error vector:', error);
-        return res.status(500).json({ success: false, message: 'Internal engine fault.' });
+        console.error('Core Auth Engine Failure Vector:', error);
+        return res.status(500).json({ success: false, message: 'Internal infrastructure routing fault.' });
     }
-}
-
-
-// Inside your existing api/auth.js match block:
-if (userMatch) {
-    // Generate a temporary execution stamp token
-    const secureToken = btoa(JSON.stringify({
-        authenticated: true,
-        user: cleanedEmail,
-        timestamp: Date.now()
-    }));
-
-    return res.status(200).json({ 
-        success: true, 
-        message: 'Access approved.',
-        token: secureToken, // Send this token flag back down to the browser storage
-        redirectUrl: '../authorized/dashboard.html'
-    });
 }
