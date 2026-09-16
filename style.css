@@ -437,3 +437,10 @@ input:focus {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+
+.brand-image-logo {
+    width: auto;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+}
