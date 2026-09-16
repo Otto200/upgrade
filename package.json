@@ -1,0 +1,9 @@
+{
+  "name": "bankbugs-fx-push",
+  "version": "1.0.0",
+  "description": "BANKBUGS|FX free push architecture engine.",
+  "main": "sw.js",
+  "dependencies": {
+    "web-push": "^3.6.7"
+  }
+}
