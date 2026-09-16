@@ -181,7 +181,7 @@
         const textValue = document.getElementById('alert-body').value || "New liquidity purge setup posted!";
         
         try {
-          const response = await fetch('/api/broadcast', {
+          const response = await fetch('api/broadcast.js', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
