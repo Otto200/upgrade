@@ -165,3 +165,77 @@
     line-height: 1.4 !important;
     margin: 0 !important;
 }
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   INTERACTIVE CROWN BUTTON ARCHITECTURE
+   Target File: visitor/unlockmentorship.css
+   ========================================================================== */
+
+/* Core Premium Anchor Reset */
+a.pro-unlock-btn.gold-edition {
+    text-decoration: none !important;
+    position: relative !important; /* Establishes coordinate space for the crown */
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    background: linear-gradient(135deg, #C5A880 0%, #A98E65 100%) !important;
+    color: #0B0F19 !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.03em !important;
+    text-transform: uppercase !important;
+    padding: 0.55rem 1rem !important;
+    border: none !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.2) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Button Level Hover Matrix Modifications */
+a.pro-unlock-btn.gold-edition:hover {
+    background: linear-gradient(135deg, #D9C3A3 0%, #C5A880 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(197, 168, 128, 0.35) !important;
+}
+
+/* --- The Diagonal Floating Crown Wrapper --- */
+.premium-crown-wrapper {
+    position: absolute !important;
+    top: -12px !important;      /* Offsets crown to sit on the top border edge */
+    left: -10px !important;     /* Offsets crown to hang over left corner */
+    display: flex !important;
+    transform: rotate(-28deg) !important; /* Slants the crown diagonally */
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    z-index: 5 !important;
+}
+
+/* Crown Icon Color Profile and Sizing */
+.premium-crown-icon {
+    width: 18px !important;
+    height: 18px !important;
+    color: #FFF !important; /* Premium white crown contrast pop against gold button */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)) !important;
+}
+
+/* --- Interactive Hover Effects for the Crown --- */
+a.pro-unlock-btn.gold-edition:hover .premium-crown-wrapper {
+    /* Lifts and rotates slightly higher on button focus interaction profiles */
+    transform: translate(-1px, -3px) rotate(-32deg) scale(1.15) !important;
+}
+
+/* Clean text container mapping safe row styling */
+.btn-text-content {
+    position: relative !important;
+    z-index: 2 !important;
+    text-decoration: none !important;
+}
