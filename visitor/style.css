@@ -47,32 +47,7 @@ body.fintech-dashboard {
     z-index: 90;
 }
 
-/* Tier One Header Component Group (Optimized Layout Spacing) */
-.tier-one {
-    background-color: var(--bg-surface);
-    border-bottom: 1px solid var(--border-color);
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 0.75rem 1.25rem !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
 
-/* Ensure the layout wraps comfortably on compact mobile viewports */
-@media (max-width: 480px) {
-    .tier-one {
-        padding: 0.6rem 0.75rem !important;
-        gap: 0.25rem !important;
-    }
-    .hamburger-label {
-        display: none !important; /* Conceals label on tight viewports to protect space */
-    }
-    .pro-unlock-btn.gold-edition {
-        font-size: 0.75rem !important;
-        padding: 0.5rem 0.75rem !important;
-    }
-}
 
 /* Tier One Header Component Group */
 .tier-one {
