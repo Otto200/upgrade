@@ -1,0 +1,383 @@
+/* ==========================================================================
+   BANKBUGS|FX VISITOR DIRECTORY STYLESHEET
+   Target Location: visitor/style.css
+   ========================================================================== */
+
+:root {
+    --bg-main: #0B0F19;          /* Deep rich obsidian navy background */
+    --bg-surface: #131A2C;       /* Elevated layer container surfaces */
+    --bg-input: #1C263E;         /* Inner workspace background elements */
+    --primary: #C5A880;          /* High-end warm champagne gold */
+    --primary-hover: #D9C3A3;    /* Brightened champagne highlight color */
+    --text-primary: #FFFFFF;     /* Crisp readable primary white text */
+    --text-secondary: #8E9BAE;   /* Clean interface metadata text */
+    --text-muted: #56647A;       /* Inactive tracking items and thin borders */
+    --error: #FF6B6B;            /* Institutional risk warning flag red */
+    --border-color: #253352;     /* Refined structural separator lines */
+}
+
+/* --- Base Body Core Mechanics --- */
+body.fintech-dashboard {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    height: 100dvh; /* ⚡ Dynamic viewport tracking stops bottom nav truncation on mobile */
+    overflow: hidden; /* Blocks outer global workspace kinetic double scrolls */
+}
+
+.dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh; /* ⚡ Snaps app layout exactly within the mobile viewport safe margins */
+    width: 100vw;
+    position: relative;
+}
+
+
+/* --- TOP LOCKED TWO-TIER NAVIGATION SYSTEM --- */
+.top-nav-container {
+    flex-shrink: 0;
+    background-color: var(--bg-main);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    z-index: 90;
+}
+
+
+
+/* Tier One Header Component Group */
+.tier-one {
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+}
+
+/* Hamburger Trigger Structural Configuration */
+.hamburger-menu-trigger {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    padding: 0.5rem 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.hamburger-menu-trigger:hover {
+    border-color: var(--primary);
+    background-color: rgba(197, 168, 128, 0.05);
+}
+
+.hamburger-menu-trigger svg {
+    width: 18px;
+    height: 18px;
+}
+
+.hamburger-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Conversion Trigger Button Rules */
+.pro-unlock-btn.gold-edition {
+    background: linear-gradient(135deg, var(--primary) 0%, #A98E65 100%);
+    color: var(--bg-main);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.55rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.pro-unlock-btn.gold-edition:hover {
+    background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(197, 168, 128, 0.35);
+}
+
+/* Profile Badge Layout Anchors */
+.user-profile-anchor {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.profile-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--primary);
+}
+
+.profile-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+
+
+/* Tier Two Nav Item Rules */
+.tier-two-nav {
+    background-color: var(--bg-main);
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.4rem 0.75rem;
+    overflow-x: auto;
+}
+
+.tier-two-nav::-webkit-scrollbar {
+    display: none; /* Strip track footprint visibility across view spaces */
+}
+
+.tier-two-nav .menu-tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.tier-two-nav .menu-tab-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--text-secondary);
+}
+
+.tier-two-nav .menu-tab-btn:hover {
+    color: var(--text-primary);
+    background-color: rgba(197, 168, 128, 0.04);
+}
+
+.tier-two-nav .menu-tab-btn.active {
+    background-color: rgba(197, 168, 128, 0.08);
+    border-color: rgba(197, 168, 128, 0.2);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.tier-two-nav .menu-tab-btn.active svg {
+    stroke: var(--primary);
+}
+
+/* --- DYNAMIC SLIDING SIDEBAR MENU (5 ITEMS) --- */
+.side-dashboard-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    background-color: var(--bg-surface);
+    border-right: 1px solid var(--border-color);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.side-dashboard-menu.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.brand-vector-logo {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+}
+
+.sidebar-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.sidebar-links {
+    padding: 1rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.8rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-item svg {
+    width: 18px;
+    height: 18px;
+}
+
+.sidebar-item:hover, .sidebar-item.active {
+    color: var(--text-primary);
+    background-color: rgba(197, 168, 128, 0.06);
+}
+
+.sidebar-item.active {
+    color: var(--primary);
+}
+
+.sidebar-item.logout {
+    margin-top: 2rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    border-radius: 0;
+    padding-top: 1.5rem;
+}
+
+.sidebar-item.logout:hover {
+    color: var(--error);
+    background: transparent;
+}
+
+/* Structural Background Shield overlay */
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(11, 15, 25, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.sidebar-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* --- THE CONFINED WORKSPACE WINDOW (NO OVERLAP) --- */
+.main-workspace {
+    flex: 1;
+    width: 100vw;
+    overflow-y: auto; /* Content zone isolates kinetic scroll vectors internally */
+    -webkit-overflow-scrolling: touch;
+    padding: 1.25rem;
+    background-color: var(--bg-main);
+}
+
+/* --- ORIGINAL DUAL-TIER FIXED FOOTER MATRIX --- */
+.bottom-nav-lock {
+    flex-shrink: 0;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.4);
+    z-index: 90;
+}
+
+.bottom-tier-one {
+    background-color: #0E1424;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.3rem 1rem;
+    text-align: center;
+}
+
+.bottom-tier-one span {
+    color: var(--primary);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+}
+
+.bottom-tier-two {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.4rem 0.2rem;
+}
+
+.bottom-nav-item.menu-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.4rem 0.25rem;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.bottom-nav-item.menu-tab-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--text-muted);
+}
+
+.bottom-nav-item.menu-tab-btn:hover {
+    color: var(--text-secondary);
+}
+
+.bottom-nav-item.menu-tab-btn.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.bottom-nav-item.menu-tab-btn.active svg {
+    stroke: var(--primary);
+}
+
+
+.tier-two-nav .menu-tab-btn {
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+
+.bottom-tier-two .bottom-nav-item.menu-tab-btn {
+    text-decoration: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
