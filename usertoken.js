@@ -2,7 +2,7 @@ async function establishPushSubscription(reg) {
   try {
     const subscription = await reg.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: base64ToUint8(PUBLIC_KEY)
+      applicationServerKey: base64ToUint8(BGMyOqSJXyL8XezQfZqDmJgV_uXCWMkjyI_GcBzk95bkpB4oFihlVpo9M9Sr6qjPmfKT6VEPCdDtaX0UIBepxB)
     });
     
     // Automatic Save Protocol: Push this user's token straight to your Vercel database API
