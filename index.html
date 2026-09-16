@@ -3,157 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BANKBUGS|FX Start Trading in PNG</title>
-
-   
-
-
-    <!-- ⚡ FORCE ROOT FAVICON DISPLAY -->
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Aura Wealth - Premium Fintech Login</title>
     <link rel="stylesheet" href="style.css">
-
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "7701dc44-7800-465d-bc09-9780161f4682",
-    });
-  });
-</script>
-
-    
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Hero Branding Header -->
-        <header class="trader-profile">
-            <div class="glow-avatar">
-                <!-- Swapped vector illustration with high-end brand logo image -->
-                <img src="img/logo.webp" alt="BANKBUGS|FX Logo" class="avatar-logo-img" onerror="this.style.display='none';">
+    <div class="login-container">
+        <!-- Visual Brand Side (Hidden on Mobile) -->
+        <div class="brand-panel">
+            <div class="brand-overlay"></div>
+            <div class="brand-content">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" class="icon-logo" aria-hidden="true">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>AURA WEALTH</span>
+                </div>
+                <div class="brand-text">
+                    <h1>The future of premium wealth management.</h1>
+                    <p>Access your global multi-currency accounts, private equity allocations, and real-time market intelligence seamlessly across all devices.</p>
+                </div>
+                <div class="brand-footer">
+                    <p>&copy; 2026 Aura Technologies Inc. Institutional Grade Security.</p>
+                </div>
             </div>
-            <h1>BANKBUGS|FX</h1>
-            <p class="tagline">Hosted by Otto Eric • Since 2026</p>
-            <div class="timeline-badge">Official Traders Strategy App</div>
-        </header>
+        </div>
 
-        <!-- 2-Step Success Roadmap -->
-        <main class="strategy-card">
-            <h2>🇵🇬 Start Trading in PNG</h2>
-            <p class="subtitle">Follow these 2 direct steps to Start your journey and earn using our repeatable trading model.</p>
-            
-            <div class="steps-container">
-                <!-- Step 1 -->
-                <div class="step-node">
-                    <div class="step-header">
-                        <div class="step-number">1</div>
-                        <h3>Open Trading Account with IC Markets</h3>
-                    </div>
-                    <p class="step-desc">Create free raw spread institutional account to get the lowest spreads and fastest execution.</p>
-                    <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="step-cta-btn partner-btn">
-                        <span>Open IC Markets Account</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
+        <!-- Form Interaction Side -->
+        <div class="form-panel">
+            <div class="form-container">
+                <!-- Mobile Logo Header -->
+                <div class="mobile-header">
+                    <div class="logo">
+                        <svg viewBox="0 0 24 24" class="icon-logo" aria-hidden="true">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </a>
+                        <span>AURA WEALTH</span>
+                    </div>
                 </div>
 
-                <!-- Step 2 (Renumbered & Optimized) -->
-                <div class="step-node">
-                    <div class="step-header">
-                        <div class="step-number">2</div>
-                        <h3>Access Our Strategy</h3>
+                <div class="form-header">
+                    <h2>Welcome back</h2>
+                    <p>Enter your institutional credentials to access your portal</p>
+                </div>
+
+                <form id="loginForm" novalidate>
+                    <!-- Email Field -->
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <input type="email" id="email" placeholder="name@company.com" required autocomplete="email">
+                        </div>
+                        <span class="error-message" id="emailError">Please enter a valid email address</span>
                     </div>
-                    <p class="step-desc">Access the exact rules, entry setups, Buy/Sell Levels and risk management to earn or pass Propfirms.</p>
-                    
-                    <!-- Main App Download Button -->
-                    <button id="downloadStrategyBtn" class="step-cta-btn master-btn">
-                        <span>Download Our Android APP</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4M7 10l5 5 5-5M12 15V3"/>
-                        </svg>
+
+                    <!-- Password Field -->
+                    <div class="input-group">
+                        <div class="label-row">
+                            <label for="password">Password</label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+                        <div class="input-wrapper">
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <input type="password" id="password" placeholder="••••••••••••" required autocomplete="current-password">
+                            <button type="button" class="toggle-password" id="togglePassword" aria-label="Toggle password visibility">
+                                <svg viewBox="0 0 24 24" class="icon-eye" aria-hidden="true">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="error-message" id="passwordError">Password must be at least 8 characters</span>
+                    </div>
+
+                    <!-- Remember Me / Extra Options -->
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            Remember this device for 30 days
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">Authorize Secure Sign In</span>
+                        <div class="spinner hidden"></div>
                     </button>
+                </form>
 
-                    <!-- Web Portal Entry Link -->
-                    <a href="dashboard.html" class="web-portal-link">
-                        <span>or Use Web Portal</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                <!-- Alternative Authentication Utilities -->
+                <div class="divider">
+                    <span>Or authorized hardware sign-in</span>
+                </div>
+
+                <div class="social-grid">
+                    <button type="button" class="social-btn">
+                        <svg viewBox="0 0 24 24" class="btn-icon" aria-hidden="true">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="16" r="1" fill="currentColor"/>
                         </svg>
-                    </a>
+                        <span>Passkey / FIDO2</span>
+                    </button>
                 </div>
             </div>
-        </main>
-
-        <!-- Dynamic Success Notification Panel -->
-        <div id="notificationPanel" class="hidden-panel"></div>
-
-        <!-- Regional Trust Indicators -->
-        <footer class="proof-footer">
-            <div class="proof-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-                <span>PNG Trader</span>
-            </div>
-            <div class="proof-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 14 14"></polyline>
-                </svg>
-                <span>+5-Year EXP</span>
-            </div>
-        </footer>
-
-        <!-- ==========================================
-             🌟 ADDED SECTION: THE PERFORMANCE EVIDENCE MARQUEE
-             ========================================== -->
-        <section class="proof-marquee-section">
-            <div class="proof-section-header">
-                <h3>Prop Certified & Live Broker Withdrawals</h3>
-                <p>Backed by consistency and disciplined execution.</p>
-            </div>
-
-            <!-- Full-Bleed Scrolling Track Wrapper -->
-            <div class="marquee-viewport-container">
-                <div class="marquee-infinite-track">
-                    
-                    <!-- Core 12 Assets Group (16:9 webp) -->
-                    <div class="marquee-slide"><img src="img/fundednext-certificate.webp" alt="FundedNext Certificate"></div>
-                    <div class="marquee-slide"><img src="img/toponetrader-certificate.webp" alt="TopOneTrader Certificate"></div>
-                    <div class="marquee-slide"><img src="img/withdrawal-1.webp" alt="Live Withdrawal Proof 1"></div>
-                    <div class="marquee-slide"><img src="img/withdrawal-2.webp" alt="Live Withdrawal Proof 2"></div>
-                    <div class="marquee-slide"><img src="img/withdrawal-3.webp" alt="Live Withdrawal Proof 3"></div>
-                    <div class="marquee-slide"><img src="img/flex-1.webp" alt="Otto Eric Performance"></div>
-                    <div class="marquee-slide"><img src="img/flex-2.webp" alt="Otto Eric Performance"></div>
-                    <div class="marquee-slide"><img src="img/flex-3.webp" alt="Otto Eric Performance"></div>
-                    <div class="marquee-slide"><img src="img/flex-4.webp" alt="Otto Eric Performance"></div>
-                    <div class="marquee-slide"><img src="img/flex-5.webp" alt="Otto Eric Performance"></div>
-
-                    <!-- 🔄 CLONE GROUP: Perfect duplicates to prevent seamless looping track lag -->
-                    <div class="marquee-slide"><img src="img/fundednext-certificate.webp" alt=""></div>
-                    <div class="marquee-slide"><img src="img/toponetrader-certificate.webp" alt=""></div>
-                    <div class="marquee-slide"><img src="img/withdrawal-1.webp" alt=""></div>
-                    <div class="marquee-slide"><img src="img/withdrawal-2.webp" alt=""></div>
-                    <div class="marquee-slide"><img src="img/withdrawal-3.webp" alt=""></div>
-                    <div class="marquee-slide"><img src="img/flex-1.webp" alt=""></div>
-                    <div class="marquee-slide"><img src="img/flex-2.webp" alt=""></div>
-                    <div class="marquee-slide"><img src="img/flex-3.webp" alt=""></div>
-                    <div class="marquee-slide"><img src="img/flex-4.webp" alt=""></div>
-                    <div class="marquee-slide"><img src="img/flex-5.webp" alt=""></div>
-
-                </div>
-            </div>
-
-            <div class="proof-footer-note">
-                <p>"These are real results, no hype. I follow my trading plan."</p>
-            </div>
-        </section>
-
+        </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
