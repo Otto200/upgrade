@@ -1,0 +1,268 @@
+/* ==========================================================================
+   BANKBUGS|FX PREMIUM FINTECH CUSTOM DESIGN OVERRIDE
+   Target File: dashboard/dashboard-theme-overide.css
+   Style Profile: Premium Gold/Obsidian theme maintaining original structural layout
+   ========================================================================== */
+
+/* --- High-End FinTech Design Variables --- */
+:root {
+    --bg-main: #0B0F19;          /* Deep rich obsidian navy background */
+    --bg-surface: #131A2C;       /* Elevated layer container surfaces */
+    --bg-input: #1C263E;         /* Inner workspace background elements */
+    --primary: #C5A880;          /* High-end warm champagne gold */
+    --primary-hover: #D9C3A3;    /* Brightened champagne highlight color */
+    --text-primary: #FFFFFF;     /* Crisp readable primary white text */
+    --text-secondary: #8E9BAE;   /* Clean interface metadata text */
+    --text-muted: #56647A;       /* Inactive tracking items and thin borders */
+    --border-color: #253352;     /* Refined structural separator lines */
+}
+
+/* --- Base Body & Workspace Structuring --- */
+body.fintech-dashboard {
+    background-color: var(--bg-main) !important;
+    color: var(--text-primary) !important;
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.dashboard-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+    background-color: var(--bg-main) !important;
+}
+
+/* --- 1. STICKY/LOCKED TOP NAVIGATION SYSTEM --- */
+.top-nav-container {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+    background-color: var(--bg-main) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Tier One Brand Block */
+.tier-one {
+    background-color: var(--bg-surface) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.85rem 1.25rem !important;
+}
+
+.sidebar-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+
+.brand-vector-logo {
+    height: 30px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+.sidebar-brand h2 {
+    color: var(--text-primary) !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.01em !important;
+    margin: 0 !important;
+}
+
+.sidebar-brand h2 span {
+    color: var(--primary) !important;
+    font-weight: 500 !important;
+    font-size: 0.85rem !important;
+    margin-left: 0.35rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+}
+
+/* Gold Edition Conversion Trigger */
+.pro-unlock-btn.gold-edition {
+    background: linear-gradient(135deg, var(--primary) 0%, #A98E65 100%) !important;
+    color: var(--bg-main) !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.03em !important;
+    text-transform: uppercase !important;
+    padding: 0.6rem 1.1rem !important;
+    border: none !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.2) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.pro-unlock-btn.gold-edition:hover {
+    background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(197, 168, 128, 0.35) !important;
+}
+
+/* Sleek Dynamic FOMO Text Loop Banner */
+.fomo-ticker-banner {
+    background-color: #0E1424 !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding: 0.5rem 0 !important;
+    overflow: hidden !important;
+}
+
+.ticker-text-track span {
+    color: var(--text-secondary) !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+}
+
+/* Tier Two Nav Bar Layout */
+.tier-two-nav {
+    background-color: var(--bg-main) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    display: flex !important;
+    gap: 0.35rem !important;
+    padding: 0.5rem !important;
+    overflow-x: auto !important;
+}
+
+.tier-two-nav::-webkit-scrollbar {
+    display: none !important; /* Conceal horizontal scroll track on mobile devices */
+}
+
+.tier-two-nav .menu-tab-btn {
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    color: var(--text-secondary) !important;
+    padding: 0.5rem 0.85rem !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+}
+
+.tier-two-nav .menu-tab-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    stroke: var(--text-secondary) !important;
+    transition: stroke 0.2s ease !important;
+}
+
+/* Interactive States for Navigation Tabs */
+.tier-two-nav .menu-tab-btn:hover {
+    color: var(--text-primary) !important;
+    background-color: rgba(197, 168, 128, 0.04) !important;
+}
+
+.tier-two-nav .menu-tab-btn.active {
+    background-color: rgba(197, 168, 128, 0.08) !important;
+    border-color: rgba(197, 168, 128, 0.2) !important;
+    color: var(--primary) !important;
+    font-weight: 600 !important;
+}
+
+.tier-two-nav .menu-tab-btn.active svg {
+    stroke: var(--primary) !important;
+}
+
+/* --- 2. MAIN CONTENT WORKSPACE AREA --- */
+.main-workspace {
+    flex: 1 !important;
+    background-color: var(--bg-main) !important;
+    padding: 1.5rem !important;
+    margin-bottom: 90px !important; /* Safeguard buffer space for the bottom locked nav */
+}
+
+.content-viewport-panel {
+    background-color: var(--bg-main) !important;
+    width: 100% !important;
+}
+
+/* --- 3. LOCKED DUAL-TIER BOTTOM NAVIGATION BAR --- */
+.bottom-nav-lock {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    background-color: var(--bg-surface) !important;
+    border-top: 1px solid var(--border-color) !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.bottom-tier-one {
+    background-color: #0E1424 !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding: 0.35rem 1rem !important;
+    text-align: center !important;
+}
+
+.bottom-tier-one span {
+    color: var(--primary) !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    display: block !important;
+}
+
+.bottom-tier-two {
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    padding: 0.5rem 0.25rem !important;
+    background-color: var(--bg-surface) !important;
+}
+
+.bottom-nav-item.menu-tab-btn {
+    background: transparent !important;
+    border: none !important;
+    color: var(--text-muted) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.3rem !important;
+    cursor: pointer !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    padding: 0.4rem 0.5rem !important;
+    transition: all 0.2s ease !important;
+    flex: 1 !important;
+}
+
+.bottom-nav-item.menu-tab-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+    stroke: var(--text-muted) !important;
+    transition: stroke 0.2s ease !important;
+}
+
+/* Bottom Action Tab Interactions */
+.bottom-nav-item.menu-tab-btn:hover {
+    color: var(--text-secondary) !important;
+}
+
+.bottom-nav-item.menu-tab-btn:hover svg {
+    stroke: var(--text-secondary) !important;
+}
+
+.bottom-nav-item.menu-tab-btn.active {
+    color: var(--primary) !important;
+    font-weight: 600 !important;
+}
+
+.bottom-nav-item.menu-tab-btn.active svg {
+    stroke: var(--primary) !important;
+}
