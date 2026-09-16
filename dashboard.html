@@ -164,26 +164,41 @@
     }
   }
 
-  // Extract your personal device push subscription token
+  // Replace the old syncDeviceToken function with this one:
   async function syncDeviceToken(reg) {
     try {
       if (PUBLIC_VAPID_KEY === 'BGMyOqSJXyL8XezQfZqDmJgV_uXCWMkjyI_GcBzk95bkpB4oFihlVpo9M9Sr6qjPmfKT6VEPCdDtaX0UIBepxBs') {
-        console.warn("VAPID Key placeholder detected. Please update with your generated key.");
+        alert("🚨 Stop: You still have the placeholder text inside PUBLIC_VAPID_KEY in your dashboard.html file!");
         return;
       }
+      
+      console.log("Attempting browser push subscription with key...");
       
       const subscription = await reg.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: base64ToUint8(PUBLIC_VAPID_KEY)
       });
       
-      // Save it temporarily into the window session memory so your button can use it
+      // Save it to window memory
       myActiveDeviceToken = subscription;
-      console.log("Device token generated. Active and ready to test.");
+      
+      // FORCE AN ALERT TO SHOW YOU IT WORKED
+      alert("✅ SUCCESS! Your device generated a token. You can now press the broadcast button safely.");
+      console.log("Device token generated:", JSON.stringify(subscription));
+
+      // Fire token to your Vercel function
+      await fetch('/api/save-subscription', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ subscription })
+      });
     } catch (tokenErr) {
-      console.error('Token synchronization tracking blocked:', tokenErr);
+      console.error('Token tracking blocked:', tokenErr);
+      // THIS WILL POP UP AND TELL US THE EXACT PROBLEM
+      alert("❌ Browser Blocked Token: " + tokenErr.message);
     }
   }
+
 
   // Initialize Core Broadcast Interface Triggers
   (function() {
