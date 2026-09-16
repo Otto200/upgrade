@@ -1,0 +1,621 @@
+/* ==========================================================================
+   BANKBUGS|FX PREMIUM FINTECH STYLESHEET
+   Target File: visitor/style.css
+   ========================================================================== */
+
+/* --- High-End Liquidity Matrix Design Variables --- */
+:root {
+    --bg-main: #0B0F19;         /* Premium deep rich obsidian navy */
+    --bg-surface: #131A2C;      /* Elevated glass/card layer */
+    --bg-input: #1C263E;        /* Active trading window background */
+    --primary: #C5A880;         /* High-end warm champagne gold */
+    --primary-hover: #D9C3A3;   /* Brightened gold for highlights */
+    --text-primary: #FFFFFF;    /* Crisp primary typography */
+    --text-secondary: #8E9BAE;  /* Subdued interface metadata */
+    --text-muted: #56647A;      /* Placeholder text & inactive tracking markers */
+    --error: #FF6B6B;           /* Institutional risk liquidation red */
+    --success: #10B981;         /* Clean interbank execution green */
+    --border-color: #253352;    /* Refined separator borders */
+    --font-stack: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --sidebar-width: 260px;
+}
+
+/* --- Base Layout Normalization --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* --- Sidebar Portal Workspace Mechanics --- */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--bg-surface);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-header {
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.brand-image-logo {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+}
+
+.sidebar-nav {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.nav-section {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 0.75rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--text-primary);
+    background-color: rgba(197, 168, 128, 0.08);
+}
+
+.nav-item.active {
+    color: var(--primary);
+    background-color: rgba(197, 168, 128, 0.1);
+    font-weight: 600;
+}
+
+.nav-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.badge {
+    margin-left: auto;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.2rem 0.4rem;
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--success);
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+}
+
+.pulse {
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.sidebar-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.logout-btn:hover {
+    color: var(--error);
+}
+
+/* --- Main Canvas Allocation Geometry --- */
+.main-content {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Upper Interbank Header Bar --- */
+.dashboard-header {
+    height: 70px;
+    background-color: var(--bg-main);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.market-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-indicator.online {
+    background-color: var(--success);
+    box-shadow: 0 0 8px var(--success);
+}
+
+.status-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.action-badge {
+    background: linear-gradient(135deg, rgba(197, 168, 128, 0.2), rgba(197, 168, 128, 0.05));
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-family: var(--font-stack);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.action-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(197, 168, 128, 0.15);
+}
+
+.badge-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.user-profile-anchor {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.profile-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.profile-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* --- Content Panel Internal Margins --- */
+.content-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+}
+
+/* --- Institutional Liquidity Warning Banner --- */
+.alert-banner {
+    background: linear-gradient(90deg, rgba(239, 68, 68, 0.08) 0%, rgba(11, 15, 25, 0) 100%);
+    border-left: 3px solid var(--error);
+    border-top: 1px solid rgba(239, 68, 68, 0.15);
+    border-bottom: 1px solid rgba(239, 68, 68, 0.15);
+    border-right: 1px solid rgba(239, 68, 68, 0.15);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.alert-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.alert-msg {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.alert-msg strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* --- Live Algorithmic Analytical Metrics Subgrid --- */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.metric-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.card-meta {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.card-value {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gold-text {
+    color: var(--primary);
+}
+
+.trend-up {
+    font-size: 0.75rem;
+    color: var(--success);
+    background-color: rgba(16, 185, 129, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.trend-optimal {
+    font-size: 0.75rem;
+    color: var(--primary);
+    background-color: rgba(197, 168, 128, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.card-footer-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* --- Main Split Interactive Panel Elements --- */
+.workspace-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.panel-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.panel-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.pairs-selector {
+    display: flex;
+    background-color: var(--bg-main);
+    padding: 0.25rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.pairs-selector .pair {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.pairs-selector .pair.active {
+    background-color: var(--bg-input);
+    color: var(--primary);
+    border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+/* --- Custom Dynamic SVG Liquidity Canvas Feed --- */
+.mock-chart-container {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    min-height: 240px;
+    position: relative;
+}
+
+.chart-y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: monospace;
+    padding: 0.5rem 0;
+}
+
+.chart-canvas-area {
+    flex: 1;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    background-image: 
+        linear-gradient(rgba(37, 51, 82, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 51, 82, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.vector-wave {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.swing-point-marker {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.swing-point-marker::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 1px solid inherit;
+    border-radius: 50%;
+    animation: pulseGlow 1.5s infinite;
+}
+
+.swing-point-marker.high {
+    background-color: var(--error);
+    border: 1px solid var(--error);
+    box-shadow: 0 0 8px var(--error);
+}
+
+.swing-point-marker.low {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 8px var(--primary);
+}
+
+.line-tag {
+    position: absolute;
+    white-space: nowrap;
+    background-color: #0b0f19eb;
+    border: 1px solid var(--border-color);
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-primary);
+}
+
+/* --- Premium Funnel Conversion Action Hub --- */
+.premium-cta-panel {
+    background: linear-gradient(145deg, #131A2C 0%, #0E1424 100%);
+    border: 1px solid var(--border-color);
+    justify-content: center;
+    text-align: center;
+}
+
+.cta-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.gold-shield-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    background-color: rgba(197, 168, 128, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gold-shield-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.cta-inner h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.cta-inner p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.premium-action-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: var(--bg-main);
+    border: none;
+    border-radius: 6px;
+    font-family: var(--font-stack);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.premium-action-btn:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+}
+
+/* ==========================================================================
+   ADAPTIVE BREAKPOINTS & RESPONSIVE COMPATIBILITY VECTOR DESIGN RULES
+   ========================================================================== */
+
+/* --- Tablet Devices (Landscape & Portrait Scaling) --- */
+@media (max-width: 1024px) {
+    .sidebar {
+        transform: translateX(-100%); /* Stash drawer navigation offcanvas */
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0; /* Fully expand main viewport bleed */
+    }
+    
+    .mobile-toggle {
+        display: block;
+        margin-right: 1rem;
+    }
+    
+    .workspace-grid {
+        grid-template-columns: 1fr; /* Stack dashboard modules sequentially */
+    }
+}
+
+/* --- Mobile Smartphones --- */
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr; /* Convert telemetry nodes to full layout blocks */
+    }
+    
+    .dashboard-header {
+        padding: 0 1rem;
+    }
+    
+    .content-body {
+        padding: 1rem;
+    }
+    
+    .action-badge span {
+        display: none; /* Icon-only compact configuration layout on extra narrow viewports */
+    }
+    
+    .action-badge {
+        padding: 0.5rem;
+    }
+}
+
