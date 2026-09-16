@@ -124,7 +124,7 @@
     const alertText = document.getElementById('alert-body').value || "New liquidity purge setup posted!";
     
     // Call your Vercel API endpoint
-    const response = await fetch('/api/broadcast', {
+    const response = await fetch('/api/broadcast.js', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
