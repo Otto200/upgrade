@@ -11,6 +11,9 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="/visitor/style.css">
+
+    <link rel="stylesheet" href="/visitor/unlockmentorship.css">
+    
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -43,9 +46,11 @@
                     <span class="profile-label">Visitor</span>
                 </div>
 
-                <button class="pro-unlock-btn gold-edition" onclick="window.open('https://your-payment-link.com', '_blank')">
+                              <!-- Premium Pro Anchor Conversion Trigger -->
+                <a href="#" class="pro-unlock-btn gold-edition" id="mentorshipModalTrigger">
                     UNLOCK Mentorship
-                </button>
+                </a>
+
             </div>
 
                       <!-- TIER TWO: Core Tab Mechanics -->
@@ -158,5 +163,57 @@
         
     </div>
     <script src="/visitor/dashboard.js"></script>
+
+
+    <!-- ==========================================
+         PREMIUM ONBOARDING REQ MODAL POPUP MATRIX
+         ========================================== -->
+    <div class="premium-modal-overlay" id="mentorshipModal">
+        <div class="premium-modal-card">
+            <button class="modal-close-trigger" id="modalCloseBtn" aria-label="Dismiss Overlay">&times;</button>
+            
+            <div class="modal-header-block">
+                <div class="modal-gold-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                </div>
+                <h3>Ecosystem Mentorship Access</h3>
+                <p class="premium-badge-tag">💎 ZERO SUBSCRIPTION FEES</p>
+            </div>
+
+            <div class="modal-body-requirements">
+                <p class="req-intro-text">To secure entry into the fully unlocked algorithmic PRIME matrix, trading nodes must satisfy the baseline funding requirements through our synchronized clearing partners:</p>
+                
+                <ul class="req-list-group">
+                    <li>
+                        <span class="req-num">01</span>
+                        <div class="req-content">
+                            <strong>Partner Broker Onboarding</strong>
+                            <p>Register a live corporate raw-spread trading account via our approved gateway node inside the bottom navigation subpanel.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="req-num">02</span>
+                        <div class="req-content">
+                            <strong>Ecosystem Margin Allocation</strong>
+                            <p>Fund the verification account with a baseline operational trading margin balance ($100 minimum configuration tier).</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="req-num">03</span>
+                        <div class="req-content">
+                            <strong>Signature Key Verification</strong>
+                            <p>Submit your live broker clearing account ID number directly to the server core team to provision permanent portal access.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="modal-footer-action">
+                <p class="disclaimer-text">Once criteria vectors are processed, your manual login credentials are generated instantly. No recurring charges will ever be levied.</p>
+            </div>
+        </div>
+    </div>
+
+    
 </body>
 </html>
