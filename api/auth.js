@@ -51,3 +51,21 @@ export default async function handler(req, res) {
         return res.status(500).json({ success: false, message: 'Internal engine fault.' });
     }
 }
+
+
+// Inside your existing api/auth.js match block:
+if (userMatch) {
+    // Generate a temporary execution stamp token
+    const secureToken = btoa(JSON.stringify({
+        authenticated: true,
+        user: cleanedEmail,
+        timestamp: Date.now()
+    }));
+
+    return res.status(200).json({ 
+        success: true, 
+        message: 'Access approved.',
+        token: secureToken, // Send this token flag back down to the browser storage
+        redirectUrl: '../authorized/dashboard.html'
+    });
+}
