@@ -111,6 +111,38 @@
         
     </div>
 
+<!-- Secret Admin Panel at the bottom of your dashboard -->
+<div id="admin-panel" style="margin-top: 50px; padding: 20px; border-top: 1px solid #222; text-align: center;">
+  <input type="text" id="alert-body" placeholder="Enter market setup details..." style="padding: 10px; width: 60%; background: #111; color: #fff; border: 1px solid #333;">
+  <button id="send-broadcast-btn" style="background: #ff3366; color: #fff; padding: 10px 20px; font-weight: bold; border: none; cursor: pointer; margin-left: 10px;">
+    🚨 Broadcast to All Traders
+  </button>
+</div>
+
+<script>
+  document.getElementById('send-broadcast-btn').addEventListener('click', async () => {
+    const alertText = document.getElementById('alert-body').value || "New liquidity purge setup posted!";
+    
+    // Call your Vercel API endpoint
+    const response = await fetch('/api/broadcast', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        title: 'BANKBUGS|FX Alert ⚡',
+        body: alertText
+      })
+    });
+    
+    const result = await response.json();
+    if(result.success) {
+      alert('Broadcast signal deployed successfully!');
+    }
+  });
+</script>
+
+
+
+    
 <!-- Temporary Test Button UI Layout -->
 <div style="margin: 20px; text-align: center;">
   <button id="test-push-btn" style="background-color: #00e676; color: #000000; padding: 12px 24px; border: none; font-weight: bold; border-radius: 4px; cursor: pointer;">
