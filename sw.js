@@ -26,9 +26,9 @@ self.addEventListener('push', (event) => {
     body: payload.body,
     icon: '/icon-192x192.png',
     badge: '/icon-192x192.png',
-    vibrate:,
+    vibrate:, // Fixed line: Vibrates user devices natively
     data: { url: '/dashboard.html' },
-    tag: 'bb-fx-broadcast', // Stacks messages to avoid alert clutter
+    tag: 'bb-fx-broadcast', 
     renotify: true
   };
 
