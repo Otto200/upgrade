@@ -1,8 +1,0 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "app.vercel.upgrade_livid.twa",
-        "sha256_cert_fingerprints": ["0F:F6:6D:F3:FC:D8:05:7D:DA:7C:78:95:24:5B:EB:F6:56:B1:01:EB:6C:50:91:0C:53:4D:70:D4:E4:BD:6B:80"]
-      }
-    }]
