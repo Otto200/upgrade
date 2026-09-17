@@ -64,13 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     <!-- SECTION 1: Core Institutional Statement & Top Slider -->
                     <div class="broker-partner-card">
-                        <div class="partner-meta">RECOMMENDED TIER-1 REGULATED CLEARING NODE</div>
+                        <div class="partner-meta">RECOMMENDED TIER-1 REGULATED Broker</div>
                         <div class="partner-brand-row">
                             <div class="broker-badge">IC MARKETS</div>
                             <span class="account-type-tag">OFFICIAL LIQUIDITY PROVIDER</span>
                         </div>
                         <p class="partner-perks-text">
-                            Here is our Tier-1 Regulated Broker recommended for all Bankbugsfx platform users. We recommend all users use this Broker for their Raw spread and Institutional Market Condition Best for all types of trading activities and Traders. We share our trading data using IC market as our liquidity provider so make sure to use this so you get the exact price and data we share here in our platform.
+                            Here is our Tier-1 Regulated Broker recommended for all BANKBUGS|FX Ecosystem users. We recommend all users use this Broker for their Raw spread and Institutional Market Condition Best for all types of trading activities and Traders. We share our trading data using IC market as our liquidity provider so make sure to use this so you get the exact price and data we share here in our platform.
                         </p>
                         
                         <!-- 3 Banner Auto-Sliding Component -->
@@ -91,11 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="broker-sync-card">
                         <div class="sync-header">
                             <div class="sync-status-indicator"></div>
-                            <h6>SECURE ACCOUNT REGISTRATION HUB</h6>
+                            <h6>SECURE ACCOUNT REGISTRATION</h6>
                         </div>
                         <p class="sync-explainer">Signup with Name and email and set password first. Can verify later.</p>
                         <div class="workflow-direct-cta">
-                            <a href="https://icmarkets.com" target="_blank" class="broker-gate-link-premium-icon">
+                            <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="broker-gate-link-premium-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
                                 <span>Create Trading Account Now</span>
                             </a>
@@ -106,9 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="png-critical-knowledge-panel">
                         <div class="knowledge-header-row">
                             <span class="warning-triangle">📋</span>
-                            <h5>BROKER REGISTRATION COMPLIANCE REQUIREMENTS</h5>
+                            <h5>BROKER REGISTRATION REQUIREMENTS</h5>
                         </div>
-                        <p class="knowledge-intro">To establish operational status with our synchronized clearing venue, guarantee you have the following assets ready:</p>
+                        <p class="knowledge-intro">To have a profesional trading account, you must have the following requirements:</p>
                         
                         <div class="requirements-inline-tags">
                             <span class="req-pill">Valid Identification (Passport, NID, Driver's License)</span>
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         
                         <div class="funding-threshold-bar">
                             <span class="threshold-label">Minimum Deposit: <strong>$5 USD</strong></span>
-                            <span class="threshold-label baseline">Suggested Allocation: <strong>$200 USD</strong></span>
+                            <span class="threshold-label baseline">Suggested: <strong>$200 USD</strong></span>
                         </div>
 
                         <!-- 5 Images Automated Slider Frame -->
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     <!-- SECTION 5: Crucial Optimization Signing Directives Card -->
                     <div class="compliance-card-alert-panel">
-                        <h5>⚠️ NOTE FOR FASTER APPROVAL DURING SIGNUPS:</h5>
+                        <h5>⚠️ NOTE FOR FASTER APPROVAL DURING registration:</h5>
                         <ul class="alert-bullet-list">
                             <li><span>Use Exact Name on Your ID Card</span></li>
                             <li><span>Use Exact or Similar Address on your ID Card</span></li>
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     <!-- SECTION 6: Terminal Conversion Primary Footer Call-To-Action -->
                     <div class="terminal-footer-action-hub">
-                        <a href="https://icmarkets.com" target="_blank" class="master-action-btn-hub">
+                        <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="master-action-btn-hub">
                             <span>Get Started, Open IC Account</span>
                             <svg viewBox="0 0 24 24" class="btn-arrow-icon" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 5"></polyline></svg>
                         </a>
