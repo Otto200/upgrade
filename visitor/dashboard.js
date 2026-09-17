@@ -69,9 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="broker-badge">IC MARKETS</div>
                             <span class="account-type-tag">OFFICIAL LIQUIDITY PROVIDER</span>
                         </div>
-                        <p class="partner-perks-text">
-                            Here is our Tier-1 Regulated Broker recommended for all BANKBUGS|FX Ecosystem users. We recommend all users use this Broker for their Raw spread and Institutional Market Condition Best for all types of trading activities and Traders. We share our trading data using IC market as our liquidity provider so make sure to use this so you get the exact price and data we share here in our platform.
-                        </p>
+                        
+                        <div class="partner-perks-list-wrapper">
+                            <ul class="broker-highlights-grid">
+                                <li><span>Raw spreads from 0.0 pips</span></li>
+                                <li><span>Fast Order Execution</span></li>
+                                <li><span>Institutional Grade Trading</span></li>
+                                <li><span>Top Choice for high volume traders, scalpers and Robots (EA)</span></li>
+                            </ul>
+                        </div>
+
                         
                         <!-- 3 Banner Auto-Sliding Component -->
                         <div class="slider-wrapper banner-970-250 marquee-fast">
