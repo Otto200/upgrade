@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="/img/image3.webp" aria-hidden="true">
     </div>
 </div>
+
                     </div>
 
                     <!-- SECTION 2: Account Onboarding Quick Gateway -->
