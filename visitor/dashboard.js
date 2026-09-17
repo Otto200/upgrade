@@ -290,21 +290,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-    // --- 5. OUTBOUND AFFIRMATION GATEWAY INTERCEPTOR ---
+       // --- 5. OUTBOUND AFFIRMATION GATEWAY INTERCEPTOR (FIXED FOR DYNAMIC RENDER) ---
     const outboundModal = document.getElementById('outboundAffirmationModal');
     const outboundConfirmBtn = document.getElementById('outboundConfirmBtn');
     const outboundCancelBtn = document.getElementById('outboundCancelBtn');
     let targetOutboundUrl = '';
 
-    // Delegate click catching safely for all dynamic external IC link wrappers
+    // Robust delegation to capture clicks inside dynamically injected layout keys
     document.body.addEventListener('click', (e) => {
-        const externalAnchor = e.target.closest('a[href*="https://ic.com/open-trading-account/live/?camp=92891"], a[href*="https://ic.com/open-trading-account/demo/?camp=92891"]');
+        // Target any anchor link that points to an external IC account signup path
+        const externalAnchor = e.target.closest('a[href*="ic.com"], a[href*="ic.com"], .broker-gate-link-premium-icon, .master-action-btn-hub');
         
         if (externalAnchor) {
-            e.preventDefault(); // Halt the immediate abrupt browser exit
-            targetOutboundUrl = externalAnchor.getAttribute('href');
+            e.preventDefault(); // Lock browser from jumping away instantly
+            targetOutboundUrl = externalAnchor.getAttribute('href') || 'https://ic.com';
             
-            // Launch the secure premium outbound confirmation overlay window
+            // Pop the premium translucent affirmation alert modal into active view state
             if (outboundModal) {
                 outboundModal.classList.add('active');
             }
@@ -312,24 +313,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (outboundConfirmBtn && outboundCancelBtn && outboundModal) {
-        // User approves the institutional transition path
-        outboundConfirmBtn.addEventListener('click', () => {
+        // User approves and executes direct interbank transition vector link
+        outboundConfirmBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             outboundModal.classList.remove('active');
-            window.open(targetOutboundUrl, '_blank');
+            if (targetOutboundUrl) {
+                window.open(targetOutboundUrl, '_blank');
+            }
         });
 
-        // User chooses to remain inside the Bankbugsfx secure terminal shell
-        outboundCancelBtn.addEventListener('click', () => {
+        // User dismisses alert and stays securely inside the app terminal environment
+        outboundCancelBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             outboundModal.classList.remove('active');
             targetOutboundUrl = '';
-        });
-
-        // Auto-dismiss if clicking outer backdrop mask boundary lines
-        outboundModal.addEventListener('click', (e) => {
-            if (e.target === outboundModal) {
-                outboundModal.classList.remove('active');
-                targetOutboundUrl = '';
-            }
         });
     }
 
