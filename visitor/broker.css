@@ -151,6 +151,55 @@
 }
 
 
+/* ==========================================================================
+   3:2 RATIO ID IDENTITY CARD SLIDER RULES
+   ========================================================================== */
+
+/* Establishes the clean 3:2 aspect constraint */
+.aspect-3-2 {
+    width: 100% !important;
+    max-width: 480px !important; /* Elegant container sizing for an ID card display */
+    aspect-ratio: 3 / 2 !important; /* Perfect 1.5:1 / 3:2 global ID ratio framework */
+    margin: 1.25rem auto !important; /* Centers the slider container block */
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    background-color: var(--bg-main) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Track configuration matching 10 items total (5 original + 5 loop duplicates) */
+.id-cards-marquee .slider-track.quintuple-slide {
+    display: flex !important;
+    width: 1000% !important; /* Accommodation space multiplier for 10 individual 100% width frames */
+    height: 100% !important;
+}
+
+/* Forces image contents to retain sharp 3:2 vector dimensions */
+.id-cards-marquee .slider-track.quintuple-slide img {
+    width: 10% !important; /* Math: 100% total track space / 10 images = 10% width each */
+    height: 100% !important;
+    object-fit: cover !important; /* Keeps focus centered without geometric squishing distortions */
+    flex-shrink: 0 !important;
+}
+
+/* Infinite Hardware-Accelerated Ticker Motion Profile */
+.id-cards-marquee .slider-track.quintuple-slide {
+    animation: identityCardInfiniteLoop 20s linear infinite !important;
+}
+
+@keyframes identityCardInfiniteLoop {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); } /* Seamlessly resets after moving past 5 images */
+}
+
+/* Ensure mobile interactive spaces treat spacing fluidly */
+@media (max-width: 480px) {
+    .aspect-3-2 {
+        max-width: 100% !important; /* Scales smoothly on narrow smartphone screen margins */
+    }
+}
 
 
 .slider-track {
