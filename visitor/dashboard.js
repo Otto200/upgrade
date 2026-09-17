@@ -288,3 +288,49 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize layout with the PRIME Model content view showing by default on launch
     renderViewportSection('broker');
 });
+
+
+    // --- 5. OUTBOUND AFFIRMATION GATEWAY INTERCEPTOR ---
+    const outboundModal = document.getElementById('outboundAffirmationModal');
+    const outboundConfirmBtn = document.getElementById('outboundConfirmBtn');
+    const outboundCancelBtn = document.getElementById('outboundCancelBtn');
+    let targetOutboundUrl = '';
+
+    // Delegate click catching safely for all dynamic external IC link wrappers
+    document.body.addEventListener('click', (e) => {
+        const externalAnchor = e.target.closest('a[href*="ic.com"], a[href*="icmarkets.com"]');
+        
+        if (externalAnchor) {
+            e.preventDefault(); // Halt the immediate abrupt browser exit
+            targetOutboundUrl = externalAnchor.getAttribute('href');
+            
+            // Launch the secure premium outbound confirmation overlay window
+            if (outboundModal) {
+                outboundModal.classList.add('active');
+            }
+        }
+    });
+
+    if (outboundConfirmBtn && outboundCancelBtn && outboundModal) {
+        // User approves the institutional transition path
+        outboundConfirmBtn.addEventListener('click', () => {
+            outboundModal.classList.remove('active');
+            window.open(targetOutboundUrl, '_blank');
+        });
+
+        // User chooses to remain inside the Bankbugsfx secure terminal shell
+        outboundCancelBtn.addEventListener('click', () => {
+            outboundModal.classList.remove('active');
+            targetOutboundUrl = '';
+        });
+
+        // Auto-dismiss if clicking outer backdrop mask boundary lines
+        outboundModal.addEventListener('click', (e) => {
+            if (e.target === outboundModal) {
+                outboundModal.classList.remove('active');
+                targetOutboundUrl = '';
+            }
+        });
+    }
+
+
