@@ -219,11 +219,64 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Algorithmic Rule Book / EA</h4>
                     <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Download source configurations for quantitative trade delivery bots and charting helper plugins.</p>
                 </div>`,
-            trade: `
-                <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
-                    <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Direct Trading Floor</h4>
-                    <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Live spot matrix platform trading terminal window module placeholder link.</p>
+             trade: `
+                <div class="payment-methods-view animate-fade">
+                    
+                    <!-- IC Style Section Headline -->
+                    <div class="ic-section-header">
+                        <h4>Your money, your way</h4>
+                        <p class="ic-section-subtitle">Deposit and withdraw funds quickly and securely across our verified, institutional funding pipelines.</p>
+                        <div class="ic-perks-badge-row">
+                            <span class="ic-badge-node">🚀 Instant Deposit</span>
+                            <span class="ic-badge-node">⏱️ Fast Withdrawal</span>
+                            <span class="ic-badge-node">💰 0% Commission</span>
+                        </div>
+                    </div>
+
+                    <!-- IC Markets Pattern Fluid Display Cards -->
+                    <div class="ic-payment-grid">
+                        
+                        <!-- Card 1: Credit / Debit Cards -->
+                        <div class="ic-payment-card">
+                            <div class="card-media-shell">
+                                <img src="img/image9.webp" alt="IC Markets Visa Processing Corridor" onerror="this.style.opacity='0.25';">
+                                <div class="media-tag-overlay">CARD GATEWAY</div>
+                            </div>
+                            <div class="card-content-shell">
+                                <h5>Credit / Debit Card</h5>
+                                <p class="card-explainer-text">Fund your trading account instantly using secure commercial Visa and Mastercard channels.</p>
+                                <div class="card-spec-pill-box">
+                                    <span class="spec-pill instant">INSTANT DEPOSIT</span>
+                                    <span class="spec-pill fee">0% FEES</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: International Bank Wire -->
+                        <div class="ic-payment-card">
+                            <div class="card-media-shell">
+                                <img src="img/image10.webp" alt="IC Markets SWIFT Bank Wire" onerror="this.style.opacity='0.25';">
+                                <div class="media-tag-overlay">SWIFT WIRE</div>
+                            </div>
+                            <div class="card-content-shell">
+                                <h5>Bank Wire Transfer</h5>
+                                <p class="card-explainer-text">Direct telegraphic transfers sent straight from your local bank vault to secure client trust accounts.</p>
+                                <div class="card-spec-pill-box">
+                                    <span class="spec-pill secure">SECURE RAILS</span>
+                                    <span class="spec-pill fee">0% COMMISSION</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Direct Footer Help Descriptor Hub Link -->
+                    <div class="ic-funding-footer-notice">
+                        <p>For more information on deposits, withdrawals and how to fund your trading account, use our secure registration matrix channels.</p>
+                    </div>
+
                 </div>`,
+
             more: `
                 <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
                     <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Explore Ecosystem Assets</h4>
