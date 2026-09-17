@@ -1,0 +1,193 @@
+/* ==========================================================================
+   BANKBUGS|FX MODULAR GLOBAL MARKETS ASSET TRACKER
+   Target Location: visitor/markets.css
+   ========================================================================== */
+
+.global-markets-view {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    box-sizing: border-box !important;
+}
+
+/* --- IC Website Pattern Header --- */
+.ic-market-hero-header {
+    text-align: center !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding-bottom: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.ic-market-hero-header h4 {
+    font-size: 1.6rem !important;
+    font-weight: 800 !important;
+    color: #FFFFFF !important;
+    letter-spacing: -0.02em !important;
+    margin: 0 0 0.5rem 0 !important;
+}
+
+.ic-market-subtitle {
+    font-size: 0.9rem !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.5 !important;
+    max-width: 580px !important;
+    margin: 0 auto 1.5rem auto !important;
+}
+
+/* Institutional Numbers Dashboard row */
+.ic-market-stats-row {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 2.5rem !important;
+    flex-wrap: wrap !important;
+}
+
+.market-stat-node {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+}
+
+.market-stat-node strong {
+    font-size: 1.5rem !important;
+    color: var(--primary) !important; /* Champagne Gold metrics focus */
+    font-weight: 800 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.market-stat-node span {
+    font-size: 0.7rem !important;
+    color: var(--text-muted) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    font-weight: 600 !important;
+}
+
+/* --- Multi-Asset Product Directories Matrix --- */
+.ic-market-products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+}
+
+.ic-product-card {
+    background-color: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+    display: flex !important;
+    gap: 1.1rem !important;
+    align-items: flex-start !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.ic-product-card:hover {
+    transform: translateY(-2px) !important;
+    border-color: var(--primary) !important;
+}
+
+/* Vector SVG Container Shell */
+.product-icon-frame {
+    background-color: var(--bg-main) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--primary) !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.product-svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* Text Content blocks */
+.product-info-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+}
+
+.product-info-panel h5 {
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin: 0 !important;
+}
+
+.product-info-panel p {
+    font-size: 0.8rem !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+}
+
+.product-spec-badge {
+    align-self: flex-start !important;
+    font-size: 0.65rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.03em !important;
+    background-color: rgba(197, 168, 128, 0.08) !important;
+    color: var(--primary) !important;
+    padding: 0.2rem 0.5rem !important;
+    border-radius: 4px !important;
+    border: 1px solid rgba(197, 168, 128, 0.15) !important;
+    margin-top: 0.25rem !important;
+}
+
+/* --- Terminal Footer Conversion Anchor Block --- */
+.ic-market-footer-panel {
+    border-top: 1px solid rgba(37, 51, 82, 0.4) !important;
+    padding-top: 1.5rem !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+}
+
+.ic-market-footer-panel h5 {
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin: 0 !important;
+}
+
+.market-action-row {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* Master Action CTA Mapping to sync with outbound confirmation dialog modules */
+.ic-market-footer-panel .master-action-btn-hub {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    padding: 0.85rem 2.25rem !important;
+    background: transparent !important;
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.ic-market-footer-panel .btn-arrow-icon {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.ic-market-footer-panel .master-action-btn-hub:hover {
+    background-color: rgba(197, 168, 128, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(197, 168, 128, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
