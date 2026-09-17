@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Delegate click catching safely for all dynamic external IC link wrappers
     document.body.addEventListener('click', (e) => {
-        const externalAnchor = e.target.closest('a[href*="ic.com"], a[href*="icmarkets.com"]');
+        const externalAnchor = e.target.closest('a[href*="https://ic.com/open-trading-account/live/?camp=92891"], a[href*="https://ic.com/open-trading-account/live/?camp=92891"]');
         
         if (externalAnchor) {
             e.preventDefault(); // Halt the immediate abrupt browser exit
