@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <!-- IC Style Section Headline with Clean Vector SVG Badges -->
                     <div class="ic-section-header">
                         <h4>Your money, your way</h4>
-                        <p class="ic-section-subtitle">Deposit and withdraw funds quickly and securely across our verified, institutional funding pipelines.</p>
+                        <p class="ic-section-subtitle">Deposit and withdraw funds quickly and securely from PNG with IC's verified, institutional funding routes.</p>
                         
                         <div class="ic-perks-badge-row">
                             <span class="ic-badge-node">
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <div class="card-content-shell">
                                 <h5>Credit / Debit Card</h5>
-                                <p class="card-explainer-text">Fund your trading account instantly using secure commercial Visa and Mastercard channels.</p>
+                                <p class="card-explainer-text">Fund your trading account instantly using Visa/Mastercard 3D Secure.</p>
                                 <div class="card-spec-pill-box">
                                     <span class="spec-pill instant">INSTANT DEPOSIT</span>
                                     <span class="spec-pill fee">0% FEES</span>
@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     <!-- Direct Footer Help Descriptor Hub Link -->
                     <div class="ic-funding-footer-notice">
-                        <p>For more information on deposits, withdrawals and how to fund your trading account, use our secure registration matrix channels.</p>
+                        <p>For more information on deposits, withdrawals and how to fund your trading account, Check dashboard. Note that BANKBUGS|FX does not handle funds we provide educational insights to available payment method by IC our Partner Broker.</p>
                     </div>
 
                 </div>`,
