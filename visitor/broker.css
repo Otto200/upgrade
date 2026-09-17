@@ -88,28 +88,35 @@
     aspect-ratio: 16 / 9 !important;
 }
 
-/* ⚡ NEW SPECIFIC BANNER OVERRIDE FOR THE TOP SLIDER */
+/* ==========================================================================
+   970x250 LEADERBOARD SLIDER ALIGNMENT CORE
+   ========================================================================== */
+
 .banner-970-250 {
     width: 100% !important;
-    max-width: 970px !important; /* Locks width grid to your max spec */
-    height: 250px !important;     /* Locks layout height cleanly to 250px */
-    margin: 0 auto 1.25rem auto !important; /* Centers the banner element */
+    max-width: 970px !important;    /* Locks max width layout perfectly */
+    height: 250px !important;        /* Enforces exact height restriction */
+    margin: 0 auto 1.25rem auto !important;
+    position: relative !important;
+    overflow: hidden !important;
 }
 
-/* Ensure the image assets within this specific container stretch cleanly */
+/* Ensure the full dimensional layout footprint of the banners displays completely */
 .banner-970-250 .slider-track img {
     width: calc(100% / 6) !important;
     height: 100% !important;
-    object-fit: cover !important; /* Prevents raw image distortion/squishing */
+    object-fit: fill !important;     /* ⚡ Forces the entire 970x250 content array to render inside the frame boundary lines without edge clipping */
+    flex-shrink: 0 !important;
 }
 
-/* Fluid responsive collapse for smaller mobile screen bounds */
+/* Fluid responsive mapping for mobile viewports */
 @media (max-width: 970px) {
     .banner-970-250 {
         height: auto !important;
-        aspect-ratio: 970 / 250 !important; /* Preserves proportion cleanly on mobile */
+        aspect-ratio: 970 / 250 !important; /* Locks structural aspect vector so banners scale accurately down to mobile */
     }
 }
+
 
 
 .slider-track {
