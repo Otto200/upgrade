@@ -192,46 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     </div>
 
-                    <!-- SECTION 4: Split Financial Gateway Corridor Rails -->
-                    <div class="funding-matrix-panel">
-                        <div class="matrix-split-table-widescreen">
-                            
-                            <!-- Left Column Panel: Deposits -->
-                            <div class="matrix-column">
-                                <div class="column-header-text">📥 DEPOSIT METHODS AVAILABLE</div>
-                                <div class="slider-wrapper aspect-16-9 marquee-slow">
-                                    <div class="slider-track triple-slide">
-                                        <img src="img/image9.webp" alt="Visa Mastercard Processing Corridor">
-                                        <img src="img/image10.webp" alt="Swift Bank Wire Transfer Route">
-                                        <img src="img/image11.webp" alt="Digital Wallet Liquidity Vault">
-                                        <!-- Duplicated Loop Track for Smooth Infinite Flow -->
-                                        <img src="img/image9.webp" aria-hidden="true">
-                                        <img src="img/image10.webp" aria-hidden="true">
-                                        <img src="img/image11.webp" aria-hidden="true">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Right Column Panel: Withdrawals -->
-                            <div class="matrix-column">
-                                <div class="column-header-text">📤 WITHDRAWAL METHODS AVAILABLE</div>
-                                <div class="slider-wrapper aspect-16-9 marquee-slow">
-                                    <div class="slider-track triple-slide">
-                                        <img src="img/image12.webp" alt="Card Reversal Gateway Loop">
-                                        <img src="img/image13.webp" alt="Bank Transfer Allocation Route">
-                                        <img src="img/image14.webp" alt="Verified Transfer Gateway Node">
-                                        <!-- Duplicated Loop Track for Smooth Infinite Flow -->
-                                        <img src="img/image12.webp" aria-hidden="true">
-                                        <img src="img/image13.webp" aria-hidden="true">
-                                        <img src="img/image14.webp" aria-hidden="true">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- SECTION 5: Crucial Optimization Signing Directives Card -->
+               
+                    <!-- SECTION 4: Crucial Optimization Signing Directives Card -->
                     <div class="compliance-card-alert-panel">
                         <h5>⚠️ NOTE FOR FASTER APPROVAL DURING registration:</h5>
                         <ul class="alert-bullet-list">
@@ -242,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </ul>
                     </div>
 
-                    <!-- SECTION 6: Terminal Conversion Primary Footer Call-To-Action -->
+                    <!-- SECTION 5: Terminal Conversion Primary Footer Call-To-Action -->
                     <div class="terminal-footer-action-hub">
                         <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="master-action-btn-hub">
                             <span>Get Started, Open IC Account</span>
