@@ -168,14 +168,16 @@
     animation: transparentLogoTicker 10s linear infinite !important;
 }
 
+/* ⚡ FIXED LOGO SIZING: Prevents percentage width compression */
 .logo-marquee-track img {
-    width: calc(100% / 8) !important; /* Sized perfectly across track space layout */
-    height: 36px !important;           /* Scaled 1.5x up from 24px to sit cleanly within frame */
-    object-fit: contain !important;    /* Forces transparent PNG shapes to retain clean proportions */
+    width: auto !important;            /* 🔄 Allows width to expand naturally without squeezing */
+    height: 36px !important;           /* 1.5x upscaled sharp height boundary parameter */
+    object-fit: contain !important;    /* Retains original asset rendering aspect ratios */
     flex-shrink: 0 !important;
-    padding: 0 1.5rem !important;      /* Expanded horizontal breathing padding for visual rhythm */
+    padding: 0 2.25rem !important;     /* Generous spatial separation between brand marks */
     box-sizing: border-box !important;
 }
+
 
 @keyframes transparentLogoTicker {
     0% { transform: translate3d(0, 0, 0); }
