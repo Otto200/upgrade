@@ -89,33 +89,67 @@
 }
 
 /* ==========================================================================
-   970x250 LEADERBOARD SLIDER ALIGNMENT CORE
+   970x250 ACCURATE SCALE LEADERBOARD TRACK RULES
    ========================================================================== */
 
 .banner-970-250 {
     width: 100% !important;
     max-width: 970px !important;    /* Locks max width layout perfectly */
-    height: 250px !important;        /* Enforces exact height restriction */
+    height: 250px !important;        /* Enforces the absolute true height restriction */
     margin: 0 auto 1.25rem auto !important;
     position: relative !important;
     overflow: hidden !important;
+    background-color: var(--bg-main) !important;
 }
 
-/* Ensure the full dimensional layout footprint of the banners displays completely */
-.banner-970-250 .slider-track img {
-    width: calc(100% / 6) !important;
+/* ⚡ FIXED WIDTH TRACK: 6 images (3 original + 3 loop duplicates) at 970px each */
+.banner-970-250 .slider-track.triple-slide {
+    display: flex !important;
+    width: 5820px !important;       /* Math: 970px * 6 = 5820px exactly */
     height: 100% !important;
-    object-fit: fill !important;     /* ⚡ Forces the entire 970x250 content array to render inside the frame boundary lines without edge clipping */
+}
+
+/* Ensure each individual banner is displayed in its perfect unclipped size */
+.banner-970-250 .slider-track.triple-slide img {
+    width: 970px !important;        /* Forces every image to render at exactly 970px wide */
+    height: 250px !important;       /* Forces every image to render at exactly 250px high */
+    object-fit: cover !important;   /* Guarantees the image retains its crisp geometric scale */
     flex-shrink: 0 !important;
 }
 
-/* Fluid responsive mapping for mobile viewports */
+/* 🔄 Infinite Ticker Loop Overridden for True Pixel Dimensions */
+.banner-970-250.marquee-fast .slider-track.triple-slide {
+    animation: exactPixelBannerLoop 15s linear infinite !important;
+}
+
+@keyframes exactPixelBannerLoop {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-2910px, 0, 0); } /* Math: Moves exactly 3 images over (970px * 3) */
+}
+
+/* --- Fluid Tablet & Mobile Scaling Mode --- */
 @media (max-width: 970px) {
     .banner-970-250 {
         height: auto !important;
-        aspect-ratio: 970 / 250 !important; /* Locks structural aspect vector so banners scale accurately down to mobile */
+        aspect-ratio: 970 / 250 !important; /* Preserves proportion cleanly on smaller screens */
+    }
+    
+    /* Dynamically shift track to fluid percentages when screen is smaller than the banner */
+    .banner-970-250 .slider-track.triple-slide {
+        width: 600% !important; 
+    }
+    
+    .banner-970-250 .slider-track.triple-slide img {
+        width: calc(100% / 6) !important;
+        height: auto !important;
+        aspect-ratio: 970 / 250 !important;
+    }
+    
+    .banner-970-250.marquee-fast .slider-track.triple-slide {
+        animation: slideMoveLoop 15s linear infinite !important;
     }
 }
+
 
 
 
