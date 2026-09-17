@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="knowledge-intro">To have a profesional trading account, you must have the following requirements:</p>
                         
                         <div class="requirements-inline-tags">
-                            <span class="req-pill">Valid Identification (Passport, NID, Driver's License)</span>
+                            <span class="req-pill">Atleast One Valid ID (Passport, NID, Driver's License)</span>
                             <span class="req-pill">Bank Visa Card</span>
                             <span class="req-pill">Active Email Address</span>
                             <span class="req-pill">Active Phone Number</span>
