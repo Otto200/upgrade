@@ -265,15 +265,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         <!-- Fully Bled Continuous Transparent Logo Carousel Box -->
                         <div class="brand-carousel-bled-wrapper">
                             <div class="logo-marquee-track">
-                                <img src="img/visa-logo.png" alt="Visa Framework Node" onerror="this.style.opacity='0.5';">
-                                <img src="img/mastercard-logo.png" alt="Mastercard Framework Node" onerror="this.style.opacity='0.5';">
-                                <img src="img/applepay-logo.png" alt="Apple Pay Corridor" onerror="this.style.opacity='0.5';">
-                                <img src="img/googlepay-logo.png" alt="Google Pay Corridor" onerror="this.style.opacity='0.5';">
+                                <img src="/img/visa-logo.png" alt="Visa Framework Node" onerror="this.style.opacity='0.5';">
+                                <img src="/img/mastercard-logo.png" alt="Mastercard Framework Node" onerror="this.style.opacity='0.5';">
+                                <img src="/img/applepay-logo.png" alt="Apple Pay Corridor" onerror="this.style.opacity='0.5';">
+                                <img src="/img/googlepay-logo.png" alt="Google Pay Corridor" onerror="this.style.opacity='0.5';">
                                 <!-- Duplicated Loop Track for Smooth Infinite Flow -->
-                                <img src="img/visa-logo.png" aria-hidden="true">
-                                <img src="img/mastercard-logo.png" aria-hidden="true">
-                                <img src="img/applepay-logo.png" aria-hidden="true">
-                                <img src="img/googlepay-logo.png" aria-hidden="true">
+                                <img src="/img/visa-logo.png" aria-hidden="true">
+                                <img src="/img/mastercard-logo.png" aria-hidden="true">
+                                <img src="/img/applepay-logo.png" aria-hidden="true">
+                                <img src="/img/googlepay-logo.png" aria-hidden="true">
                             </div>
                         </div>
 
