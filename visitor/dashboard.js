@@ -154,9 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="png-critical-knowledge-panel">
                         <div class="knowledge-header-row">
                             <span class="warning-triangle">📋</span>
-                            <h5>BROKER REGISTRATION REQUIREMENTS</h5>
+                            <h5>IC Broker REQUIREMENTS</h5>
                         </div>
-                        <p class="knowledge-intro">To have a profesional trading account, you must have the following requirements:</p>
+                        <p class="knowledge-intro">To register an individual trading account online in PNG, you must have the following requirements:</p>
                         
                         <div class="requirements-inline-tags">
                             <span class="req-pill">Atleast One Valid ID (Passport, NID, Driver's License)</span>
