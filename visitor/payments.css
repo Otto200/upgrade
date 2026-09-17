@@ -217,3 +217,71 @@
     flex-shrink: 0 !important;
 }
 
+
+
+
+
+
+/* --- Instant Funding Footer Panel Layout Block --- */
+.ic-instant-funding-footer-action-panel {
+    margin-top: 1.5rem !important;
+    padding-top: 1.5rem !important;
+    border-top: 1px solid rgba(37, 51, 82, 0.4) !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+}
+
+.ic-instant-funding-footer-action-panel h5 {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin: 0 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.panel-tagline {
+    font-size: 0.85rem !important;
+    color: var(--primary) !important; /* Elegant gold typography highlight */
+    font-weight: 600 !important;
+    margin: 0 0 1rem 0 !important;
+}
+
+.panel-action-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* Master Hub Button Core Overrides to ensure crisp rendering inside this specific tab container context */
+.ic-instant-funding-footer-action-panel .master-action-btn-hub {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    padding: 0.85rem 2.25rem !important;
+    background: transparent !important;
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease-in-out !important;
+    box-sizing: border-box !important;
+}
+
+.ic-instant-funding-footer-action-panel .btn-arrow-icon {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.ic-instant-funding-footer-action-panel .master-action-btn-hub:hover {
+    background-color: rgba(197, 168, 128, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(197, 168, 128, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
