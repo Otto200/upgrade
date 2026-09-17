@@ -290,22 +290,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-       // --- 5. OUTBOUND AFFIRMATION GATEWAY INTERCEPTOR (FIXED FOR DYNAMIC RENDER) ---
+         // --- 5. OUTBOUND AFFIRMATION GATEWAY INTERCEPTOR (BULLETPROOF CLASS INTERCEPT) ---
     const outboundModal = document.getElementById('outboundAffirmationModal');
     const outboundConfirmBtn = document.getElementById('outboundConfirmBtn');
     const outboundCancelBtn = document.getElementById('outboundCancelBtn');
     let targetOutboundUrl = '';
 
-    // Robust delegation to capture clicks inside dynamically injected layout keys
+    // Intercept based directly on class tagging to bypass dynamic template render collisions
     document.body.addEventListener('click', (e) => {
-        // Target any anchor link that points to an external IC account signup path
-        const externalAnchor = e.target.closest('a[href*="ic.com"], a[href*="ic.com"], .broker-gate-link-premium-icon, .master-action-btn-hub');
+        const externalAnchor = e.target.closest('.outbound-ic-link');
         
         if (externalAnchor) {
-            e.preventDefault(); // Lock browser from jumping away instantly
-            targetOutboundUrl = externalAnchor.getAttribute('href') || 'https://ic.com';
+            e.preventDefault(); // Stop the immediate native browser redirect
+            targetOutboundUrl = externalAnchor.getAttribute('href');
             
-            // Pop the premium translucent affirmation alert modal into active view state
+            // Instantly render the translucent confirmation notification modal view
             if (outboundModal) {
                 outboundModal.classList.add('active');
             }
@@ -313,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (outboundConfirmBtn && outboundCancelBtn && outboundModal) {
-        // User approves and executes direct interbank transition vector link
+        // User clicks confirmation button -> route to raw tracked IB signup portal
         outboundConfirmBtn.addEventListener('click', (e) => {
             e.preventDefault();
             outboundModal.classList.remove('active');
@@ -322,12 +321,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // User dismisses alert and stays securely inside the app terminal environment
+        // User clicks back button -> close layout overlay safely
         outboundCancelBtn.addEventListener('click', (e) => {
             e.preventDefault();
             outboundModal.classList.remove('active');
             targetOutboundUrl = '';
         });
     }
+
 
 
