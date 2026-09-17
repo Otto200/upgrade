@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </p>
                         
                         <!-- 3 Banner Auto-Sliding Component -->
-<div class="slider-wrapper banner-970-250 marquee-fast">
+                        <div class="slider-wrapper banner-970-250 marquee-fast">
     <div class="slider-track triple-slide">
         <img src="/img/image1.webp" alt="IC Markets Terminal Dashboard">
         <img src="/img/image2.webp" alt="Institutional Trading Environment">
@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="/img/image3.webp" aria-hidden="true">
     </div>
 </div>
+
 
                     </div>
 
@@ -123,22 +124,23 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="threshold-label baseline">Suggested: <strong>$200 USD</strong></span>
                         </div>
 
-                        <!-- 5 Images Automated Slider Frame -->
-                        <div class="slider-wrapper aspect-16-9 marquee-medium">
+                    <!-- 5 Images Automated Slider Frame (Locked to 3:2 ID Card Ratio) -->
+                        <div class="slider-wrapper aspect-3-2 id-cards-marquee">
                             <div class="slider-track quintuple-slide">
-                                
-                                <img src="img/image5.webp" alt="Local PNG Banking Corridor">
-                                <img src="img/image6.webp" alt="Secure Server Latency Terminal">
-                                <img src="img/image7.webp" alt="Liquidity Stream Sync">
-                                <img src="img/image8.webp" alt="Ecosystem Processing Frame">
+                                <img src="/img/image4.webp" alt="Local PNG Banking Corridor">
+                                <img src="/img/image5.webp" alt="Local PNG Banking Corridor">
+                                <img src="/img/image6.webp" alt="Secure Server Latency Terminal">
+                                <img src="/img/image7.webp" alt="Liquidity Stream Sync">
+                                <img src="/img/image8.webp" alt="Ecosystem Processing Frame">
                                 <!-- Duplicated Loop Track for Smooth Infinite Flow -->
-                                <img src="img/image4.webp" aria-hidden="true">
-                                <img src="img/image5.webp" aria-hidden="true">
-                                <img src="img/image6.webp" aria-hidden="true">
-                                <img src="img/image7.webp" aria-hidden="true">
-                                <img src="img/image8.webp" aria-hidden="true">
+                                <img src="/img/image4.webp" aria-hidden="true">
+                                <img src="/img/image5.webp" aria-hidden="true">
+                                <img src="/img/image6.webp" aria-hidden="true">
+                                <img src="/img/image7.webp" aria-hidden="true">
+                                <img src="/img/image8.webp" aria-hidden="true">
                             </div>
                         </div>
+
                     </div>
 
                     <!-- SECTION 4: Split Financial Gateway Corridor Rails -->
