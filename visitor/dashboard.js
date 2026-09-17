@@ -214,12 +214,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Interbank Liquidity Metrics</h4>
                     <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Live computational analysis calculating real-time institutional volume tracking vectors.</p>
                 </div>`,
-            indicators: `
+            trade: `
                 <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
                     <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Algorithmic Rule Book / EA</h4>
                     <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Download source configurations for quantitative trade delivery bots and charting helper plugins.</p>
                 </div>`,
-             trade: `
+             indicators: `
                 <div class="payment-methods-view animate-fade">
                     
                     <!-- IC Style Section Headline -->
