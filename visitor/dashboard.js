@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <!-- 3 Banner Auto-Sliding Component -->
                         <div class="slider-wrapper aspect-16-9 marquee-fast">
                             <div class="slider-track triple-slide">
-                                <img src="img/image1.webp" alt="IC Markets Terminal Dashboard">
+                                <img src="/img/image1.webp" alt="IC Markets Terminal Dashboard">
                                 <img src="img/image2.webp" alt="Institutional Trading Environment">
                                 <img src="img/image3.webp" alt="Raw Spread Market Liquidity">
                                 <!-- Duplicated Loop Track for Smooth Infinite Flow -->
