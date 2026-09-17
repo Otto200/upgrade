@@ -239,3 +239,88 @@ a.pro-unlock-btn.gold-edition:hover .premium-crown-wrapper {
     z-index: 2 !important;
     text-decoration: none !important;
 }
+
+
+
+
+
+/* --- Component Level Onboarding Step Sections --- */
+.modal-step-section {
+    margin-bottom: 1.5rem !important;
+}
+
+.step-instruction {
+    font-size: 0.85rem !important;
+    color: #8E9BAE !important;
+    margin: 0 0 0.65rem 0 !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+}
+
+/* --- Flexible Direct Action Buttons Base --- */
+.modal-action-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    padding: 0.85rem !important;
+    border-radius: 6px !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.btn-svg-icon {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* IC Markets Execution Link Theme */
+.ic-markets-btn {
+    background: linear-gradient(135deg, #C5A880 0%, #A98E65 100%) !important;
+    color: #0B0F19 !important;
+    box-shadow: 0 4px 12px rgba(197, 168, 128, 0.15) !important;
+}
+
+.ic-markets-btn:hover {
+    background: linear-gradient(135deg, #D9C3A3 0%, #C5A880 100%) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Secure WhatsApp Secure Support Communications Theme */
+.whatsapp-btn {
+    background-color: #25D366 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.15) !important;
+}
+
+.whatsapp-btn:hover {
+    background-color: #20BA56 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* --- Footnote Highlight Alignment Rules --- */
+.disclaimer-text-highlight {
+    font-size: 0.8rem !important;
+    color: #8E9BAE !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+.disclaimer-text-highlight strong {
+    color: #FFFFFF !important;
+}
+
+.gold-code {
+    color: #C5A880 !important;
+    font-weight: 700 !important;
+    background-color: #1C263E !important;
+    padding: 0.1rem 0.3rem !important;
+    border-radius: 4px !important;
+    font-family: monospace !important;
+    font-size: 0.85rem !important;
+}
