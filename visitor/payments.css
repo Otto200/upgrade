@@ -146,15 +146,15 @@
 .spec-pill.instant { background-color: rgba(16, 185, 129, 0.1) !important; color: var(--success) !important; }
 .spec-pill.fee { background-color: rgba(59, 130, 246, 0.1) !important; color: #3B82F6 !important; }
 
-/* ⚡ CONTINUOUS HARDWARE-ACCELERATED TRANSPARENT LOGO CAROUSEL ENGINE */
+/* ⚡ UPDATED: 1.5x SCALED HARDWARE-ACCELERATED TRANSPARENT LOGO CAROUSEL ENGINE */
 .brand-carousel-bled-wrapper {
     width: 100% !important;
-    height: 42px !important; /* Locked strictly to your exact requested parameter */
+    height: 63px !important; /* Scaled 1.5x up from 42px baseline parameter */
     position: relative !important;
     overflow: hidden !important;
     border-top: 1px dashed var(--border-color) !important;
     border-bottom: 1px dashed var(--border-color) !important;
-    padding: 0.4rem 0 !important;
+    padding: 0.5rem 0 !important;
     display: flex !important;
     align-items: center !important;
     box-sizing: border-box !important;
@@ -170,10 +170,10 @@
 
 .logo-marquee-track img {
     width: calc(100% / 8) !important; /* Sized perfectly across track space layout */
-    height: 24px !important;           /* Centers vertically inside the 42px height frame */
+    height: 36px !important;           /* Scaled 1.5x up from 24px to sit cleanly within frame */
     object-fit: contain !important;    /* Forces transparent PNG shapes to retain clean proportions */
     flex-shrink: 0 !important;
-    padding: 0 1rem !important;
+    padding: 0 1.5rem !important;      /* Expanded horizontal breathing padding for visual rhythm */
     box-sizing: border-box !important;
 }
 
@@ -181,6 +181,7 @@
     0% { transform: translate3d(0, 0, 0); }
     100% { transform: translate3d(-50%, 0, 0); } /* Loops fluidly on duplicate midpoint line */
 }
+
 
 /* --- Footer Metadata Notice Chunk --- */
 .ic-funding-footer-notice {
