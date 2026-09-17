@@ -274,5 +274,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize layout with the PRIME Model content view showing by default on launch
-    renderViewportSection('models');
+    renderViewportSection('broker');
 });
