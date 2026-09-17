@@ -209,11 +209,112 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 </div>`,
 
-            analysis: `
-                <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
-                    <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Interbank Liquidity Metrics</h4>
-                    <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Live computational analysis calculating real-time institutional volume tracking vectors.</p>
+                        analysis: `
+                <div class="global-markets-view animate-fade">
+                    
+                    <!-- IC Style Section Headline -->
+                    <div class="ic-market-hero-header">
+                        <h4>Global Markets at Your Fingertips</h4>
+                        <p class="ic-market-subtitle">Access a vast selection of CFDs on the global markets with deep institutional volume arrays and superior execution.</p>
+                        
+                        <!-- IC Strength Performance Numbers Ticker Row -->
+                        <div class="ic-market-stats-row">
+                            <div class="market-stat-node">
+                                <strong>+2,850</strong>
+                                <span>Tradable Instruments</span>
+                            </div>
+                            <div class="market-stat-node">
+                                <strong>&lt; 40ms</strong>
+                                <span>Execution Speed</span>
+                            </div>
+                            <div class="market-stat-node">
+                                <strong>0.0</strong>
+                                <span>Spreads from Pips</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IC Style Multi-Asset Class Directory Grid -->
+                    <div class="ic-market-products-grid">
+                        
+                        <!-- Class 1: Forex -->
+                        <div class="ic-product-card">
+                            <div class="product-icon-frame">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-svg">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="6" x2="12" y2="18"></line>
+                                    <path d="M17 9H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <div class="product-info-panel">
+                                <h5>Forex CFDs</h5>
+                                <p>Trade liquid major, minor, and exotic currency crosses with raw spread pricing conditions.</p>
+                                <span class="product-spec-badge">61 Currency Pairs</span>
+                            </div>
+                        </div>
+
+                        <!-- Class 2: Commodities -->
+                        <div class="ic-product-card">
+                            <div class="product-icon-frame">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-svg">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="product-info-panel">
+                                <h5>Commodities CFDs</h5>
+                                <p>Access global spot metals, energy corridors, and agricultural futures markets.</p>
+                                <span class="product-spec-badge">Precious Metals & Energies</span>
+                            </div>
+                        </div>
+
+                        <!-- Class 3: Indices -->
+                        <div class="ic-product-card">
+                            <div class="product-icon-frame">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-svg">
+                                    <path d="M3 3v18h18"></path>
+                                    <polyline points="18.7 8 12 14.7 9 11.7 3 17.7"></polyline>
+                                </svg>
+                            </div>
+                            <div class="product-info-panel">
+                                <h5>Indices CFDs</h5>
+                                <p>Speculate on major stock indices with lower margins and extended hours liquidity options.</p>
+                                <span class="product-spec-badge">25 Global Indices</span>
+                            </div>
+                        </div>
+
+                        <!-- Class 4: Stocks -->
+                        <div class="ic-product-card">
+                            <div class="product-icon-frame">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-svg">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                                    <line x1="15" y1="3" x2="15" y2="21"></line>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="3" y1="15" x2="21" y2="15"></line>
+                                </svg>
+                            </div>
+                            <div class="product-info-panel">
+                                <h5>Stocks CFDs</h5>
+                                <p>Trade global corporate equities across major international exchanges around the clock.</p>
+                                <span class="product-spec-badge">+2,100 Direct Equities</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Embedded CTA Conversion Banner Footer -->
+                    <div class="ic-market-footer-panel">
+                        <h5>Ready to access institutional liquidity corridors?</h5>
+                        <div class="market-action-row">
+                            <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="master-action-btn-hub outbound-ic-link">
+                                <span>Open Live Account</span>
+                                <svg viewBox="0 0 24 24" class="btn-arrow-icon" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 5"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>`,
+
             trade: `
                 <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
                     <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Algorithmic Rule Book / EA</h4>
