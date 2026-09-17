@@ -270,8 +270,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <img src="/img/applepay-logo.png" alt="Apple Pay Corridor" onerror="this.style.opacity='0.5';">
                                 <img src="/img/googlepay-logo.png" alt="Google Pay Corridor" onerror="this.style.opacity='0.5';">
                                 <!-- Duplicated Loop Track for Smooth Infinite Flow -->
-                                <img src="/img/visa-logo.png" aria-hidden="true">
-                                <img src="/img/mastercard-logo.png" aria-hidden="true">
+                                <img src="/img/visa-logo.webp" aria-hidden="true">
+                                <img src="/img/mastercard-logo.webp" aria-hidden="true">
                                 <img src="/img/applepay-logo.png" aria-hidden="true">
                                 <img src="/img/googlepay-logo.png" aria-hidden="true">
                             </div>
