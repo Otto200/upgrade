@@ -72,10 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         
                         <div class="partner-perks-list-wrapper">
                             <ul class="broker-highlights-grid">
-                                <li><span>Raw spreads from 0.0 pips</span></li>
-                                <li><span>Fast Order Execution</span></li>
-                                <li><span>Institutional Grade Trading</span></li>
-                                <li><span>Top Choice for high volume traders, scalpers and Robots (EA)</span></li>
+                                <li><span>Top Choice for high volume Swing traders, Scalpers and Robots (EA)</span></li>
                             </ul>
                         </div>
 
