@@ -115,8 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="requirements-inline-tags">
                             <span class="req-pill">Atleast One Valid ID (Passport, NID, Driver's License)</span>
                             <span class="req-pill">Bank Visa Card</span>
-                            <span class="req-pill">Active Email Address</span>
-                            <span class="req-pill">Active Phone Number</span>
+                            <span class="req-pill">Active Email & Phone</span>
+                            <span class="req-pill">Money/Funds to Trade</span>
                         </div>
                         
                         <div class="funding-threshold-bar">
