@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="broker-sync-card">
                         <div class="sync-header">
                             <div class="sync-status-indicator"></div>
-                            <h6>SECURE ACCOUNT REGISTRATION</h6>
+                            <h6>GET STARTED, Trade with IC right here in PNG</h6>
                         </div>
                         <p class="sync-explainer">Sign up with Name, Email and set Password Instantly.</p>
                         
