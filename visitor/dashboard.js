@@ -173,23 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="threshold-label baseline">Suggested: <strong>$200 USD</strong></span>
                         </div>
 
-                    <!-- 5 Images Automated Slider Frame (Locked to 3:2 ID Card Ratio) -->
-                        <div class="slider-wrapper aspect-3-2 id-cards-marquee">
-                            <div class="slider-track quintuple-slide">
-                                <img src="/img/image4.webp" alt="Local PNG Banking Corridor">
-                                <img src="/img/image5.webp" alt="Local PNG Banking Corridor">
-                                <img src="/img/image6.webp" alt="Secure Server Latency Terminal">
-                                <img src="/img/image7.webp" alt="Liquidity Stream Sync">
-                                <img src="/img/image8.webp" alt="Ecosystem Processing Frame">
-                                <!-- Duplicated Loop Track for Smooth Infinite Flow -->
-                                <img src="/img/image4.webp" aria-hidden="true">
-                                <img src="/img/image5.webp" aria-hidden="true">
-                                <img src="/img/image6.webp" aria-hidden="true">
-                                <img src="/img/image7.webp" aria-hidden="true">
-                                <img src="/img/image8.webp" aria-hidden="true">
-                            </div>
-                        </div>
-
                     </div>
 
                
