@@ -291,44 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-         // --- 5. OUTBOUND AFFIRMATION GATEWAY INTERCEPTOR (BULLETPROOF CLASS INTERCEPT) ---
-    const outboundModal = document.getElementById('outboundAffirmationModal');
-    const outboundConfirmBtn = document.getElementById('outboundConfirmBtn');
-    const outboundCancelBtn = document.getElementById('outboundCancelBtn');
-    let targetOutboundUrl = '';
-
-    // Intercept based directly on class tagging to bypass dynamic template render collisions
-    document.body.addEventListener('click', (e) => {
-        const externalAnchor = e.target.closest('.outbound-ic-link');
-        
-        if (externalAnchor) {
-            e.preventDefault(); // Stop the immediate native browser redirect
-            targetOutboundUrl = externalAnchor.getAttribute('href');
-            
-            // Instantly render the translucent confirmation notification modal view
-            if (outboundModal) {
-                outboundModal.classList.add('active');
-            }
-        }
-    });
-
-    if (outboundConfirmBtn && outboundCancelBtn && outboundModal) {
-        // User clicks confirmation button -> route to raw tracked IB signup portal
-        outboundConfirmBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            outboundModal.classList.remove('active');
-            if (targetOutboundUrl) {
-                window.open(targetOutboundUrl, '_blank');
-            }
-        });
-
-        // User clicks back button -> close layout overlay safely
-        outboundCancelBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            outboundModal.classList.remove('active');
-            targetOutboundUrl = '';
-        });
-    }
 
 
 
