@@ -331,3 +331,134 @@ a.pro-unlock-btn.gold-edition:hover .premium-crown-wrapper {
 
 
 
+
+
+/* ==========================================================================
+   SECURE OUTBOUND AFFIRMATION MODAL TRANSITION STYLES
+   Target File: visitor/unlockmentorship.css
+   ========================================================================== */
+
+.outbound-modal-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    background-color: rgba(11, 15, 25, 0.65) !important; /* Soft dark dim matches look */
+    backdrop-filter: blur(2.5px) !important;              /* Soft translucent overlay blur matching your requirement */
+    -webkit-backdrop-filter: blur(2.5px) !important;       /* Apple Safari engine layout support */
+    z-index: 6000 !important; /* Positions overlay directly above existing elements if layered */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 1rem !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.2s ease-in-out !important;
+}
+
+/* Visibility State Trigger via JS class hook */
+.outbound-modal-overlay.active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.outbound-modal-card {
+    background-color: #131A2C !important;
+    border: 1px solid #253352 !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    max-width: 420px !important;
+    padding: 1.75rem !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6) !important;
+    box-sizing: border-box !important;
+    transform: translateY(15px) !important;
+    transition: transform 0.2s ease-in-out !important;
+}
+
+.outbound-modal-overlay.active .outbound-modal-card {
+    transform: translateY(0) !important;
+}
+
+.outbound-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    margin-bottom: 1.25rem !important;
+    border-bottom: 1px solid #253352 !important;
+    padding-bottom: 0.75rem !important;
+}
+
+.outbound-shield-icon {
+    color: #C5A880 !important; /* Premium Champagne Gold Accent Header */
+    display: flex !important;
+}
+
+.outbound-shield-icon svg {
+    width: 22px !important;
+    height: 22px !important;
+}
+
+.outbound-header h4 {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin: 0 !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.outbound-body p {
+    font-size: 0.85rem !important;
+    color: #8E9BAE !important;
+    line-height: 1.5 !important;
+    margin: 0 0 0.75rem 0 !important;
+}
+
+.redirect-notice-alert {
+    background-color: rgba(197, 168, 128, 0.05) !important;
+    border: 1px solid rgba(197, 168, 128, 0.15) !important;
+    padding: 0.75rem !important;
+    border-radius: 6px !important;
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+}
+
+/* Actions Row Buttons Distribution Matrix */
+.outbound-actions-row {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 0.75rem !important;
+    margin-top: 1.5rem !important;
+}
+
+.outbound-btn-dismiss {
+    background-color: transparent !important;
+    border: 1px solid #253352 !important;
+    color: #FFFFFF !important;
+    padding: 0.6rem 1.25rem !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.outbound-btn-dismiss:hover {
+    background-color: #1C263E !important;
+}
+
+.outbound-btn-proceed {
+    background: linear-gradient(135deg, #C5A880 0%, #A98E65 100%) !important;
+    color: #0B0F19 !important;
+    border: none !important;
+    padding: 0.6rem 1.25rem !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(197, 168, 128, 0.15) !important;
+    transition: transform 0.2s ease !important;
+}
+
+.outbound-btn-proceed:hover {
+    transform: translateY(-1px) !important;
+}
+
+
