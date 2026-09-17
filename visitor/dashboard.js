@@ -277,6 +277,20 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                         </div>
 
+
+                        <!-- ⚡ NEW INTEGRATION: Instant Account Opening & Footer CTA -->
+                        <div class="ic-instant-funding-footer-action-panel">
+                            <h5>Instant account opening & funding</h5>
+                            <p class="panel-tagline">Trade within minutes!</p>
+                            
+                            <div class="panel-action-row">
+                                <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="master-action-btn-hub outbound-ic-link">
+                                    <span>Start Trading</span>
+                                    <svg viewBox="0 0 24 24" class="btn-arrow-icon" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 5"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- Direct Footer Help Descriptor Hub Link -->
