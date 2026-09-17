@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sync-status-indicator"></div>
                             <h6>SECURE ACCOUNT REGISTRATION</h6>
                         </div>
-                        <p class="sync-explainer">Signup with Name and email and set password first. Can verify later.</p>
+                        <p class="sync-explainer">Sign up with Name, Email and set Password Instantly.</p>
                         
                         <div class="workflow-direct-cta">
                             <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="broker-gate-link-premium-icon">
