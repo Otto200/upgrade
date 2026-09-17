@@ -96,20 +96,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     </div>
 
-                    <!-- SECTION 2: Account Onboarding Quick Gateway -->
+                                        <!-- SECTION 2: Account Onboarding Quick Gateway -->
                     <div class="broker-sync-card">
                         <div class="sync-header">
                             <div class="sync-status-indicator"></div>
                             <h6>SECURE ACCOUNT REGISTRATION</h6>
                         </div>
                         <p class="sync-explainer">Signup with Name and email and set password first. Can verify later.</p>
+                        
                         <div class="workflow-direct-cta">
-                            <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="broker-gate-link-premium-icon">
+                            <a href="https://ic.com" target="_blank" class="broker-gate-link-premium-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
                                 <span>Create Trading Account Now</span>
                             </a>
                         </div>
+
+                        <!-- ⚡ NEW BLENDED SECTION: 4 Simple Steps Matrix -->
+                        <div class="onboarding-steps-matrix-wrapper">
+                            <h5 class="matrix-steps-title">Open an account in 4 simple steps</h5>
+                            
+                            <div class="steps-fluid-grid">
+                                <div class="step-card-node">
+                                    <span class="step-numeric-badge">1</span>
+                                    <div class="step-card-content">
+                                        <strong>Register</strong>
+                                        <p>Choose an account type and complete our fast and secure application form</p>
+                                    </div>
+                                </div>
+
+                                <div class="step-card-node">
+                                    <span class="step-numeric-badge">2</span>
+                                    <div class="step-card-content">
+                                        <strong>Verify</strong>
+                                        <p>Use our digital onboarding system for fast verification</p>
+                                    </div>
+                                </div>
+
+                                <div class="step-card-node">
+                                    <span class="step-numeric-badge">3</span>
+                                    <div class="step-card-content">
+                                        <strong>Fund</strong>
+                                        <p>Fund your trading account using a wide range of funding methods</p>
+                                    </div>
+                                </div>
+
+                                <div class="step-card-node">
+                                    <span class="step-numeric-badge">4</span>
+                                    <div class="step-card-content">
+                                        <strong>Trade</strong>
+                                        <p>Start trading on your live account and access +2,850 instruments</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
 
                     <!-- SECTION 3: Account Verification Criteria Data Layout -->
                     <div class="png-critical-knowledge-panel">
