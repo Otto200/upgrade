@@ -1,0 +1,327 @@
+/* ==========================================================================
+   BANKBUGS|FX HIGH-PERFORMANCE MODULAR BROKER ENGINE
+   Target Location: visitor/broker.css
+   ========================================================================== */
+
+.broker-terminal-view {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    box-sizing: border-box !important;
+}
+
+/* --- Core Card Layers Configuration --- */
+.broker-partner-card {
+    background: linear-gradient(145deg, #131A2C 0%, #0E1424 100%) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+}
+
+.partner-meta {
+    font-size: 0.65rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    color: var(--primary) !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.partner-brand-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.broker-badge {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: #FFFFFF !important;
+    letter-spacing: -0.02em !important;
+}
+
+.account-type-tag {
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    background-color: rgba(197, 168, 128, 0.1) !important;
+    color: var(--primary) !important;
+    border: 1px solid rgba(197, 168, 128, 0.2) !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 4px !important;
+}
+
+.partner-perks-text {
+    font-size: 0.85rem !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.25rem !important;
+}
+
+.perks-grid {
+    display: flex !important;
+    gap: 1.25rem !important;
+    flex-wrap: wrap !important;
+    border-top: 1px solid rgba(37, 51, 82, 0.4) !important;
+    padding-top: 1rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.perk-node {
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+}
+
+/* --- INFINITE AUTO-SLIDER ENGINE (CSS ONLY) --- */
+.slider-wrapper {
+    width: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    background-color: var(--bg-main) !important;
+}
+
+.aspect-16-9 {
+    aspect-ratio: 16 / 9 !important;
+}
+
+.slider-track {
+    display: flex !important;
+    width: 200% !important; /* Accommodation room matrix profile for duplicated image flows */
+    height: 100% !important;
+}
+
+.slider-track img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    flex-shrink: 0 !important;
+}
+
+/* Dynamic Track Layout Spacing Multipliers */
+.triple-slide img { width: calc(100% / 6) !important; }
+.quintuple-slide img { width: calc(100% / 10) !important; }
+
+/* Infinite Ticker Loop Speed Profiles */
+.marquee-fast .slider-track { animation: slideMoveLoop 12s linear infinite !important; }
+.marquee-medium .slider-track { animation: slideMoveLoop 18s linear infinite !important; }
+.marquee-slow .slider-track { animation: slideMoveLoop 24s linear infinite !important; }
+
+@keyframes slideMoveLoop {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* --- Registration Input Gate --- */
+.broker-sync-card {
+    background-color: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+    text-align: center !important;
+}
+
+.sync-status-indicator {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: var(--primary) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 8px var(--primary) !important;
+}
+
+.sync-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.sync-header h6 {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em;
+    margin: 0 !important;
+}
+
+.sync-explainer {
+    font-size: 0.85rem !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 1.25rem !important;
+}
+
+.broker-gate-link-premium-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    background: linear-gradient(135deg, var(--primary) 0%, #A98E65 100%) !important;
+    color: var(--bg-main) !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 12px rgba(197, 168, 128, 0.2) !important;
+    transition: all 0.2s ease !important;
+}
+
+.broker-gate-link-premium-icon svg { width: 16px; height: 16px; }
+.broker-gate-link-premium-icon:hover { transform: translateY(-1px) !important; box-shadow: 0 6px 16px rgba(197, 168, 128, 0.35) !important; }
+
+/* --- Requirements & Criteria Layout --- */
+.png-critical-knowledge-panel {
+    background-color: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+}
+
+.knowledge-header-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.png-critical-knowledge-panel h5 {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+}
+
+.knowledge-intro {
+    font-size: 0.8rem !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 1rem !important;
+}
+
+.requirements-inline-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    margin-bottom: 1.25rem !important;
+}
+
+.req-pill {
+    font-size: 0.75rem !important;
+    background-color: var(--bg-input) !important;
+    border: 1px solid var(--border-color) !important;
+    padding: 0.4rem 0.75rem !important;
+    border-radius: 4px !important;
+    color: #FFFFFF !important;
+}
+
+.funding-threshold-bar {
+    display: flex !important;
+    justify-content: space-between !important;
+    background-color: var(--bg-main) !important;
+    border: 1px solid var(--border-color) !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 6px !important;
+    font-size: 0.8rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.funding-threshold-bar strong { color: var(--primary) !important; }
+.funding-threshold-bar .baseline strong { color: var(--success) !important; }
+
+/* --- Financial Two-Column Split Tables --- */
+.funding-matrix-panel {
+    width: 100% !important;
+}
+
+.matrix-split-table-widescreen {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+}
+
+.matrix-column {
+    background-color: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    padding: 1.25rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+}
+
+.column-header-text {
+    font-size: 0.75rem !important;
+    font-weight: 700;
+    color: var(--primary) !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* --- Compliance Alert System --- */
+.compliance-card-alert-panel {
+    background: linear-gradient(90deg, rgba(239, 68, 68, 0.05) 0%, transparent 100%) !important;
+    border: 1px solid rgba(239, 68, 68, 0.15) !important;
+    border-left: 3px solid var(--error) !important;
+    padding: 1.25rem !important;
+    border-radius: 4px !important;
+}
+
+.compliance-card-alert-panel h5 {
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin: 0 0 0.75rem 0 !important;
+}
+
+.alert-bullet-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+}
+
+.alert-bullet-list li {
+    font-size: 0.8rem !important;
+    color: var(--text-secondary) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.alert-bullet-list li::before { content: '▪'; color: var(--error); }
+
+/* --- Master Conversion Hub Footer --- */
+.terminal-footer-action-hub {
+    text-align: center !important;
+    margin: 0.5rem 0 1rem 0 !important;
+}
+
+.master-action-btn-hub {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    padding: 1rem 2rem !important;
+    background: transparent !important;
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.btn-arrow-icon { width: 16px; height: 16px; }
+.master-action-btn-hub:hover {
+    background-color: rgba(197, 168, 128, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(197, 168, 128, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* --- Adaptive Smartphone Folding Breakpoints --- */
+@media (max-width: 768px) {
+    .matrix-split-table-widescreen { grid-template-columns: 1fr !important; }
+}
