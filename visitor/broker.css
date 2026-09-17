@@ -83,9 +83,34 @@
     background-color: var(--bg-main) !important;
 }
 
+/* --- High-Performance Auto-Slider Height Overrides --- */
 .aspect-16-9 {
     aspect-ratio: 16 / 9 !important;
 }
+
+/* ⚡ NEW SPECIFIC BANNER OVERRIDE FOR THE TOP SLIDER */
+.banner-970-250 {
+    width: 100% !important;
+    max-width: 970px !important; /* Locks width grid to your max spec */
+    height: 250px !important;     /* Locks layout height cleanly to 250px */
+    margin: 0 auto 1.25rem auto !important; /* Centers the banner element */
+}
+
+/* Ensure the image assets within this specific container stretch cleanly */
+.banner-970-250 .slider-track img {
+    width: calc(100% / 6) !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Prevents raw image distortion/squishing */
+}
+
+/* Fluid responsive collapse for smaller mobile screen bounds */
+@media (max-width: 970px) {
+    .banner-970-250 {
+        height: auto !important;
+        aspect-ratio: 970 / 250 !important; /* Preserves proportion cleanly on mobile */
+    }
+}
+
 
 .slider-track {
     display: flex !important;
