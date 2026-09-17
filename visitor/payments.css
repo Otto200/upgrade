@@ -164,3 +164,22 @@
     line-height: 1.5 !important;
     margin: 0 !important;
 }
+
+
+
+
+
+/* --- Inline SVG Vector Typography Alignment Controls --- */
+.ic-badge-node {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+}
+
+.inline-svg-icon {
+    width: 13px !important;
+    height: 13px !important;
+    stroke: var(--primary) !important; /* Forces the inline SVG icons to glow in clean champagne gold */
+    flex-shrink: 0 !important;
+}
+
