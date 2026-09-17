@@ -59,11 +59,147 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Live Signals Node</h4>
                     <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Real-time interbank execution logs tracking active smart money footprints.</p>
                 </div>`,
-            broker: `
-                <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
-                    <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Broker Authentication Node</h4>
-                    <p style="font-size:0.85rem; color:#8E9BAE; line-height:1.5;">Connect your institutional verification signatures safely to clear execution pathways inside your workspace.</p>
+                       broker: `
+                <div class="broker-terminal-view animate-fade">
+                    
+                    <!-- SECTION 1: Core Institutional Statement & Top Slider -->
+                    <div class="broker-partner-card">
+                        <div class="partner-meta">RECOMMENDED TIER-1 REGULATED CLEARING NODE</div>
+                        <div class="partner-brand-row">
+                            <div class="broker-badge">IC MARKETS</div>
+                            <span class="account-type-tag">OFFICIAL LIQUIDITY PROVIDER</span>
+                        </div>
+                        <p class="partner-perks-text">
+                            Here is our Tier-1 Regulated Broker recommended for all Bankbugsfx platform users. We recommend all users use this Broker for their Raw spread and Institutional Market Condition Best for all types of trading activities and Traders. We share our trading data using IC market as our liquidity provider so make sure to use this so you get the exact price and data we share here in our platform.
+                        </p>
+                        
+                        <!-- 3 Banner Auto-Sliding Component -->
+                        <div class="slider-wrapper aspect-16-9 marquee-fast">
+                            <div class="slider-track triple-slide">
+                                <img src="img/image1.webp" alt="IC Markets Terminal Dashboard">
+                                <img src="img/image2.webp" alt="Institutional Trading Environment">
+                                <img src="img/image3.webp" alt="Raw Spread Market Liquidity">
+                                <!-- Duplicated Loop Track for Smooth Infinite Flow -->
+                                <img src="img/image1.webp" aria-hidden="true">
+                                <img src="img/image2.webp" aria-hidden="true">
+                                <img src="img/image3.webp" aria-hidden="true">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2: Account Onboarding Quick Gateway -->
+                    <div class="broker-sync-card">
+                        <div class="sync-header">
+                            <div class="sync-status-indicator"></div>
+                            <h6>SECURE ACCOUNT REGISTRATION HUB</h6>
+                        </div>
+                        <p class="sync-explainer">Signup with Name and email and set password first. Can verify later.</p>
+                        <div class="workflow-direct-cta">
+                            <a href="https://icmarkets.com" target="_blank" class="broker-gate-link-premium-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                                <span>Create Trading Account Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 3: Account Verification Criteria Data Layout -->
+                    <div class="png-critical-knowledge-panel">
+                        <div class="knowledge-header-row">
+                            <span class="warning-triangle">📋</span>
+                            <h5>BROKER REGISTRATION COMPLIANCE REQUIREMENTS</h5>
+                        </div>
+                        <p class="knowledge-intro">To establish operational status with our synchronized clearing venue, guarantee you have the following assets ready:</p>
+                        
+                        <div class="requirements-inline-tags">
+                            <span class="req-pill">Valid Identification (Passport, NID, Driver's License)</span>
+                            <span class="req-pill">Bank Visa Card</span>
+                            <span class="req-pill">Active Email Address</span>
+                            <span class="req-pill">Active Phone Number</span>
+                        </div>
+                        
+                        <div class="funding-threshold-bar">
+                            <span class="threshold-label">Minimum Deposit: <strong>$5 USD</strong></span>
+                            <span class="threshold-label baseline">Suggested Allocation: <strong>$200 USD</strong></span>
+                        </div>
+
+                        <!-- 5 Images Automated Slider Frame -->
+                        <div class="slider-wrapper aspect-16-9 marquee-medium">
+                            <div class="slider-track quintuple-slide">
+                                
+                                <img src="img/image5.webp" alt="Local PNG Banking Corridor">
+                                <img src="img/image6.webp" alt="Secure Server Latency Terminal">
+                                <img src="img/image7.webp" alt="Liquidity Stream Sync">
+                                <img src="img/image8.webp" alt="Ecosystem Processing Frame">
+                                <!-- Duplicated Loop Track for Smooth Infinite Flow -->
+                                <img src="img/image4.webp" aria-hidden="true">
+                                <img src="img/image5.webp" aria-hidden="true">
+                                <img src="img/image6.webp" aria-hidden="true">
+                                <img src="img/image7.webp" aria-hidden="true">
+                                <img src="img/image8.webp" aria-hidden="true">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 4: Split Financial Gateway Corridor Rails -->
+                    <div class="funding-matrix-panel">
+                        <div class="matrix-split-table-widescreen">
+                            
+                            <!-- Left Column Panel: Deposits -->
+                            <div class="matrix-column">
+                                <div class="column-header-text">📥 DEPOSIT METHODS AVAILABLE</div>
+                                <div class="slider-wrapper aspect-16-9 marquee-slow">
+                                    <div class="slider-track triple-slide">
+                                        <img src="img/image9.webp" alt="Visa Mastercard Processing Corridor">
+                                        <img src="img/image10.webp" alt="Swift Bank Wire Transfer Route">
+                                        <img src="img/image11.webp" alt="Digital Wallet Liquidity Vault">
+                                        <!-- Duplicated Loop Track for Smooth Infinite Flow -->
+                                        <img src="img/image9.webp" aria-hidden="true">
+                                        <img src="img/image10.webp" aria-hidden="true">
+                                        <img src="img/image11.webp" aria-hidden="true">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Column Panel: Withdrawals -->
+                            <div class="matrix-column">
+                                <div class="column-header-text">📤 WITHDRAWAL METHODS AVAILABLE</div>
+                                <div class="slider-wrapper aspect-16-9 marquee-slow">
+                                    <div class="slider-track triple-slide">
+                                        <img src="img/image12.webp" alt="Card Reversal Gateway Loop">
+                                        <img src="img/image13.webp" alt="Bank Transfer Allocation Route">
+                                        <img src="img/image14.webp" alt="Verified Transfer Gateway Node">
+                                        <!-- Duplicated Loop Track for Smooth Infinite Flow -->
+                                        <img src="img/image12.webp" aria-hidden="true">
+                                        <img src="img/image13.webp" aria-hidden="true">
+                                        <img src="img/image14.webp" aria-hidden="true">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- SECTION 5: Crucial Optimization Signing Directives Card -->
+                    <div class="compliance-card-alert-panel">
+                        <h5>⚠️ NOTE FOR FASTER APPROVAL DURING SIGNUPS:</h5>
+                        <ul class="alert-bullet-list">
+                            <li><span>Use Exact Name on Your ID Card</span></li>
+                            <li><span>Use Exact or Similar Address on your ID Card</span></li>
+                            <li><span>Trading Account Name Must Match Local Bank Account Name</span></li>
+                            <li><span>You will be required to provide Bank statement for Proof of address if Necessary (optional)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- SECTION 6: Terminal Conversion Primary Footer Call-To-Action -->
+                    <div class="terminal-footer-action-hub">
+                        <a href="https://icmarkets.com" target="_blank" class="master-action-btn-hub">
+                            <span>Get Started, Open IC Account</span>
+                            <svg viewBox="0 0 24 24" class="btn-arrow-icon" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 5"></polyline></svg>
+                        </a>
+                    </div>
+
                 </div>`,
+
             analysis: `
                 <div style="padding:1.5rem; border:1px solid #253352; border-radius:6px; background-color:#131A2C;">
                     <h4 style="color:#C5A880; font-size:1.1rem; margin-bottom:0.5rem;">Interbank Liquidity Metrics</h4>
