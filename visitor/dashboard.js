@@ -74,17 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         </p>
                         
                         <!-- 3 Banner Auto-Sliding Component -->
-                        <div class="slider-wrapper aspect-16-9 marquee-fast">
-                            <div class="slider-track triple-slide">
-                                <img src="/img/image1.webp" alt="IC Markets Terminal Dashboard">
-                                <img src="img/image2.webp" alt="Institutional Trading Environment">
-                                <img src="img/image3.webp" alt="Raw Spread Market Liquidity">
-                                <!-- Duplicated Loop Track for Smooth Infinite Flow -->
-                                <img src="img/image1.webp" aria-hidden="true">
-                                <img src="img/image2.webp" aria-hidden="true">
-                                <img src="img/image3.webp" aria-hidden="true">
-                            </div>
-                        </div>
+<div class="slider-wrapper banner-970-250 marquee-fast">
+    <div class="slider-track triple-slide">
+        <img src="img/image1.webp" alt="IC Markets Terminal Dashboard">
+        <img src="img/image2.webp" alt="Institutional Trading Environment">
+        <img src="img/image3.webp" alt="Raw Spread Market Liquidity">
+        <!-- Duplicated Loop Track for Smooth Infinite Flow -->
+        <img src="img/image1.webp" aria-hidden="true">
+        <img src="img/image2.webp" aria-hidden="true">
+        <img src="img/image3.webp" aria-hidden="true">
+    </div>
+</div>
                     </div>
 
                     <!-- SECTION 2: Account Onboarding Quick Gateway -->
