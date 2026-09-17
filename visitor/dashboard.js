@@ -101,12 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <p class="sync-explainer">Sign up with Name, Email and set Password Instantly.</p>
                         
-                        <div class="workflow-direct-cta">
-                           <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="broker-gate-link-premium-icon">
+                         <div class="workflow-direct-cta">
+                            <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="broker-gate-link-premium-icon outbound-ic-link">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
                                 <span>Register Trading Account Now</span>
                             </a>
                         </div>
+
 
                                                <!-- ⚡ NEW BLENDED SECTION: 4 Simple Steps Matrix -->
                         <div class="onboarding-steps-matrix-wrapper">
@@ -146,17 +147,18 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </div>
                             </div>
 
-                            <!-- ⚡ NEW INTEGRATION: Centered Horizontal Dual CTA Buttons -->
+                             <!-- ⚡ NEW INTEGRATION: Centered Horizontal Dual CTA Buttons -->
                             <div class="steps-dual-cta-container">
-                                <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="step-cta-btn live-btn">
+                                <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="step-cta-btn live-btn outbound-ic-link">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cta-svg"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
                                     <span>Open Live Account</span>
                                 </a>
-                                <a href="https://ic.com/open-trading-account/demo/?camp=92891" target="_blank" class="step-cta-btn demo-btn">
+                                <a href="https://ic.com/open-trading-account/demo/?camp=92891" target="_blank" class="step-cta-btn demo-btn outbound-ic-link">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cta-svg"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                                     <span>Open Demo Account</span>
                                 </a>
                             </div>
+
                         </div>
 
                     </div>
@@ -196,14 +198,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         </ul>
                     </div>
 
-                    <!-- SECTION 5: Terminal Conversion Primary Footer Call-To-Action -->
+                  <!-- SECTION 5: Terminal Conversion Primary Footer Call-To-Action -->
                     <div class="terminal-footer-action-hub">
-                       <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="master-action-btn-hub">
-
+                       <a href="https://ic.com/open-trading-account/live/?camp=92891" target="_blank" class="master-action-btn-hub outbound-ic-link">
                             <span>Get Started, Register IC Account</span>
                             <svg viewBox="0 0 24 24" class="btn-arrow-icon" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 5"></polyline></svg>
                         </a>
                     </div>
+
 
                 </div>`,
 
