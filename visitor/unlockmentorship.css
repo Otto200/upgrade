@@ -3,12 +3,13 @@
    Target File: visitor/unlockmentorship.css
    ========================================================================== */
 
-/* --- Modal Overlay Container Placement --- */
+/* --- Modal Overlay Container Placement (Optimized Soft Transparency Profile) --- */
 .premium-modal-overlay {
     position: fixed !important;
     inset: 0 !important;
-    background-color: rgba(11, 15, 25, 0.85) !important;
-    backdrop-filter: blur(8px) !important;
+    background-color: rgba(11, 15, 25, 0.65) !important; /* Decreased dimming layer tint opacity */
+    backdrop-filter: blur(2.5px) !important;              /* Reduced from 8px to a soft, readable overlay blur */
+    -webkit-backdrop-filter: blur(2.5px) !important;       /* Apple Safari rendering engine alignment support */
     z-index: 5000 !important;
     display: flex !important;
     align-items: center !important;
@@ -24,6 +25,7 @@
     opacity: 1 !important;
     pointer-events: auto !important;
 }
+
 
 /* --- Inner Core Typography Card Geometry --- */
 .premium-modal-card {
