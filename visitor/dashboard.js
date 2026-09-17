@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </a>
                         </div>
 
-                        <!-- ⚡ NEW BLENDED SECTION: 4 Simple Steps Matrix -->
+                                               <!-- ⚡ NEW BLENDED SECTION: 4 Simple Steps Matrix -->
                         <div class="onboarding-steps-matrix-wrapper">
                             <h5 class="matrix-steps-title">Open an account in 4 simple steps</h5>
                             
@@ -144,6 +144,18 @@ document.addEventListener('DOMContentLoaded', () => {
                                         <p>Start trading on your live account and access +2,850 instruments</p>
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- ⚡ NEW INTEGRATION: Centered Horizontal Dual CTA Buttons -->
+                            <div class="steps-dual-cta-container">
+                                <a href="https://ic.com" target="_blank" class="step-cta-btn live-btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cta-svg"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                                    <span>Open Live Account</span>
+                                </a>
+                                <a href="https://ic.com" target="_blank" class="step-cta-btn demo-btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cta-svg"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    <span>Open Demo Account</span>
+                                </a>
                             </div>
                         </div>
 
