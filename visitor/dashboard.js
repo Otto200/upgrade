@@ -290,6 +290,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize layout with the PRIME Model content view showing by default on launch
     renderViewportSection('broker');
+
+
+    // --- 5. SECURE OUTBOUND AFFIRMATION ROUTING LISTENER ---
+    const outboundModal = document.getElementById('outboundAffirmationModal');
+    const outboundConfirmBtn = document.getElementById('outboundConfirmBtn');
+    const outboundCancelBtn = document.getElementById('outboundCancelBtn');
+    let targetOutboundUrl = '';
+
+    // Bulletproof event delegation catches links inside dynamic tab render scopes
+    document.body.addEventListener('click', (e) => {
+        // Intercept clicks coming from any asset tagged with your target class
+        const externalAnchor = e.target.closest('.outbound-ic-link');
+        
+        if (externalAnchor) {
+            e.preventDefault(); // Lock browser from jumping away instantly
+            
+            // Extract and hold your exact tracked partner destination address
+            targetOutboundUrl = externalAnchor.getAttribute('href') || 'https://ic.com';
+            
+            // Pop the translucent affirmation notice overlay cleanly into active layout view
+            if (outboundModal) {
+                outboundModal.classList.add('active');
+            }
+        }
+    });
+
+    if (outboundConfirmBtn && outboundCancelBtn && outboundModal) {
+        // User clicks Proceed -> Open the tracked signup page in a clean browser window
+        outboundConfirmBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            outboundModal.classList.remove('active');
+            if (targetOutboundUrl) {
+                window.open(targetOutboundUrl, '_blank');
+            }
+        });
+
+        // User clicks Return -> Dismiss overlay window and stay safely inside terminal shell
+        outboundCancelBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            outboundModal.classList.remove('active');
+            targetOutboundUrl = ''; // Clean memory reference signature
+        });
+    }
+
+
+
+   
 });
 
 
