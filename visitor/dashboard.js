@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <!-- Isolate Visa Card Node Only -->
                         <div class="ic-payment-card isolated-focus">
                             <div class="card-media-shell">
-                                <img src="img/image9.webp" alt="IC Markets Visa Processing Corridor" onerror="this.style.opacity='0.25';">
+                                <img src="/img/image6.webp" alt="IC Markets Visa Processing Corridor" onerror="this.style.opacity='0.25';">
                                 <div class="media-tag-overlay">CARD GATEWAY</div>
                             </div>
                             <div class="card-content-shell">
