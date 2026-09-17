@@ -222,22 +222,32 @@ document.addEventListener('DOMContentLoaded', () => {
              indicators: `
                 <div class="payment-methods-view animate-fade">
                     
-                    <!-- IC Style Section Headline -->
+                    <!-- IC Style Section Headline with Clean Vector SVG Badges -->
                     <div class="ic-section-header">
                         <h4>Your money, your way</h4>
                         <p class="ic-section-subtitle">Deposit and withdraw funds quickly and securely across our verified, institutional funding pipelines.</p>
+                        
                         <div class="ic-perks-badge-row">
-                            <span class="ic-badge-node">🚀 Instant Deposit</span>
-                            <span class="ic-badge-node">⏱️ Fast Withdrawal</span>
-                            <span class="ic-badge-node">💰 0% Commission</span>
+                            <span class="ic-badge-node">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-svg-icon"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                <span>Instant Deposit</span>
+                            </span>
+                            <span class="ic-badge-node">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-svg-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span>Fast Withdrawal</span>
+                            </span>
+                            <span class="ic-badge-node">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-svg-icon"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                <span>0% Commission</span>
+                            </span>
                         </div>
                     </div>
 
-                    <!-- IC Markets Pattern Fluid Display Cards -->
-                    <div class="ic-payment-grid">
+                    <!-- IC Markets Pattern Single Content Card -->
+                    <div class="ic-payment-single-container">
                         
-                        <!-- Card 1: Credit / Debit Cards -->
-                        <div class="ic-payment-card">
+                        <!-- Isolate Visa Card Node Only -->
+                        <div class="ic-payment-card isolated-focus">
                             <div class="card-media-shell">
                                 <img src="img/image9.webp" alt="IC Markets Visa Processing Corridor" onerror="this.style.opacity='0.25';">
                                 <div class="media-tag-overlay">CARD GATEWAY</div>
@@ -252,19 +262,18 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                         </div>
 
-                        <!-- Card 2: International Bank Wire -->
-                        <div class="ic-payment-card">
-                            <div class="card-media-shell">
-                                <img src="img/image10.webp" alt="IC Markets SWIFT Bank Wire" onerror="this.style.opacity='0.25';">
-                                <div class="media-tag-overlay">SWIFT WIRE</div>
-                            </div>
-                            <div class="card-content-shell">
-                                <h5>Bank Wire Transfer</h5>
-                                <p class="card-explainer-text">Direct telegraphic transfers sent straight from your local bank vault to secure client trust accounts.</p>
-                                <div class="card-spec-pill-box">
-                                    <span class="spec-pill secure">SECURE RAILS</span>
-                                    <span class="spec-pill fee">0% COMMISSION</span>
-                                </div>
+                        <!-- Fully Bled Continuous Transparent Logo Carousel Box -->
+                        <div class="brand-carousel-bled-wrapper">
+                            <div class="logo-marquee-track">
+                                <img src="img/visa-logo.png" alt="Visa Framework Node" onerror="this.style.opacity='0.5';">
+                                <img src="img/mastercard-logo.png" alt="Mastercard Framework Node" onerror="this.style.opacity='0.5';">
+                                <img src="img/applepay-logo.png" alt="Apple Pay Corridor" onerror="this.style.opacity='0.5';">
+                                <img src="img/googlepay-logo.png" alt="Google Pay Corridor" onerror="this.style.opacity='0.5';">
+                                <!-- Duplicated Loop Track for Smooth Infinite Flow -->
+                                <img src="img/visa-logo.png" aria-hidden="true">
+                                <img src="img/mastercard-logo.png" aria-hidden="true">
+                                <img src="img/applepay-logo.png" aria-hidden="true">
+                                <img src="img/googlepay-logo.png" aria-hidden="true">
                             </div>
                         </div>
 
