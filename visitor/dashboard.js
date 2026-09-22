@@ -32,6 +32,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 2. Centralized Canvas Router & View Loader ---
+
+// Locate your main canvas container element
+const contentCanvas = document.querySelector('.main-content-canvas') || document.getElementById('content-area');
+
+if (contentCanvas) {
+    // 1. Reset inline styles that might be forcing a rigid layout width
+    contentCanvas.style.width = '100%';
+    contentCanvas.style.maxWidth = '100%';
+    contentCanvas.style.boxSizing = 'border-box';
+    
+    // 2. Set margins to automatically balance layout spaces equally 
+    contentCanvas.style.marginLeft = 'auto';
+    contentCanvas.style.marginRight = 'auto';
+
+    // 3. Force full-bleed padding depending on device sizing
+    if (window.innerWidth <= 480) {
+        contentCanvas.style.paddingLeft = '0px';
+        contentCanvas.style.paddingRight = '0px';
+    } else {
+        contentCanvas.style.paddingLeft = '12px';
+        contentCanvas.style.paddingRight = '12px';
+    }
+}
+
+
+
+
+   
     const renderViewportSection = (viewKey) => {
         const structuralTemplates = {
             models: `
